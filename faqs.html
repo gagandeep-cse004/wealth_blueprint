@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQs | Wealth Blue Print</title>
+  <meta name="description"
+    content="Find answers to common questions about Wealth Blue Print’s investment, insurance, and financial planning services." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* FAQ Hero */
+    .faq-hero-modern {
+      background: linear-gradient(135deg, #004aad, #0072ff);
+      color: white;
+      text-align: center;
+      padding: 120px 20px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .faq-hero-modern h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .faq-hero-modern p {
+      font-size: 1.1rem;
+      color: #e6f0ff;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .faq-hero-modern img {
+      position: absolute;
+      right: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 320px;
+      opacity: 0.15;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(-50%) translateX(0);
+      }
+
+      50% {
+        transform: translateY(-45%) translateX(10px);
+      }
+    }
+
+    /* Search bar */
+    .faq-searchbar {
+      max-width: 600px;
+      margin: 50px auto 30px;
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      padding: 10px 20px;
+    }
+
+    .faq-searchbar input {
+      border: none;
+      outline: none;
+      flex: 1;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    .faq-searchbar i {
+      color: #0072ff;
+      font-size: 1.2rem;
+    }
+
+    /* FAQ Section */
+    .faq-section-modern {
+      padding: 60px 20px;
+      background: #f8fbff;
+    }
+
+    .faq-categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .faq-category {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      padding: 10px 25px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .faq-category.active {
+      background: #0072ff;
+      color: white;
+      border-color: #0072ff;
+    }
+
+    /* FAQ Items */
+    .faq-item {
+      background: #fff;
+      margin: 15px auto;
+      max-width: 800px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq-question {
+      padding: 18px 25px;
+      cursor: pointer;
+      font-weight: 600;
+      position: relative;
+      color: #002b5c;
+    }
+
+    .faq-question::after {
+      content: '\f078';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      right: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-question::after {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding: 0 25px;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 400px;
+      padding-bottom: 18px;
+    }
+
+    .faq-answer p {
+      color: #555;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    /* CTA Section */
+    .faq-cta {
+      text-align: center;
+      margin-top: 60px;
+      background: linear-gradient(135deg, #0072ff, #00c6ff);
+      padding: 60px 30px;
+      border-radius: 20px;
+      color: white;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .faq-cta h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .faq-cta p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      opacity: 0.9;
+    }
+
+    .faq-cta .btn-primary {
+      background: white;
+      color: #0072ff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .faq-cta .btn-primary:hover {
+      background: #002b5c;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .faq-hero-modern img {
+        display: none;
+      }
+
+      .faq-hero-modern h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ✅ HEADER (unchanged) -->
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo" class="brand-logo" /></a>
+          <a href="index.html">
+            <h2><span class="highlight">wealthblue</span>print</h2>
+          </a>
+        </div>
+  
+        <div class="hamburger" id="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+  
+        <nav id="nav-menu">
+          <ul id="menu-items">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Products</a>
+              <div class="dropdown-menu">
+                <a href="investment-plans.html">Investment Plans</a>
+                <a href="retirement-plans.html">Retirement Plans</a>
+                <a href="child-plans.html">Child Plans</a>
+                <a href="term-insurance.html">Term Insurance</a>
+                <a href="calculators.html">calculators</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Renew</a>
+              <div class="dropdown-menu">
+                <a href="renew-policy.html">Renew Policy</a>
+                <a href="check-status.html">Check Status</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Claim</a>
+              <div class="dropdown-menu">
+                <a href="file-claim.html">File a Claim</a>
+                <a href="track-claim.html">Track Claim</a>
+              </div>
+            </li>
+  
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Help</a>
+              <div class="dropdown-menu">
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="support.html">Customer Support</a>
+                <a href="advisor.html">Find an Advisor</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">About</a>
+              <div class="dropdown-menu">
+                <a href="our-story.html">Our Story</a>
+                <a href="leadership.html">Leadership</a>
+                <a href="careers.html">Careers</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+  
+        <div class="navbar-actions desktop-only">
+          <a href="investment-plans.html" class="btn-primary">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🌟 FAQ HERO -->
+  <section class="faq-hero-modern">
+    <div class="container">
+      <h1>How Can We Help You?</h1>
+      <p>Get answers to all your questions about investment, insurance, and financial planning — fast and simple.</p>
+      <img src="./images/family-protection-2.svg" alt="FAQ Illustration" />
+    </div>
+  </section>
+
+  <!-- 🔍 Search -->
+  <div class="faq-searchbar">
+    <i class="fas fa-search"></i>
+    <input type="text" id="faqSearch" placeholder="Search your question..." />
+  </div>
+
+  <!-- 🧩 FAQ Section -->
+  <section class="faq-section-modern">
+    <div class="container">
+      <div class="faq-categories">
+        <div class="faq-category active" data-category="all">All</div>
+        <div class="faq-category" data-category="investment">Investment</div>
+        <div class="faq-category" data-category="insurance">Insurance</div>
+        <div class="faq-category" data-category="retirement">Retirement</div>
+        <div class="faq-category" data-category="account">Account</div>
+      </div>
+
+      <!-- FAQ Items -->
+      <div class="faq-item" data-category="investment">
+        <div class="faq-question">What are the best investment options offered by Wealth Blue Print?</div>
+        <div class="faq-answer">
+          <p>We offer personalized portfolios including mutual funds, SIPs, retirement plans, and low-risk bonds
+            designed to match your financial goals and risk appetite.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="insurance">
+        <div class="faq-question">What types of insurance do you provide?</div>
+        <div class="faq-answer">
+          <p>We provide term insurance, health insurance, ULIPs, and child protection plans through SEBI-registered
+            advisors to safeguard your family's future.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="retirement">
+        <div class="faq-question">When should I start retirement planning?</div>
+        <div class="faq-answer">
+          <p>The best time is now. The earlier you start, the better you benefit from compounding and long-term growth
+            stability.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" data-category="account">
+        <div class="faq-question">How can I open an account with Wealth Blue Print?</div>
+        <div class="faq-answer">
+          <p>You can start online by completing your KYC and setting up your portfolio within minutes, or book a free
+            consultation with our advisor.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 💬 CTA -->
+    <div class="faq-cta">
+      <h3>Still have questions?</h3>
+      <p>Our experts are ready to help you make confident financial decisions.</p>
+      <a href="contact.html" class="btn-primary"><i class="fas fa-headset"></i> Contact Support</a>
+    </div>
+  </section>
+
+  <!-- ✅ FOOTER (unchanged) -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="footer-logo-img">
+            <img src="./images/logo.png" alt="Wealth Blue Print Logo" loading="lazy" class="footer-logo-image" />
+          </div>
+          <p>Your partner for financial growth and security</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/Wealth Blue Printimf/" target="/" aria-label="Follow us on Facebook"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/Wealth Blue Print__?t=QZcsQv6QemM2qT4bfejZeg&s=08" target="/"
+              aria-label="Follow us on X"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/grow-well-imf/about/" target="/"
+              aria-label="Follow us on Linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/Wealth Blue Print.imf/" target="/" aria-label="Follow us on Instagram"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="./investment-plans.html">Products</a></li>
+              <li><a href="./renew-policy.html">Renew</a></li>
+              <li><a href="./advisor.html">Testimonials</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="investment-plans.html">Financial Planning</a></li>
+              <li><a href="child-plans.html">Child Planning</a></li>
+              <li><a href="investment-plans.html">Investment Planning</a></li>
+              <li><a href="retirement-plans.html">Retirement Planning</a></li>
+              <li><a href="term-insurance.html">Term Insurance</a></li>
+              <li><a href="#">Tax Advisory</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="leadership.html">Leadership</a></li>
+              <li><a href="advisor.html">Advisor</a></li>
+              <li>
+                <a href="retirement-plans.html">Financial Calculators</a>
+              </li>
+              <li><a href="faqs.html">FAQs</a></li>
+              <li><a href="contact.html">contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Wealth Blue Print Financial Advisors. All rights reserved.</p>
+        <ul class="footer-legal">
+          <li><a href="privacypolicy.html">Privacy Policy</a></li>
+  
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Accordion logic
+    document.querySelectorAll(".faq-question").forEach(q => {
+      q.addEventListener("click", () => {
+        const parent = q.parentElement;
+        parent.classList.toggle("active");
+      });
+    });
+
+    // Search logic
+    document.getElementById("faqSearch").addEventListener("input", e => {
+      const term = e.target.value.toLowerCase();
+      document.querySelectorAll(".faq-item").forEach(item => {
+        const question = item.querySelector(".faq-question").textContent.toLowerCase();
+        item.style.display = question.includes(term) ? "block" : "none";
+      });
+    });
+
+    // Category filter
+    document.querySelectorAll(".faq-category").forEach(cat => {
+      cat.addEventListener("click", () => {
+        document.querySelectorAll(".faq-category").forEach(c => c.classList.remove("active"));
+        cat.classList.add("active");
+        const category = cat.dataset.category;
+        document.querySelectorAll(".faq-item").forEach(item => {
+          item.style.display = (category === "all" || item.dataset.category === category) ? "block" : "none";
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

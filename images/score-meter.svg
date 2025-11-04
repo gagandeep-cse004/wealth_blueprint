@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="120" viewBox="0 0 200 120">
+  <defs>
+    <linearGradient id="score-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5757" />
+      <stop offset="50%" stop-color="#F6B93B" />
+      <stop offset="100%" stop-color="#16A34A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Meter background -->
+  <path d="M 20 100 A 80 80 0 0 1 180 100" stroke="#E5E7EB" stroke-width="10" stroke-linecap="round" fill="none" />
+  
+  <!-- Colored meter arc (70% filled for example) -->
+  <path d="M 20 100 A 80 80 0 0 1 152 60" stroke="url(#score-gradient)" stroke-width="10" stroke-linecap="round" fill="none">
+    <animate attributeName="d" 
+      from="M 20 100 A 80 80 0 0 1 20 100" 
+      to="M 20 100 A 80 80 0 0 1 152 60" 
+      dur="1.5s" 
+      begin="0.5s" 
+      fill="freeze" />
+  </path>
+  
+  <!-- Needle -->
+  <g transform="translate(100, 100)">
+    <line x1="0" y1="0" x2="0" y2="-60" stroke="#334155" stroke-width="2" stroke-linecap="round">
+      <animateTransform 
+        attributeName="transform" 
+        type="rotate" 
+        from="-90" 
+        to="30" 
+        dur="1.5s" 
+        begin="0.5s" 
+        fill="freeze" />
+    </line>
+    <circle cx="0" cy="0" r="5" fill="#334155" />
+  </g>
+  
+  <!-- Score labels -->
+  <text x="15" y="115" font-family="Arial" font-size="10" font-weight="bold" fill="#94A3B8">Poor</text>
+  <text x="93" y="115" font-family="Arial" font-size="10" font-weight="bold" fill="#94A3B8">Good</text>
+  <text x="170" y="115" font-family="Arial" font-size="10" font-weight="bold" fill="#94A3B8">Great</text>
+  
+  <!-- Score value -->
+  <text x="100" y="35" font-family="Arial" font-size="16" font-weight="bold" fill="#1E56A0" text-anchor="middle">
+    <tspan>75</tspan>
+    <animate 
+      attributeName="opacity" 
+      from="0" 
+      to="1" 
+      dur="0.5s" 
+      begin="2s" 
+      fill="freeze" />
+  </text>
+</svg> 

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Education Planning | Wealth Blue Print</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0061ff;
+            --secondary-color: #00c6ae;
+            --primary-dark: #0044cc;
+            --text-color: #1a1a1a;
+            --text-light: #4a4a4a;
+            --white: #ffffff;
+            --off-white: #f9fbff;
+            --gradient: linear-gradient(135deg, #0061ff 0%, #00c6ae 100%);
+            --shadow: 0 10px 30px rgba(0, 97, 255, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: var(--text-color);
+            margin: 0;
+            background: var(--off-white);
+            overflow-x: hidden;
+        }
+
+        /* 🌟 Hero Section */
+        .hero-edu {
+            position: relative;
+            padding: 120px 0 100px;
+            background: var(--gradient);
+            color: var(--white);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-edu h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            animation: fadeInDown 1s ease forwards;
+        }
+
+        .hero-edu p {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            color: #eaf6ff;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        .hero-edu .cta-btn {
+            display: inline-block;
+            margin-top: 30px;
+            background: var(--white);
+            color: var(--primary-dark);
+            padding: 14px 30px;
+            font-weight: 600;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .hero-edu .cta-btn:hover {
+            transform: translateY(-3px);
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+
+        /* ✨ Steps Section */
+        .steps-section {
+            padding: 80px 0;
+            text-align: center;
+            background: var(--white);
+        }
+
+        .steps-section h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .step-card {
+            background: var(--off-white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            background: var(--gradient);
+            color: var(--white);
+        }
+
+        .step-card i {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .step-card:hover i {
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        /* 🎓 Goal Calculator */
+        .calculator-section {
+            padding: 90px 0;
+            background: var(--gradient);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .calculator-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .calculator-box {
+            background: var(--white);
+            color: var(--text-color);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            display: inline-block;
+            padding: 40px;
+            max-width: 500px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .calculator-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .calculator-box button {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .calculator-box button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* 💡 Benefits Section */
+        .benefits-section {
+            padding: 80px 0;
+            text-align: center;
+            background: var(--off-white);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: scale(1.05);
+        }
+
+        .benefit-card i {
+            font-size: 45px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        /* 🌈 Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 🌟 CTA Footer */
+        .cta-footer {
+            padding: 60px 0;
+            background: var(--gradient);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-footer h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-footer a {
+            background: var(--white);
+            color: var(--primary-dark);
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-footer a:hover {
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo"
+                            class="brand-logo" /></a>
+                    <a href="index.html">
+                        <h2><span class="highlight">wealthblue</span>print</h2>
+                    </a>
+                </div>
+    
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+    
+                <nav id="nav-menu">
+                    <ul id="menu-items">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Products</a>
+                            <div class="dropdown-menu">
+                                <a href="investment-plans.html">Investment Plans</a>
+                                <a href="retirement-plans.html">Retirement Plans</a>
+                                <a href="child-plans.html">Child Plans</a>
+                                <a href="term-insurance.html">Term Insurance</a>
+                                <a href="calculators.html">calculators</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Renew</a>
+                            <div class="dropdown-menu">
+                                <a href="renew-policy.html">Renew Policy</a>
+                                <a href="check-status.html">Check Status</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Claim</a>
+                            <div class="dropdown-menu">
+                                <a href="file-claim.html">File a Claim</a>
+                                <a href="track-claim.html">Track Claim</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Help</a>
+                            <div class="dropdown-menu">
+                                <a href="faqs.html">FAQs</a>
+                                <a href="contact.html">Contact Us</a>
+                                <a href="support.html">Customer Support</a>
+                                <a href="advisor.html">Find an Advisor</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">About</a>
+                            <div class="dropdown-menu">
+                                <a href="our-story.html">Our Story</a>
+                                <a href="leadership.html">Leadership</a>
+                                <a href="careers.html">Careers</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <div class="navbar-actions desktop-only">
+                    <a href="investment-plans.html" class="btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 🎓 Hero Section -->
+    <section class="hero-edu">
+        <div class="container">
+            <h1>Plan Your Child’s Bright Future</h1>
+            <p>Smart education planning ensures your child’s dreams are never limited by finances.</p>
+            <a href="#calculator" class="cta-btn">Start Planning Now</a>
+        </div>
+    </section>
+
+    <!-- 🧭 Steps Section -->
+    <section class="steps-section">
+        <h2>How Education Planning Works</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <i class="fas fa-user-graduate"></i>
+                <h3>Set Education Goals</h3>
+                <p>Define your child’s academic aspirations—school, college, or overseas studies.</p>
+            </div>
+            <div class="step-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Estimate Future Costs</h3>
+                <p>Analyze current and projected expenses to plan accurately for inflation.</p>
+            </div>
+            <div class="step-card">
+                <i class="fas fa-piggy-bank"></i>
+                <h3>Invest Strategically</h3>
+                <p>Start a disciplined savings and investment plan for long-term growth.</p>
+            </div>
+            <div class="step-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Stay Protected</h3>
+                <p>Secure your plan with insurance coverage to ensure goal continuity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🧮 Goal Calculator -->
+    <section class="calculator-section" id="calculator">
+        <h2>🎯 Estimate Your Education Goal</h2>
+        <div class="calculator-box">
+            <input type="number" id="currentCost" placeholder="Current Cost of Education (₹)" />
+            <input type="number" id="years" placeholder="Years until Education" />
+            <input type="number" id="inflation" placeholder="Expected Inflation Rate (%)" />
+            <button onclick="calculateGoal()">Calculate Future Cost</button>
+            <p id="result" style="margin-top:15px; font-weight:600;"></p>
+        </div>
+    </section>
+
+    <!-- 🌟 Benefits Section -->
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f9f9fb;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .benefits-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #ffffff, #f3f6ff);
+        }
+    
+        .benefits-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #1a237e;
+            position: relative;
+            display: inline-block;
+        }
+    
+        .benefits-section h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #3f51b5;
+            border-radius: 2px;
+        }
+    
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+    
+        .benefit-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .benefit-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(63, 81, 181, 0.15), rgba(63, 81, 181, 0));
+            transition: all 0.5s ease;
+        }
+    
+        .benefit-card:hover::before {
+            left: 100%;
+        }
+    
+        .benefit-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 10px 24px rgba(63, 81, 181, 0.25);
+        }
+    
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: #3f51b5;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+    
+        .benefit-card:hover i {
+            color: #1a237e;
+        }
+    
+        .benefit-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+    
+        .benefit-card p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    
+        /* Subtle animation on load */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+    
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        .benefit-card {
+            animation: fadeInUp 0.7s ease forwards;
+        }
+    
+        .benefit-card:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+    
+        .benefit-card:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+    
+        .benefit-card:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+    
+        .benefit-card:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+    
+        .benefit-card:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+    </style>
+    </head>
+    
+    <body>
+    
+        <section class="benefits-section">
+            <h2>Why Choose Wealth Blue Print</h2>
+    
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Smart Planning Tools</h3>
+                    <p>Use intelligent calculators and AI-driven insights to plan accurately and effectively.</p>
+                </div>
+    
+                <div class="benefit-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Trusted Experts</h3>
+                    <p>Get professional guidance from experienced financial planners dedicated to your goals.</p>
+                </div>
+    
+                <div class="benefit-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Affordable Investment Options</h3>
+                    <p>Choose from flexible, high-return investment plans designed for your education goals.</p>
+                </div>
+    
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Data-Driven Insights</h3>
+                    <p>Make confident decisions with reports powered by real-time financial analytics.</p>
+                </div>
+    
+                <div class="benefit-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Portfolio Access</h3>
+                    <p>Monitor and manage your investments anytime, anywhere through your secure dashboard.</p>
+                </div>
+    
+                <div class="benefit-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Client-Centric Approach</h3>
+                    <p>We prioritize your peace of mind and future growth through transparent and ethical practices.</p>
+                </div>
+            </div>
+        </section>
+
+    <!-- 🚀 CTA Footer -->
+    <section class="cta-footer">
+        <h2>Secure Your Child’s Future Today</h2>
+        <a href="contact.html">Talk to Our Advisor</a>
+    </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <div class="footer-logo-img">
+                            <img src="./images/logo.png" alt="Growwell Logo" loading="lazy" class="footer-logo-image" />
+                        </div>
+                        <p>Your partner for financial growth and security</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/growwellimf/" target="/" aria-label="Follow us on Facebook"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/Growwell__?t=QZcsQv6QemM2qT4bfejZeg&s=08" target="/"
+                                aria-label="Follow us on X"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/grow-well-imf/about/" target="/"
+                                aria-label="Follow us on Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/growwell.imf/" target="/" aria-label="Follow us on Instagram"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="./investment-plans.html">Products</a></li>
+                                <li><a href="./renew-policy.html">Renew</a></li>
+                                <li><a href="./advisor.html">Testimonials</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Services</h3>
+                            <ul>
+                                <li><a href="investment-plans.html">Financial Planning</a></li>
+                                <li><a href="child-plans.html">Child Planning</a></li>
+                                <li><a href="investment-plans.html">Investment Planning</a></li>
+                                <li><a href="retirement-plans.html">Retirement Planning</a></li>
+                                <li><a href="term-insurance.html">Term Insurance</a></li>
+                                <li><a href="#">Tax Advisory</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Resources</h3>
+                            <ul>
+                                <li><a href="leadership.html">Leadership</a></li>
+                                <li><a href="advisor.html">Advisor</a></li>
+                                <li>
+                                    <a href="retirement-plans.html">Financial Calculators</a>
+                                </li>
+                                <li><a href="faqs.html">FAQs</a></li>
+                                <li><a href="contact.html">contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 wealth blue print Financial Advisors. All rights reserved.</p>
+                    <ul class="footer-legal">
+                        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+        
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+    <script>
+        function calculateGoal() {
+            const cost = parseFloat(document.getElementById("currentCost").value);
+            const years = parseFloat(document.getElementById("years").value);
+            const inflation = parseFloat(document.getElementById("inflation").value) / 100;
+            if (!cost || !years || !inflation) {
+                document.getElementById("result").innerText = "Please fill all fields correctly.";
+                return;
+            }
+            const futureCost = cost * Math.pow(1 + inflation, years);
+            document.getElementById("result").innerText =
+                "Estimated Future Cost: ₹" + futureCost.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

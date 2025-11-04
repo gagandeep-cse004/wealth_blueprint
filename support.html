@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Support | Wealth Blue Print</title>
+  <link rel="stylesheet" href="css/support.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo" class="brand-logo" /></a>
+          <a href="index.html">
+            <h2><span class="highlight">wealthblue</span>print</h2>
+          </a>
+        </div>
+  
+        <div class="hamburger" id="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+  
+        <nav id="nav-menu">
+          <ul id="menu-items">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Products</a>
+              <div class="dropdown-menu">
+                <a href="investment-plans.html">Investment Plans</a>
+                <a href="retirement-plans.html">Retirement Plans</a>
+                <a href="child-plans.html">Child Plans</a>
+                <a href="term-insurance.html">Term Insurance</a>
+                <a href="calculators.html">calculators</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Renew</a>
+              <div class="dropdown-menu">
+                <a href="renew-policy.html">Renew Policy</a>
+                <a href="check-status.html">Check Status</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Claim</a>
+              <div class="dropdown-menu">
+                <a href="file-claim.html">File a Claim</a>
+                <a href="track-claim.html">Track Claim</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Help</a>
+              <div class="dropdown-menu">
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="support.html">Customer Support</a>
+                <a href="advisor.html">Find an Advisor</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">About</a>
+              <div class="dropdown-menu">
+                <a href="our-story.html">Our Story</a>
+                <a href="leadership.html">Leadership</a>
+                <a href="careers.html">Careers</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+  
+        <div class="navbar-actions desktop-only">
+          <a href="investment-plans.html" class="btn-primary">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🌟 Support Hero Section -->
+  <section class="support-hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>We’re Here to Help You</h1>
+        <p>Contact our support team for quick help and financial guidance — available 24/7.</p>
+        <a href="#support-options" class="btn-glow">Get Support <i class="fas fa-arrow-down"></i></a>
+      </div>
+      <div class="hero-bg-circle circle-1"></div>
+      <div class="hero-bg-circle circle-2"></div>
+    </div>
+  </section>
+
+  <!-- 💬 Support Options -->
+  <section id="support-options" class="support-options">
+    <div class="container">
+      <h2 class="section-title">Choose a Support Option</h2>
+      <p class="section-desc">Reach us through any of the following channels</p>
+      <div class="options-grid">
+        <div class="option-card fade-in">
+          <i class="fas fa-headset"></i>
+          <h3>Call Support</h3>
+          <p>Talk directly with our experts for instant help.</p>
+          <a href="tel:+911800123456" class="btn-outline">Call Now</a>
+        </div>
+        <div class="option-card fade-in delay-1">
+          <i class="fas fa-comments"></i>
+          <h3>Live Chat</h3>
+          <p>Chat in real-time with our 24/7 on whatsapp</p>
+          <a href="https://wa.me/919876543210?text=Hello%20Wealth%20Blue%20Print%2C%20I%20need%20help%20with%20my%20policy" class="btn-outline">Start Chat</a>
+        </div>
+        <div class="option-card fade-in delay-2">
+          <i class="fas fa-envelope"></i>
+          <h3>Email Us</h3>
+          <p>Send us your query — we’ll respond within 24 hours.</p>
+          <a href="mailto:support@wealthblueprint.com" class="btn-outline">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📝 Support Ticket Form -->
+  <section class="support-form">
+    <div class="container">
+      <h2 class="section-title">Submit a Support Ticket</h2>
+      <p class="section-desc">Our team will get back to you as soon as possible</p>
+
+      <form id="ticketForm" class="fade-in-up">
+        <div class="form-row">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="Policy Number (if any)" />
+          <select required>
+            <option value="">Select Issue Type</option>
+            <option>Account Access</option>
+            <option>Claim Status</option>
+            <option>Payment Issue</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <textarea placeholder="Describe your issue" required></textarea>
+        <button type="submit" class="btn-glow">Submit Ticket</button>
+        <p id="success-msg" class="success-msg">✅ Ticket submitted successfully!</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ❓ FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <button class="faq-question">How can I check my policy status? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer">Login to your account → My Policies → Status.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I change my policy details online? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer">Yes, go to Profile Settings and update your information securely.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What if I forget my login password? <i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer">Click “Forgot Password” on the login page to reset via email.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="support-location">
+    <div class="container">
+      <h2 class="section-title">Visit Our Office — Noida</h2>
+      <p class="section-desc">We’re available in person for consultations and support.</p>
+      <div class="map-container fade-in-up">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.1164681068613!2d77.35618717450569!3d28.610173275670828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce57f3f5d1b15%3A0x8a6359c9c90e52a4!2sNoida%2C%20Uttar%20Pradesh%2C%20India!5e0!3m2!1sen!2sin!4v1730440000000!5m2!1sen!2sin"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <div class="footer-logo-img">
+              <img src="./images/logo.png" alt="Wealth Blue Print Logo" loading="lazy" class="footer-logo-image" />
+            </div>
+            <p>Your partner for financial growth and security</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/Wealth Blue Printimf/" target="/" aria-label="Follow us on Facebook"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a href="https://x.com/Wealth Blue Print__?t=QZcsQv6QemM2qT4bfejZeg&s=08" target="/"
+                aria-label="Follow us on X"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/company/grow-well-imf/about/" target="/"
+                aria-label="Follow us on Linkedin"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/Wealth Blue Print.imf/" target="/" aria-label="Follow us on Instagram"><i
+                  class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./investment-plans.html">Products</a></li>
+                <li><a href="./renew-policy.html">Renew</a></li>
+                <li><a href="./advisor.html">Testimonials</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Services</h3>
+              <ul>
+                <li><a href="investment-plans.html">Financial Planning</a></li>
+                <li><a href="child-plans.html">Child Planning</a></li>
+                <li><a href="investment-plans.html">Investment Planning</a></li>
+                <li><a href="retirement-plans.html">Retirement Planning</a></li>
+                <li><a href="term-insurance.html">Term Insurance</a></li>
+                <li><a href="#">Tax Advisory</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Resources</h3>
+              <ul>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="advisor.html">Advisor</a></li>
+                <li>
+                  <a href="retirement-plans.html">Financial Calculators</a>
+                </li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html">contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Wealth Blue Print Financial Advisors. All rights reserved.</p>
+          <ul class="footer-legal">
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+    
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+  <script>
+    // Smooth fade animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    document.querySelectorAll('.fade-in, .fade-in-up').forEach(el => observer.observe(el));
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        btn.classList.toggle('active');
+        answer.classList.toggle('show');
+      });
+    });
+
+    // Form submission message
+    const form = document.getElementById('ticketForm');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('success-msg').style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+
+</html>

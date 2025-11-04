@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="400" viewBox="0 0 500 400">
+  <!-- Pentagon Shield Background -->
+  <path d="M250 30 L400 120 L350 320 L250 370 L150 320 L100 120 Z" fill="#e6f0ff" stroke="#1b62b3" stroke-width="5" />
+  
+  <!-- Umbrella Protection -->
+  <path d="M150 120 C250 60, 350 60, 350 120" stroke="#1b62b3" stroke-width="8" fill="none" />
+  <line x1="250" y1="120" x2="250" y2="70" stroke="#1b62b3" stroke-width="6" />
+  <circle cx="250" cy="65" r="8" fill="#1b62b3" />
+  
+  <!-- Family Group - Simplified Stick Figures -->
+  
+  <!-- Parent 1 -->
+  <circle cx="200" cy="180" r="25" fill="white" stroke="#333333" stroke-width="2" />
+  <line x1="200" y1="205" x2="200" y2="280" stroke="#333333" stroke-width="3" />
+  <line x1="200" y1="230" x2="170" y2="260" stroke="#333333" stroke-width="3" />
+  <line x1="200" y1="230" x2="230" y2="260" stroke="#333333" stroke-width="3" />
+  <line x1="200" y1="280" x2="180" y2="340" stroke="#333333" stroke-width="3" />
+  <line x1="200" y1="280" x2="220" y2="340" stroke="#333333" stroke-width="3" />
+  
+  <!-- Parent 2 -->
+  <circle cx="300" cy="180" r="25" fill="white" stroke="#333333" stroke-width="2" />
+  <line x1="300" y1="205" x2="300" y2="280" stroke="#333333" stroke-width="3" />
+  <line x1="300" y1="230" x2="270" y2="260" stroke="#333333" stroke-width="3" />
+  <line x1="300" y1="230" x2="330" y2="260" stroke="#333333" stroke-width="3" />
+  <line x1="300" y1="280" x2="280" y2="340" stroke="#333333" stroke-width="3" />
+  <line x1="300" y1="280" x2="320" y2="340" stroke="#333333" stroke-width="3" />
+  
+  <!-- Child -->
+  <circle cx="250" cy="220" r="18" fill="white" stroke="#333333" stroke-width="2" />
+  <line x1="250" y1="238" x2="250" y2="290" stroke="#333333" stroke-width="2.5" />
+  <line x1="250" y1="255" x2="230" y2="275" stroke="#333333" stroke-width="2.5" />
+  <line x1="250" y1="255" x2="270" y2="275" stroke="#333333" stroke-width="2.5" />
+  <line x1="250" y1="290" x2="235" y2="330" stroke="#333333" stroke-width="2.5" />
+  <line x1="250" y1="290" x2="265" y2="330" stroke="#333333" stroke-width="2.5" />
+  
+  <!-- Financial Protection Text -->
+  <text x="250" y="370" font-family="Arial" font-size="15" text-anchor="middle" fill="#1b62b3" font-weight="bold">FINANCIAL PROTECTION</text>
+</svg> 

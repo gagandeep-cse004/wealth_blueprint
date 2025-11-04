@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Planning | Wealth Blue Print</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #0061ff;
+            --secondary-color: #00c6ae;
+            --primary-dark: #0044cc;
+            --text-color: #1a1a1a;
+            --text-light: #4a4a4a;
+            --white: #ffffff;
+            --off-white: #f9fbff;
+            --gradient: linear-gradient(135deg, #0061ff 0%, #00c6ae 100%);
+            --shadow: 0 10px 30px rgba(0, 97, 255, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: var(--text-color);
+            margin: 0;
+            background: var(--off-white);
+            overflow-x: hidden;
+        }
+
+        /* 🌟 Hero Section */
+        .hero-tax {
+            position: relative;
+            padding: 120px 0 100px;
+            background: var(--gradient);
+            color: var(--white);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-tax h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            animation: fadeInDown 1s ease forwards;
+        }
+
+        .hero-tax p {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            color: #eaf6ff;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        .hero-tax .cta-btn {
+            display: inline-block;
+            margin-top: 30px;
+            background: var(--white);
+            color: var(--primary-dark);
+            padding: 14px 30px;
+            font-weight: 600;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .hero-tax .cta-btn:hover {
+            transform: translateY(-3px);
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+
+        /* ✨ Steps Section */
+        .steps-section {
+            padding: 80px 0;
+            text-align: center;
+            background: var(--white);
+        }
+
+        .steps-section h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .step-card {
+            background: var(--off-white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            background: var(--gradient);
+            color: var(--white);
+        }
+
+        .step-card i {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .step-card:hover i {
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        /* 🧮 Tax Calculator */
+        .calculator-section {
+            padding: 90px 0;
+            background: var(--gradient);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .calculator-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .calculator-box {
+            background: var(--white);
+            color: var(--text-color);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            display: inline-block;
+            padding: 40px;
+            max-width: 500px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .calculator-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .calculator-box button {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .calculator-box button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* 💡 Benefits Section */
+        .benefits-section {
+            padding: 80px 0;
+            text-align: center;
+            background: var(--off-white);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: scale(1.05);
+        }
+
+        .benefit-card i {
+            font-size: 45px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        /* 🌈 Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 🌟 CTA Footer */
+        .cta-footer {
+            padding: 60px 0;
+            background: var(--gradient);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-footer h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-footer a {
+            background: var(--white);
+            color: var(--primary-dark);
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-footer a:hover {
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ✅ Navbar -->
+        <header>
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo"
+                                class="brand-logo" /></a>
+                        <a href="index.html">
+                            <h2><span class="highlight">wealthblue</span>print</h2>
+                        </a>
+                    </div>
+        
+                    <div class="hamburger" id="hamburger">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+        
+                    <nav id="nav-menu">
+                        <ul id="menu-items">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">Products</a>
+                                <div class="dropdown-menu">
+                                    <a href="investment-plans.html">Investment Plans</a>
+                                    <a href="retirement-plans.html">Retirement Plans</a>
+                                    <a href="child-plans.html">Child Plans</a>
+                                    <a href="term-insurance.html">Term Insurance</a>
+                                    <a href="calculators.html">calculators</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">Renew</a>
+                                <div class="dropdown-menu">
+                                    <a href="renew-policy.html">Renew Policy</a>
+                                    <a href="check-status.html">Check Status</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">Claim</a>
+                                <div class="dropdown-menu">
+                                    <a href="file-claim.html">File a Claim</a>
+                                    <a href="track-claim.html">Track Claim</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">Help</a>
+                                <div class="dropdown-menu">
+                                    <a href="faqs.html">FAQs</a>
+                                    <a href="contact.html">Contact Us</a>
+                                    <a href="support.html">Customer Support</a>
+                                    <a href="advisor.html">Find an Advisor</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle">About</a>
+                                <div class="dropdown-menu">
+                                    <a href="our-story.html">Our Story</a>
+                                    <a href="leadership.html">Leadership</a>
+                                    <a href="careers.html">Careers</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+        
+                    <div class="navbar-actions desktop-only">
+                        <a href="investment-plans.html" class="btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    <!-- 💰 Hero Section -->
+    <section class="hero-tax">
+        <div class="container">
+            <h1>Smarter Tax Planning for a Wealthier Tomorrow</h1>
+            <p>Optimize your taxes legally and efficiently with expert-backed strategies.</p>
+            <a href="#calculator" class="cta-btn">Calculate Your Tax Savings</a>
+        </div>
+    </section>
+
+    <!-- 🧭 Steps Section -->
+    <section class="steps-section">
+        <h2>How Tax Planning Works</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>Assess Income & Expenses</h3>
+                <p>Identify taxable income, deductions, and exemptions under current laws.</p>
+            </div>
+            <div class="step-card">
+                <i class="fas fa-chart-pie"></i>
+                <h3>Choose the Right Regime</h3>
+                <p>Compare Old vs. New Tax Regimes to find the most beneficial one for you.</p>
+            </div>
+            <div class="step-card">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Invest in Tax-Saving Options</h3>
+                <p>Maximize benefits under sections 80C, 80D, and more with strategic investments.</p>
+            </div>
+            <div class="step-card">
+                <i class="fas fa-check-circle"></i>
+                <h3>File Accurately & On Time</h3>
+                <p>Ensure timely filing to avoid penalties and maintain financial discipline.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🧮 Tax Calculator -->
+    <section class="calculator-section" id="calculator">
+        <h2>💡 Estimate Your Tax Savings</h2>
+        <div class="calculator-box">
+            <input type="number" id="income" placeholder="Annual Income (₹)" />
+            <input type="number" id="investments" placeholder="Tax-Saving Investments (₹)" />
+            <input type="number" id="taxRate" placeholder="Tax Rate (%)" />
+            <button onclick="calculateTax()">Calculate Tax Savings</button>
+            <p id="taxResult" style="margin-top:15px; font-weight:600;"></p>
+        </div>
+    </section>
+
+<!-- 🌟 Why Choose Wealth Blue Print -->
+<section class="benefits-modern">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Excellence. Trust. Growth.</span>
+            <h2>Why Choose <span>Wealth Blue Print</span></h2>
+        </div>
+
+        <div class="modern-grid">
+            <div class="modern-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <h3>Strategic Wealth Planning</h3>
+                <p>We design holistic financial strategies that balance growth, security, and future stability.</p>
+            </div>
+
+            <div class="modern-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI-Driven Analytics</h3>
+                <p>Experience data-backed financial insights powered by smart automation and deep learning models.</p>
+            </div>
+
+            <div class="modern-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Global Investment Reach</h3>
+                <p>Access diversified opportunities across global markets with professional risk optimization.</p>
+            </div>
+
+            <div class="modern-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Regulatory & Tax Compliance</h3>
+                <p>Stay fully compliant with international tax and legal frameworks while growing your wealth securely.
+                </p>
+            </div>
+
+            <div class="modern-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h3>High-Net-Worth Expertise</h3>
+                <p>Our advisors specialize in advanced wealth structuring for professionals and entrepreneurs.</p>
+            </div>
+
+            <div class="modern-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Personalized Advisory</h3>
+                <p>Get tailored financial guidance that aligns with your lifestyle, goals, and family aspirations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 💫 CSS Styling -->
+<style>
+    .benefits-modern {
+        padding: 100px 20px;
+        background: radial-gradient(circle at top left, #eef2ff, #ffffff);
+        font-family: "Poppins", sans-serif;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .section-header .section-subtitle {
+        color: #3f51b5;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+        color: #0a1a55;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    .section-header h2 span {
+        color: #3f51b5;
+        background: linear-gradient(90deg, #3f51b5, #1a237e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .modern-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 40px;
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+
+    .modern-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        border-radius: 18px;
+        padding: 40px 25px;
+        box-shadow: 0 8px 25px rgba(63, 81, 181, 0.1);
+        text-align: center;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .modern-card::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        right: -80px;
+        width: 160px;
+        height: 160px;
+        background: radial-gradient(circle, rgba(63, 81, 181, 0.15), transparent 60%);
+        transition: all 0.5s ease;
+        border-radius: 50%;
+    }
+
+    .modern-card:hover::before {
+        transform: scale(1.4);
+        opacity: 0.7;
+    }
+
+    .modern-card:hover {
+        transform: translateY(-12px) rotateX(5deg) rotateY(-3deg);
+        box-shadow: 0 12px 35px rgba(63, 81, 181, 0.2);
+    }
+
+    .icon-wrapper {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #3f51b5, #1a237e);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        color: #fff;
+        font-size: 1.8rem;
+        transition: all 0.3s ease;
+    }
+
+    .modern-card:hover .icon-wrapper {
+        transform: rotate(10deg) scale(1.1);
+        box-shadow: 0 0 15px rgba(63, 81, 181, 0.4);
+    }
+
+    .modern-card h3 {
+        font-size: 1.25rem;
+        color: #0d1a4b;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .modern-card p {
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Floating glow animation */
+    .benefits-modern::after {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        bottom: -150px;
+        right: -100px;
+        background: radial-gradient(circle, rgba(63, 81, 181, 0.15), transparent 70%);
+        filter: blur(40px);
+        animation: floatGlow 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatGlow {
+        0% {
+            transform: translate(0, 0);
+            opacity: 0.7;
+        }
+
+        100% {
+            transform: translate(-40px, -20px);
+            opacity: 0.5;
+        }
+    }
+</style>
+
+<!-- Font Awesome Icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+
+
+    <!-- 🚀 CTA Footer -->
+    <section class="cta-footer">
+        <h2>Start Your Tax-Saving Journey Today</h2>
+        <a href="contact.html">Talk to a Tax Advisor</a>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-img">
+                        <img src="./images/logo.png" alt="Growwell Logo" loading="lazy" class="footer-logo-image" />
+                    </div>
+                    <p>Your partner for financial growth and security</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/growwellimf/" target="/" aria-label="Follow us on Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/Growwell__?t=QZcsQv6QemM2qT4bfejZeg&s=08" target="/"
+                            aria-label="Follow us on X"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/grow-well-imf/about/" target="/"
+                            aria-label="Follow us on Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/growwell.imf/" target="/" aria-label="Follow us on Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="./investment-plans.html">Products</a></li>
+                            <li><a href="./renew-policy.html">Renew</a></li>
+                            <li><a href="./advisor.html">Testimonials</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="investment-plans.html">Financial Planning</a></li>
+                            <li><a href="child-plans.html">Child Planning</a></li>
+                            <li><a href="investment-plans.html">Investment Planning</a></li>
+                            <li><a href="retirement-plans.html">Retirement Planning</a></li>
+                            <li><a href="term-insurance.html">Term Insurance</a></li>
+                            <li><a href="#">Tax Advisory</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="leadership.html">Leadership</a></li>
+                            <li><a href="advisor.html">Advisor</a></li>
+                            <li>
+                                <a href="retirement-plans.html">Financial Calculators</a>
+                            </li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 wealth blue print Financial Advisors. All rights reserved.</p>
+                <ul class="footer-legal">
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+    
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function calculateTax() {
+            const income = parseFloat(document.getElementById("income").value);
+            const investments = parseFloat(document.getElementById("investments").value);
+            const taxRate = parseFloat(document.getElementById("taxRate").value) / 100;
+
+            if (!income || !investments || !taxRate) {
+                document.getElementById("taxResult").innerText = "Please fill all fields correctly.";
+                return;
+            }
+
+            const taxableIncome = Math.max(income - investments, 0);
+            const taxPayable = taxableIncome * taxRate;
+            const savings = income * taxRate - taxPayable;
+
+            document.getElementById("taxResult").innerText =
+                "💰 Estimated Tax Savings: ₹" + savings.toFixed(2);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="stem-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#15803D" />
+      <stop offset="100%" stop-color="#22C55E" />
+    </linearGradient>
+    <linearGradient id="leaf-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16A34A" />
+      <stop offset="100%" stop-color="#4ADE80" />
+    </linearGradient>
+    <linearGradient id="coin-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAB308" />
+      <stop offset="100%" stop-color="#FDE047" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base/Soil -->
+  <path d="M10,50 C10,46 14,44 20,44 C26,44 32,46 32,44 C32,46 38,44 44,44 C50,44 54,46 54,50 L54,52 L10,52 Z" fill="#92400E" />
+  
+  <!-- Stem -->
+  <path d="M32,44 L32,22" stroke="url(#stem-gradient)" stroke-width="3" stroke-linecap="round"
+        stroke-dasharray="22" stroke-dashoffset="22">
+    <animate attributeName="stroke-dashoffset" from="22" to="0" dur="1s" begin="0.5s" fill="freeze" />
+  </path>
+  
+  <!-- Leaves -->
+  <!-- Left leaf -->
+  <path d="M32,34 C28,34 22,31 22,25 C22,20 27,22 32,24" fill="url(#leaf-gradient)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.2s" fill="freeze" />
+  </path>
+  
+  <!-- Right leaf -->
+  <path d="M32,28 C36,28 42,25 42,19 C42,14 37,16 32,18" fill="url(#leaf-gradient)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.5s" fill="freeze" />
+  </path>
+  
+  <!-- Top leaves/flower -->
+  <circle cx="32" cy="18" r="0" fill="#4ADE80">
+    <animate attributeName="r" from="0" to="6" dur="0.8s" begin="1.8s" fill="freeze" />
+  </circle>
+  
+  <!-- Money/coins imagery -->
+  <!-- Coins at the base -->
+  <circle cx="20" cy="48" r="3" fill="url(#coin-gradient)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.2s" fill="freeze" />
+  </circle>
+  <circle cx="44" cy="48" r="3" fill="url(#coin-gradient)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.4s" fill="freeze" />
+  </circle>
+  
+  <!-- Dollar sign in the flower -->
+  <text x="32" y="21" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle" fill="white" opacity="0">
+    $
+    <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="2.2s" fill="freeze" />
+  </text>
+  
+  <!-- Growth arrow -->
+  <path d="M42,14 L48,8 L54,14" stroke="#22C55E" stroke-width="2" fill="none" stroke-linecap="round" 
+        stroke-dasharray="20" stroke-dashoffset="20">
+    <animate attributeName="stroke-dashoffset" from="20" to="0" dur="0.5s" begin="2.5s" fill="freeze" />
+  </path>
+  <line x1="48" y1="8" x2="48" y2="20" stroke="#22C55E" stroke-width="2" stroke-linecap="round"
+        stroke-dasharray="12" stroke-dashoffset="12">
+    <animate attributeName="stroke-dashoffset" from="12" to="0" dur="0.5s" begin="2.5s" fill="freeze" />
+  </line>
+</svg> 

@@ -24,7 +24,7 @@
   <meta name="author" content="Wealth Blue Print" />
   <meta name="publisher" content="Wealth Blue Print" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/our-story.css" />
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,7 +39,8 @@
       <div class="navbar">
         <div class="logo">
           <a href="index.html">
-            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo" class="brand-logo" /></a>
+            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo"
+              class="brand-logo" /></a>
           <a href="index.html">
             <h2><span class="highlight">wealthblue</span>print</h2>
           </a>
@@ -60,7 +61,7 @@
                 <a href="retirement-plans.html">Retirement Plans</a>
                 <a href="child-plans.html">Child Plans</a>
                 <a href="term-insurance.html">Term Insurance</a>
-                <a href="calculators.html">calculators</a>
+                <a href="Calculators.html">Calculators</a>
               </div>
             </li>
             <li class="dropdown">
@@ -124,7 +125,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Timeline Section -->
   <section id="timeline" class="our-timeline">
     <div class="container">
@@ -176,8 +177,8 @@
           <div class="timeline-content">
             <h3>Empowering the Future</h3>
             <p>
-              Now serving 20,000+ clients with ₹500+ Cr in assets under
-              management — and a growing team of 250+ certified advisors.
+              Now serving 20,000+ clients with ₹500+ Cr in assets under management
+              — and a growing team of 250+ certified advisors.
             </p>
           </div>
         </div>
@@ -185,6 +186,129 @@
     </div>
   </section>
   
+  <style>
+    .our-timeline {
+      background: #f8faff;
+      padding: 80px 0;
+    }
+  
+    .timeline-container {
+  position: relative;
+  margin: 60px auto;
+  max-width: 900px;
+  padding: 20px 0;
+}
+
+/* Center blue vertical line */
+.timeline-container::before {
+  content: "";
+  position: absolute;       /* ✅ Fix: makes the line stay centered */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #0066cc; /* ✅ Changed to blue line */
+  border-radius: 2px;
+  z-index: 1;
+}
+
+    /* Timeline items */
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 25px 40px;
+      box-sizing: border-box;
+      z-index: 2;
+    }
+  
+    /* Left side items */
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+  
+    /* Right side items */
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+  
+    /* Year circles */
+    .timeline-year {
+      position: absolute;
+      top: 20px;
+      background: #ffffff;
+      color: #0066cc;
+      font-weight: bold;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3);
+      border: 3px solid #0066cc;
+      z-index: 3;
+    }
+  
+    /* Position years beside the line */
+    .timeline-item:nth-child(odd) .timeline-year {
+      right: -35px;
+    }
+  
+    .timeline-item:nth-child(even) .timeline-year {
+      left: -35px;
+    }
+  
+    /* Content cards */
+    .timeline-content {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+  
+    .timeline-content h3 {
+      color: #003366;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+  
+    .timeline-content p {
+      color: #555;
+      line-height: 1.6;
+    }
+  
+    /* Responsive stacking */
+    @media (max-width: 768px) {
+      .timeline-container::before {
+        left: 20px;
+      }
+  
+      .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        text-align: left;
+      }
+  
+      .timeline-year {
+        left: 20px;
+        right: auto;
+        transform: translateX(0);
+      }
+    }
+  </style>
+
   <!-- Vision & Values -->
   <section class="vision-values">
     <div class="container">
@@ -193,7 +317,7 @@
         <h2>Driven by <span class="highlight">Purpose & Integrity</span></h2>
         <p>Guided by values that define who we are and how we serve you.</p>
       </div>
-  
+
       <div class="values-grid">
         <div class="value-card">
           <i class="fas fa-handshake"></i>
@@ -221,115 +345,124 @@
 
   <style>
     .our-story-hero {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(135deg, #f6f9ff, #e8f3ff);
-  padding: 100px 0;
-}
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #f6f9ff, #e8f3ff);
+      padding: 100px 0;
+    }
 
-.our-story-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
+    .our-story-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
 
-.our-story-left h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #002147;
-}
+    .our-story-left h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #002147;
+    }
 
-.our-story-left p {
-  margin: 20px 0 30px;
-  color: #444;
-  max-width: 500px;
-}
+    .our-story-left p {
+      margin: 20px 0 30px;
+      color: #444;
+      max-width: 500px;
+    }
 
-.our-story-left .btn-primary {
-  background: #0056d2;
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.our-story-left .btn-primary:hover {
-  background: #003f9a;
-}
+    .our-story-left .btn-primary {
+      background: #0056d2;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
-.our-story-right img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
+    .our-story-left .btn-primary:hover {
+      background: #003f9a;
+    }
 
-/* Timeline */
-.our-timeline {
-  padding: 100px 0;
-  background: #fff;
-}
-.timeline-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  position: relative;
-}
-.timeline-container::before {
-  content: "";
-  position: absolute;
-  left: 20px;
-  top: 0;
-  width: 3px;
-  height: 100%;
-  background: #0056d2;
-}
-.timeline-item {
-  position: relative;
-  padding-left: 60px;
-}
-.timeline-year {
-  font-weight: bold;
-  color: #0056d2;
-  font-size: 1.3rem;
-}
-.timeline-content h3 {
-  font-size: 1.4rem;
-  margin-bottom: 8px;
-  color: #002147;
-}
+    .our-story-right img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
 
-/* Values */
-.vision-values {
-  background: #f9fbff;
-  padding: 80px 0;
-}
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
-}
-.value-card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 25px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  transition: 0.3s;
-}
-.value-card i {
-  font-size: 2rem;
-  color: #0056d2;
-  margin-bottom: 15px;
-}
-.value-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 86, 210, 0.15);
-}
+    /* Timeline */
+    .our-timeline {
+      padding: 100px 0;
+      background: #fff;
+    }
 
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      position: relative;
+    }
+
+    .timeline-container::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: #0056d2;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 60px;
+    }
+
+    .timeline-year {
+      font-weight: bold;
+      color: #0056d2;
+      font-size: 1.3rem;
+    }
+
+    .timeline-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      color: #002147;
+    }
+
+    /* Values */
+    .vision-values {
+      background: #f9fbff;
+      padding: 80px 0;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .value-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .value-card i {
+      font-size: 2rem;
+      color: #0056d2;
+      margin-bottom: 15px;
+    }
+
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 86, 210, 0.15);
+    }
   </style>
   <!-- Footer Section -->
   <footer>
@@ -337,8 +470,7 @@
       <div class="footer-content">
         <div class="footer-logo">
           <div class="footer-logo-img">
-            <img src="./images/logo.png" alt="Wealth Blue Print Logo" loading="lazy"
-              class="footer-logo-image" />
+            <img src="./images/logo.png" alt="Wealth Blue Print Logo" loading="lazy" class="footer-logo-image" />
           </div>
           <p>Your partner for financial growth and security</p>
           <div class="social-icons">
@@ -392,7 +524,7 @@
         <p>&copy; 2025 Wealth Blue Print Financial Advisors. All rights reserved.</p>
         <ul class="footer-legal">
           <li><a href="privacypolicy.html">Privacy Policy</a></li>
-          
+
         </ul>
       </div>
     </div>

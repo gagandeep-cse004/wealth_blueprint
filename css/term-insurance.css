@@ -70,8 +70,13 @@
 }
 
 @keyframes shimmer {
-    0% { transform: translateX(-100%) rotate(45deg); }
-    100% { transform: translateX(100%) rotate(45deg); }
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
 }
 
 .term-hero h1 {
@@ -141,12 +146,12 @@
     overflow: hidden;
 }
 
-.premium-button{
+.premium-button {
     background: var(--dark-color) !important;
 
 }
 
-.benefits-txt{
+.benefits-txt {
     color: var(--accent-color);
 }
 
@@ -391,7 +396,7 @@
     right: 20px;
     background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
     color: white;
-    padding: 8px 16px ;
+    padding: 8px 16px;
     font-size: 12px;
     font-weight: 600;
     border-radius: 30px;
@@ -503,13 +508,13 @@
 }
 
 /* Premium Calculator */
-.term-calculator {
+.term-Calculator {
     padding: 100px 0;
     background-color: #fff;
     position: relative;
 }
 
-.calculator-wrapper {
+.Calculator-wrapper {
     display: flex;
     gap: 40px;
     background: #fff;
@@ -521,19 +526,19 @@
     border: 1px solid #eaeef5;
 }
 
-.calculator-form {
+.Calculator-form {
     flex: 1;
     padding: 40px;
     background: #f5f7ff;
     border-radius: 20px 0 0 20px;
 }
 
-.calculator-header {
+.Calculator-header {
     margin-bottom: 30px;
     text-align: left;
 }
 
-.calculator-header h3 {
+.Calculator-header h3 {
     font-size: 24px;
     font-weight: 700;
     color: #333;
@@ -542,7 +547,7 @@
     display: inline-block;
 }
 
-.calculator-header h3:after {
+.Calculator-header h3:after {
     content: '';
     position: absolute;
     width: 50px;
@@ -553,7 +558,7 @@
     border-radius: 3px;
 }
 
-.calculator-header p {
+.Calculator-header p {
     color: #666;
     line-height: 1.6;
     font-size: 15px;
@@ -641,7 +646,7 @@
     box-shadow: 0 12px 30px rgba(43, 77, 170, 0.3);
 }
 
-.calculator-result {
+.Calculator-result {
     flex: 1;
     padding: 40px;
     /* background: linear-gradient(135deg, #2b4daa 0%, #4a6ed9 100%); */
@@ -966,11 +971,11 @@
     .term-hero {
         padding: 100px 0 80px;
     }
-    
+
     .term-hero h1 {
         font-size: 42px;
     }
-    
+
     .term-hero p {
         font-size: 18px;
         max-width: 90%;
@@ -981,18 +986,18 @@
     .term-hero {
         padding: 80px 0 60px;
     }
-    
+
     .term-hero h1 {
         font-size: 36px;
         margin-bottom: 20px;
     }
-    
+
     .term-hero p {
         font-size: 16px;
         max-width: 100%;
         margin-bottom: 30px;
     }
-    
+
     .term-hero-cta {
         flex-direction: column;
         width: 100%;
@@ -1000,7 +1005,7 @@
         margin: 0 auto;
         gap: 15px;
     }
-    
+
     .btn-hero {
         width: 100%;
         padding: 12px 20px;
@@ -1011,22 +1016,22 @@
     .term-hero {
         padding: 60px 0 50px;
     }
-    
+
     .term-hero h1 {
         font-size: 28px;
     }
-    
+
     .term-hero p {
         font-size: 15px;
         line-height: 1.6;
     }
-    
+
     .hero-badge {
         font-size: 12px;
         padding: 8px 16px;
         margin-bottom: 20px;
     }
-    
+
     .gradient-text::after {
         height: 2px;
         bottom: -3px;
@@ -1039,18 +1044,18 @@
         align-items: center;
         justify-content: space-between;
     }
-    
+
     .term-hero-wrapper {
         flex: 1;
     }
-    
+
     .term-hero-image {
         flex: 1;
         text-align: right;
     }
-    
+
     .hero-illustration {
         max-width: 450px;
         margin: 0;
     }
-} 
+}

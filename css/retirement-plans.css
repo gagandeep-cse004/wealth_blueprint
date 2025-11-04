@@ -46,6 +46,7 @@
   --border-radius-lg: 16px;
   --border-radius-xl: 28px;
 }
+
 /* ===== Hero Section Enhancements ===== */
 .retirement-hero {
   position: relative;
@@ -60,11 +61,11 @@
   max-width: 1200px;
 }
 
-.retirement-txt{
+.retirement-txt {
   color: var(--accent-color);
 }
 
-.rt-image{
+.rt-image {
   border-radius: 2rem;
 }
 
@@ -324,7 +325,9 @@
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
 }
 
-.icon-1, .icon-2, .icon-3 {
+.icon-1,
+.icon-2,
+.icon-3 {
   width: 60px;
   height: 60px;
   animation: orbitAnimation 15s linear infinite;
@@ -346,7 +349,9 @@
   animation-delay: -10s;
 }
 
-.icon-1 i, .icon-2 i, .icon-3 i {
+.icon-1 i,
+.icon-2 i,
+.icon-3 i {
   font-size: 24px;
   color: var(--accent-color);
   transition: all 0.3s ease;
@@ -520,16 +525,20 @@
   0% {
     transform: rotate(0deg) translateX(120px) rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg) translateX(120px) rotate(-360deg);
   }
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.4;
   }
+
   50% {
     transform: scale(1.05);
     opacity: 0.6;
@@ -537,10 +546,13 @@
 }
 
 @keyframes pulse-reverse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1.05);
     opacity: 0.6;
   }
+
   50% {
     transform: scale(1);
     opacity: 0.4;
@@ -548,9 +560,12 @@
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-15px);
   }
@@ -941,7 +956,7 @@
 }
 
 /* ===== Calculator Section Enhancements ===== */
-.retirement-calculator {
+.retirement-Calculator {
   padding: 100px 0;
   background: linear-gradient(135deg, #0c2340 0%, #0a4d8c 100%);
   color: var(--white);
@@ -949,7 +964,7 @@
   overflow: hidden;
 }
 
-.retirement-calculator::before {
+.retirement-Calculator::before {
   content: '';
   position: absolute;
   top: 0;
@@ -961,7 +976,7 @@
   z-index: 1;
 }
 
-.retirement-calculator::after {
+.retirement-Calculator::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -973,19 +988,19 @@
   z-index: 1;
 }
 
-.retirement-calculator .section-header h2 {
+.retirement-Calculator .section-header h2 {
   color: var(--white);
 }
 
-.retirement-calculator .section-subtitle {
+.retirement-Calculator .section-subtitle {
   color: var(--secondary-color);
 }
 
-.retirement-calculator .section-description {
+.retirement-Calculator .section-description {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.calculator-container {
+.Calculator-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -999,7 +1014,7 @@
   z-index: 2;
 }
 
-.calculator-form {
+.Calculator-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1029,11 +1044,11 @@
   border-radius: 3px;
 }
 
-.calculator-group {
+.Calculator-group {
   margin-bottom: 5px;
 }
 
-.calculator-label {
+.Calculator-label {
   display: block;
   font-size: 14px;
   font-weight: 500;
@@ -1041,7 +1056,7 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-.calculator-input {
+.Calculator-input {
   width: 100%;
   padding: 14px;
   font-size: 16px;
@@ -1052,7 +1067,7 @@
   transition: all var(--transition-fast);
 }
 
-.calculator-input:focus {
+.Calculator-input:focus {
   border-color: var(--secondary-color);
   outline: none;
   box-shadow: 0 0 0 3px rgba(255, 158, 27, 0.3);
@@ -1062,7 +1077,7 @@
   position: relative;
 }
 
-.calculator-slider {
+.Calculator-slider {
   width: 100%;
   height: 6px;
   background: rgba(255, 255, 255, 0.1);
@@ -1073,7 +1088,7 @@
   margin-bottom: 20px;
 }
 
-.calculator-slider::-webkit-slider-thumb {
+.Calculator-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
@@ -1085,7 +1100,7 @@
   transition: all var(--transition-fast);
 }
 
-.calculator-slider::-webkit-slider-thumb:hover {
+.Calculator-slider::-webkit-slider-thumb:hover {
   transform: scale(1.2);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
 }
@@ -1125,7 +1140,7 @@
   margin-right: 8px;
 }
 
-.calculator-result {
+.Calculator-result {
   background: rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius-lg);
   padding: 30px;
@@ -1233,7 +1248,7 @@
   margin-right: 5px;
 }
 
-.calculator-benefits {
+.Calculator-benefits {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -1437,23 +1452,28 @@
 
 /* Process step specific icons */
 .process-step:nth-child(1) .process-step-icon i {
-  color: #2c86e0; /* Blue */
+  color: #2c86e0;
+  /* Blue */
 }
 
 .process-step:nth-child(2) .process-step-icon i {
-  color: #2cb67d; /* Green */
+  color: #2cb67d;
+  /* Green */
 }
 
 .process-step:nth-child(3) .process-step-icon i {
-  color: #ff7849; /* Orange */
+  color: #ff7849;
+  /* Orange */
 }
 
 .process-step:nth-child(4) .process-step-icon i {
-  color: #7e57c2; /* Purple */
+  color: #7e57c2;
+  /* Purple */
 }
 
 .process-step:nth-child(5) .process-step-icon i {
-  color: #ff5e7d; /* Pink */
+  color: #ff5e7d;
+  /* Pink */
 }
 
 .process-step:hover .process-step-icon i {
@@ -1508,31 +1528,31 @@
   }
 }
 
-@media screen and (max-width: 768px) {    
+@media screen and (max-width: 768px) {
   .process-steps {
     grid-template-columns: 1fr;
     margin-top: 60px;
   }
-  
+
   .process-step {
     max-width: 450px;
     margin-left: auto;
     margin-right: auto;
-}
+  }
 
-.process-step-title {
+  .process-step-title {
     font-size: 1.5rem;
-}
+  }
 
-.process-step-description {
+  .process-step-description {
     font-size: 1rem;
   }
-  
+
   .process-step-icon {
     width: 80px;
     height: 80px;
   }
-  
+
   .process-step-icon i {
     font-size: 2.4rem;
   }
@@ -1696,71 +1716,75 @@
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-  .calculator-container {
+  .Calculator-container {
     grid-template-columns: 1fr;
   }
-  
+
   .retirement-hero h1 {
     font-size: 40px;
   }
-  
+
   .retirement-hero p {
     font-size: 16px;
   }
-  
+
   .plans-grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
-  
+
   .floating-card {
     display: none;
   }
-  
+
   .benefit-card {
     padding: 25px;
   }
-  
+
   /* Improved responsive styling for retirement illustration */
   .retirement-illustration {
     width: 180px;
     height: 180px;
     margin: 0 auto;
   }
-  
+
   .retirement-showcase {
     min-height: 280px;
   }
-  
+
   .main-icon {
     width: 80px;
     height: 80px;
   }
-  
+
   .main-icon i {
     font-size: 32px;
   }
-  
-  .icon-1, .icon-2, .icon-3 {
+
+  .icon-1,
+  .icon-2,
+  .icon-3 {
     width: 40px;
     height: 40px;
   }
-  
-  .icon-1 i, .icon-2 i, .icon-3 i {
+
+  .icon-1 i,
+  .icon-2 i,
+  .icon-3 i {
     font-size: 18px;
   }
-  
+
   .pulse-circle {
     width: 150px;
     height: 150px;
   }
-  
+
   .pulse-circle::after {
     width: 180px;
     height: 180px;
     top: -15px;
     left: -15px;
   }
-  
+
   .hero-wrapper {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
@@ -1769,16 +1793,16 @@
   .hero-stats {
     gap: 10px;
   }
-  
+
   .hero-stat-item {
     padding: 8px 10px;
     min-width: 90px;
   }
-  
+
   .hero-stat-item .stat-value {
     font-size: 20px;
   }
-  
+
   .hero-stat-item .stat-label {
     font-size: 12px;
   }
@@ -1788,18 +1812,18 @@
   .retirement-hero {
     padding: 80px 0 60px;
   }
-  
+
   .retirement-hero h1 {
     font-size: 32px;
   }
-  
+
   .retirement-hero-cta {
     flex-direction: column;
     max-width: 300px;
     margin-left: 0;
     margin-right: auto;
   }
-  
+
   /* Better positioning for medium screens */
   .retirement-illustration {
     position: relative;
@@ -1807,11 +1831,11 @@
     width: 150px;
     height: 150px;
   }
-  
+
   .retirement-showcase {
     min-height: 240px;
   }
-  
+
   .hero-right {
     display: flex;
     justify-content: center;
@@ -1819,81 +1843,84 @@
     margin-top: 10px;
     min-height: 240px;
   }
-  
+
   .hero-wrapper {
     grid-template-columns: 1fr;
     gap: 10px;
     margin-top: 50px;
   }
-  
+
   .section-header h2 {
     font-size: 28px;
   }
-  
+
   .investment-benefits,
   .investment-plans,
-  .investment-calculator,
+  .investment-Calculator,
   .investment-process,
   .investment-faq,
   .cta {
     padding: 70px 0;
   }
-  
+
   /* Responsive behavior */
-@media (max-width: 991px) {
-  .calculator-container {
+  @media (max-width: 991px) {
+    .Calculator-container {
       flex-direction: column;
+    }
   }
-}
 
-@media (max-width: 767px) {
-  .result-stats {
+  @media (max-width: 767px) {
+    .result-stats {
       grid-template-columns: 1fr;
+    }
   }
-}
 
-@media (max-width: 575px) {
-  .calculator-form, .calculator-result {
+  @media (max-width: 575px) {
+
+    .Calculator-form,
+    .Calculator-result {
       padding: 20px;
+    }
+
+    .calculate-btn {
+      width: 100%;
+    }
   }
 
-  .calculate-btn {
-      width: 100%;
-  }
-}
   .benefit-icon {
     width: 60px;
     height: 60px;
   }
-  
+
   .benefit-icon i {
     font-size: 24px;
   }
-  
+
   .process-step-content {
     padding: 20px;
   }
-  
+
   .process-step-title {
     font-size: 20px;
   }
-  
+
   .cta h2 {
     font-size: 28px;
   }
-  
+
   .cta-buttons {
     flex-direction: column;
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .btn {
     width: 100%;
     justify-content: center;
   }
-  
+
   .trust-indicators {
     flex-direction: column;
     align-items: center;
@@ -1910,52 +1937,56 @@
   .retirement-hero h1 {
     font-size: 28px;
   }
-  
+
   .hero-badge {
     font-size: 12px;
   }
-  
+
   /* Smaller retirement illustration for mobile */
   .retirement-illustration {
     width: 120px;
     height: 120px;
     margin: 0 auto;
   }
-  
+
   .retirement-showcase {
     min-height: 200px;
   }
-  
+
   .hero-right {
     min-height: 200px;
   }
-  
+
   .main-icon {
     width: 60px;
     height: 60px;
     border-width: 3px;
   }
-  
+
   .main-icon i {
     font-size: 24px;
   }
-  
-  .icon-1, .icon-2, .icon-3 {
+
+  .icon-1,
+  .icon-2,
+  .icon-3 {
     width: 30px;
     height: 30px;
     border-width: 2px;
   }
-  
-  .icon-1 i, .icon-2 i, .icon-3 i {
+
+  .icon-1 i,
+  .icon-2 i,
+  .icon-3 i {
     font-size: 14px;
   }
-  
+
   .pulse-circle {
     width: 100px;
     height: 100px;
     border-width: 1px;
   }
-  
+
   .pulse-circle::after {
     width: 130px;
     height: 130px;
@@ -1963,7 +1994,7 @@
     left: -15px;
     border-width: 1px;
   }
-  
+
   .sebi-badge {
     position: relative;
     bottom: auto;
@@ -1973,55 +2004,55 @@
     width: fit-content;
     font-size: 12px;
   }
-  
+
   .sebi-badge i {
     font-size: 12px;
   }
-  
+
   .hero-stats {
     justify-content: space-between;
     gap: 8px;
   }
-  
+
   .hero-stat-item {
     padding: 6px 8px;
     min-width: auto;
     flex: 1;
   }
-  
+
   .hero-stat-item .stat-value {
     font-size: 18px;
   }
-  
+
   .hero-stat-item .stat-label {
     font-size: 11px;
   }
-  
+
   .section-header {
     margin-bottom: 40px;
   }
-  
+
   .benefit-card {
     padding: 20px;
   }
-  
+
   .plan-header {
     padding: 25px 20px;
   }
-  
+
   .plan-features {
     padding: 20px;
   }
-  
+
   .plan-cta {
     padding: 0 20px 20px;
   }
-  
+
   .faq-question {
     padding: 15px 20px;
     font-size: 16px;
   }
-  
+
   .faq-answer-content {
     padding: 0 20px 15px;
   }
@@ -2100,4 +2131,4 @@
 .cta .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-3px);
-} 
+}

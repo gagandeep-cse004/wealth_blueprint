@@ -8,7 +8,7 @@
   <meta name="description"
     content="Plan your retirement with confidence. Wealth Blue Print offers expert retirement solutions to help you secure a financially independent and stress-free future." />
   <meta name="keywords"
-    content="Wealth Blue Print, retirement plans, retirement solutions, retirement planning, retirement calculator" />
+    content="Wealth Blue Print, retirement plans, retirement solutions, retirement planning, retirement Calculator" />
   <meta name="robots" content="retirement-plans, follow" />
   <link rel="canonical" href="https://Wealth Blue Printimf.com/" />
   <meta property="og:title" content="Secure Retirement Plans for Future | Wealth Blue Print" />
@@ -32,214 +32,304 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
 
-    <style>
-      /* 🌈 Section Base */
-.retirement-hero {
-  position: relative;
-  overflow: hidden;
-  padding: 100px 0;
-  background: radial-gradient(circle at top left, #0d1117, #111827);
-  color: #fff;
-}
+  <style>
+    /* 🌈 Section Base */
+    .retirement-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0;
+      background: radial-gradient(circle at top left, #0d1117, #111827);
+      color: #fff;
+    }
 
-/* 🔮 Decorative Circles */
-.decorative-circle {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.6;
-  animation: float 12s ease-in-out infinite alternate;
-}
-.circle-1 { top: -10%; left: -10%; width: 300px; height: 300px; background: #6b5bff; }
-.circle-2 { bottom: 5%; right: -8%; width: 250px; height: 250px; background: #00d4ff; }
-.circle-3 { top: 30%; left: 50%; width: 200px; height: 200px; background: #ff2e63; }
+    /* 🔮 Decorative Circles */
+    .decorative-circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.6;
+      animation: float 12s ease-in-out infinite alternate;
+    }
 
-/* 🧱 Layout */
-.hero-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-}
+    .circle-1 {
+      top: -10%;
+      left: -10%;
+      width: 300px;
+      height: 300px;
+      background: #6b5bff;
+    }
 
-.hero-left {
-  flex: 1;
-  max-width: 550px;
-  z-index: 2;
-}
+    .circle-2 {
+      bottom: 5%;
+      right: -8%;
+      width: 250px;
+      height: 250px;
+      background: #00d4ff;
+    }
 
-.hero-right {
-  flex: 1;
-  position: relative;
-  text-align: center;
-}
+    .circle-3 {
+      top: 30%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      background: #ff2e63;
+    }
 
-/* ✨ Text Styling */
-.hero-badge {
-  background: linear-gradient(90deg, #00d4ff, #6b5bff);
-  color: #fff;
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
+    /* 🧱 Layout */
+    .hero-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+    }
 
-.hero-left h1 {
-  font-size: 2.8rem;
-  margin: 1rem 0;
-  font-weight: 700;
-  line-height: 1.2;
-  
-}
+    .hero-left {
+      flex: 1;
+      max-width: 550px;
+      z-index: 2;
+    }
 
-.gradient-text {
-  background: linear-gradient(90deg, #00d4ff, #6b5bff, #ff2e63);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 800;
-}
+    .hero-right {
+      flex: 1;
+      position: relative;
+      text-align: center;
+    }
 
-.hero-left p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #d1d5db;
-  margin-bottom: 2rem;
-}
+    /* ✨ Text Styling */
+    .hero-badge {
+      background: linear-gradient(90deg, #00d4ff, #6b5bff);
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
 
-/* 📊 Stats */
-.hero-stats {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-.hero-stat-item {
-  text-align: center;
-}
-.stat-value {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #00d4ff;
-  display: block;
-}
-.stat-label {
-  font-size: 0.9rem;
-  color: #9ca3af;
-}
+    .hero-left h1 {
+      font-size: 2.8rem;
+      margin: 1rem 0;
+      font-weight: 700;
+      line-height: 1.2;
 
-/* 🧭 Buttons */
-.btn-primary, .btn-secondary {
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-.btn-primary {
-  background: linear-gradient(90deg, #00d4ff, #6b5bff);
-  color: #fff;
-  box-shadow: 0 0 15px rgba(107,91,255,0.5);
-}
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 25px rgba(0,212,255,0.8);
-}
-.btn-secondary {
-  border: 2px solid #00d4ff;
-  color: #00d4ff;
-  margin-left: 15px;
-}
-.btn-secondary:hover {
-  background: #00d4ff;
-  color: #fff;
-}
+    }
 
-/* 🪄 Floating Cards */
-.floating-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 12px 20px;
-  color: #fff;
-  font-size: 0.9rem;
-  position: absolute;
-  animation: float 8s ease-in-out infinite alternate;
-}
-.floating-card i {
-  color: #00d4ff;
-  font-size: 1.2rem;
-  margin-right: 6px;
-}
-.floating-card-1 { top: 15%; left: 10%; animation-delay: 1s; }
-.floating-card-2 { top: 40%; right: 5%; animation-delay: 3s; }
-.floating-card-3 { bottom: 15%; left: 20%; animation-delay: 5s; }
+    .gradient-text {
+      background: linear-gradient(90deg, #00d4ff, #6b5bff, #ff2e63);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
 
-/* 🌀 Illustration Animation */
-.retirement-illustration {
-  position: relative;
-  display: inline-block;
-  margin-top: 30px;
-}
-.illustration-icon {
-  position: absolute;
-  background: linear-gradient(45deg, #00d4ff, #6b5bff);
-  color: #fff;
-  border-radius: 50%;
-  padding: 12px;
-  animation: orbit 10s linear infinite;
-}
-.main-icon {
-  padding: 20px;
-  font-size: 2rem;
-}
-.icon-1 { top: -60px; left: 70px; animation-delay: 2s; }
-.icon-2 { right: -70px; top: 40px; animation-delay: 4s; }
-.icon-3 { bottom: -60px; left: 50px; animation-delay: 6s; }
+    .hero-left p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #d1d5db;
+      margin-bottom: 2rem;
+    }
 
-.pulse-circle {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 2px solid rgba(0,212,255,0.5);
-  animation: pulse 2.5s infinite ease-in-out;
-}
+    /* 📊 Stats */
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
 
-/* 🎖️ SEBI Badge */
-.sebi-badge {
-  margin-top: 20px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #9ca3af;
-  font-size: 0.9rem;
-}
+    .hero-stat-item {
+      text-align: center;
+    }
 
-/* 💫 Keyframes */
-@keyframes float {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-15px); }
-}
-@keyframes pulse {
-  0% { transform: scale(0.95); opacity: 0.6; }
-  100% { transform: scale(1.05); opacity: 1; }
-}
-@keyframes orbit {
-  0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
-  100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
-}
+    .stat-value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #00d4ff;
+      display: block;
+    }
 
-/* 📱 Responsive */
-@media (max-width: 992px) {
-  .hero-wrapper { flex-direction: column; text-align: center; }
-  .hero-left, .hero-right { max-width: 100%; }
-  .hero-stats { justify-content: center; }
-}
+    .stat-label {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
 
-    </style>
+    /* 🧭 Buttons */
+    .btn-primary,
+    .btn-secondary {
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #00d4ff, #6b5bff);
+      color: #fff;
+      box-shadow: 0 0 15px rgba(107, 91, 255, 0.5);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(0, 212, 255, 0.8);
+    }
+
+    .btn-secondary {
+      border: 2px solid #00d4ff;
+      color: #00d4ff;
+      margin-left: 15px;
+    }
+
+    .btn-secondary:hover {
+      background: #00d4ff;
+      color: #fff;
+    }
+
+    /* 🪄 Floating Cards */
+    .floating-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 12px 20px;
+      color: #fff;
+      font-size: 0.9rem;
+      position: absolute;
+      animation: float 8s ease-in-out infinite alternate;
+    }
+
+    .floating-card i {
+      color: #00d4ff;
+      font-size: 1.2rem;
+      margin-right: 6px;
+    }
+
+    .floating-card-1 {
+      top: 15%;
+      left: 10%;
+      animation-delay: 1s;
+    }
+
+    .floating-card-2 {
+      top: 40%;
+      right: 5%;
+      animation-delay: 3s;
+    }
+
+    .floating-card-3 {
+      bottom: 15%;
+      left: 20%;
+      animation-delay: 5s;
+    }
+
+    /* 🌀 Illustration Animation */
+    .retirement-illustration {
+      position: relative;
+      display: inline-block;
+      margin-top: 30px;
+    }
+
+    .illustration-icon {
+      position: absolute;
+      background: linear-gradient(45deg, #00d4ff, #6b5bff);
+      color: #fff;
+      border-radius: 50%;
+      padding: 12px;
+      animation: orbit 10s linear infinite;
+    }
+
+    .main-icon {
+      padding: 20px;
+      font-size: 2rem;
+    }
+
+    .icon-1 {
+      top: -60px;
+      left: 70px;
+      animation-delay: 2s;
+    }
+
+    .icon-2 {
+      right: -70px;
+      top: 40px;
+      animation-delay: 4s;
+    }
+
+    .icon-3 {
+      bottom: -60px;
+      left: 50px;
+      animation-delay: 6s;
+    }
+
+    .pulse-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid rgba(0, 212, 255, 0.5);
+      animation: pulse 2.5s infinite ease-in-out;
+    }
+
+    /* 🎖️ SEBI Badge */
+    .sebi-badge {
+      margin-top: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+
+    /* 💫 Keyframes */
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-15px);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(0.95);
+        opacity: 0.6;
+      }
+
+      100% {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+    }
+
+    @keyframes orbit {
+      0% {
+        transform: rotate(0deg) translateX(50px) rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg) translateX(50px) rotate(-360deg);
+      }
+    }
+
+    /* 📱 Responsive */
+    @media (max-width: 992px) {
+      .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-left,
+      .hero-right {
+        max-width: 100%;
+      }
+
+      .hero-stats {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -249,7 +339,8 @@
       <div class="navbar">
         <div class="logo">
           <a href="index.html">
-            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo" class="brand-logo" /></a>
+            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo"
+              class="brand-logo" /></a>
           <a href="index.html">
             <h2><span class="highlight">wealthblue</span>print</h2>
           </a>
@@ -270,7 +361,7 @@
                 <a href="retirement-plans.html">Retirement Plans</a>
                 <a href="child-plans.html">Child Plans</a>
                 <a href="term-insurance.html">Term Insurance</a>
-                <a href="calculators.html">calculators</a>
+                <a href="Calculators.html">Calculators</a>
               </div>
             </li>
             <li class="dropdown">
@@ -314,218 +405,220 @@
     </div>
   </header>
 
-<section class="retirement-hero-modern">
-  <div class="container">
-    <div class="hero-inner">
-      <!-- Left Section -->
-      <div class="hero-left">
-        <span class="hero-badge">
-          <i class="fas fa-sun"></i> Your Second Innings, Financially Free
-        </span>
+  <section class="retirement-hero-modern">
+    <div class="container">
+      <div class="hero-inner">
+        <!-- Left Section -->
+        <div class="hero-left">
+          <span class="hero-badge">
+            <i class="fas fa-sun"></i> Your Second Innings, Financially Free
+          </span>
 
-        <h1>
-          Build a <span class="highlight">Retirement Plan</span>
-          That <span class="highlight">Works for You</span>
-        </h1>
+          <h1>
+            Build a <span class="highlight">Retirement Plan</span>
+            That <span class="highlight">Works for You</span>
+          </h1>
 
-        <p>
-          Make every tomorrow count with personalized retirement plans designed
-          for steady income, tax savings, and lifelong peace of mind.
-          <strong>Invest smartly today</strong> and enjoy the freedom you’ve earned.
-        </p>
+          <p>
+            Make every tomorrow count with personalized retirement plans designed
+            for steady income, tax savings, and lifelong peace of mind.
+            <strong>Invest smartly today</strong> and enjoy the freedom you’ve earned.
+          </p>
 
-        <div class="hero-cta">
-          <a href="advisor.html" class="btn-primary">
-            <i class="fas fa-user-tie"></i> Talk to Our Advisor
-          </a>
-          <a href="#plans" class="btn-outline">
-            <i class="fas fa-clipboard-list"></i> View Plans
-          </a>
+          <div class="hero-cta">
+            <a href="advisor.html" class="btn-primary">
+              <i class="fas fa-user-tie"></i> Talk to Our Advisor
+            </a>
+            <a href="#plans" class="btn-outline">
+              <i class="fas fa-clipboard-list"></i> View Plans
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <i class="fas fa-award"></i> Trusted by 40,000+ Retirees & SEBI Certified Advisors
+          </div>
         </div>
 
-        <div class="hero-trust">
-          <i class="fas fa-award"></i> Trusted by 40,000+ Retirees & SEBI Certified Advisors
-        </div>
-      </div>
+        <!-- Right Section -->
+        <div class="hero-right">
+          <div class="hero-image-wrapper">
+            <img src="./images/retirement.jpg" alt="Happy retired couple" class="hero-image" />
 
-      <!-- Right Section -->
-      <div class="hero-right">
-        <div class="hero-image-wrapper">
-          <img src="./images/retirement.jpg" alt="Happy retired couple" class="hero-image" />
-
-          <!-- Floating Elements -->
-          <div class="floating-tag tag1">
-            <i class="fas fa-chart-line"></i>
-            <p>Steady Monthly Income</p>
-          </div>
-          <div class="floating-tag tag2">
-            <i class="fas fa-piggy-bank"></i>
-            <p>Tax-Free Savings</p>
-          </div>
-          <div class="floating-tag tag3">
-            <i class="fas fa-shield-alt"></i>
-            <p>Capital Protection</p>
+            <!-- Floating Elements -->
+            <div class="floating-tag tag1">
+              <i class="fas fa-chart-line"></i>
+              <p>Steady Monthly Income</p>
+            </div>
+            <div class="floating-tag tag2">
+              <i class="fas fa-piggy-bank"></i>
+              <p>Tax-Free Savings</p>
+            </div>
+            <div class="floating-tag tag3">
+              <i class="fas fa-shield-alt"></i>
+              <p>Capital Protection</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<style>
-  .retirement-hero-modern {
-  background: linear-gradient(115deg, #f9fbff 0%, #eef6ff 100%);
-  padding: 90px 0;
-  position: relative;
-  overflow: hidden;
-}
+  <style>
+    .retirement-hero-modern {
+      background: linear-gradient(115deg, #f9fbff 0%, #eef6ff 100%);
+      padding: 90px 0;
+      position: relative;
+      overflow: hidden;
+    }
 
-.hero-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-  flex-wrap: wrap;
-}
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
 
-.hero-left {
-  flex: 1 1 45%;
-  max-width: 520px;
-}
+    .hero-left {
+      flex: 1 1 45%;
+      max-width: 520px;
+    }
 
-.hero-badge {
-  background: #e3f2ff;
-  color: #0078ff;
-  padding: 8px 18px;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
+    .hero-badge {
+      background: #e3f2ff;
+      color: #0078ff;
+      padding: 8px 18px;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-.hero-left h1 {
-  font-size: 2.8rem;
-  line-height: 1.3;
-  margin: 25px 0;
-  color: #1a1a1a;
-}
+    .hero-left h1 {
+      font-size: 2.8rem;
+      line-height: 1.3;
+      margin: 25px 0;
+      color: #1a1a1a;
+    }
 
-.hero-left .highlight {
-  color: #0078ff;
-  background: linear-gradient(90deg, #0078ff, #00c3ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    .hero-left .highlight {
+      color: #0078ff;
+      background: linear-gradient(90deg, #0078ff, #00c3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-.hero-left p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 35px;
-}
+    .hero-left p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 35px;
+    }
 
-.hero-cta a {
-  text-decoration: none;
-  padding: 12px 26px;
-  border-radius: 30px;
-  font-weight: 600;
-  margin-right: 15px;
-  transition: all 0.3s ease;
-}
+    .hero-cta a {
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-right: 15px;
+      transition: all 0.3s ease;
+    }
 
-.btn-primary {
-  background: #0078ff;
-  color: #fff;
-  border: none;
-}
+    .btn-primary {
+      background: #0078ff;
+      color: #fff;
+      border: none;
+    }
 
-.btn-outline {
-  border: 2px solid #0078ff;
-  color: #0078ff;
-}
+    .btn-outline {
+      border: 2px solid #0078ff;
+      color: #0078ff;
+    }
 
-.btn-primary:hover {
-  background: #005fcc;
-}
+    .btn-primary:hover {
+      background: #005fcc;
+    }
 
-.btn-outline:hover {
-  background: #0078ff;
-  color: #fff;
-}
+    .btn-outline:hover {
+      background: #0078ff;
+      color: #fff;
+    }
 
-.hero-trust {
-  margin-top: 25px;
-  font-size: 0.95rem;
-  color: #777;
-}
+    .hero-trust {
+      margin-top: 25px;
+      font-size: 0.95rem;
+      color: #777;
+    }
 
-.hero-right {
-  flex: 1 1 45%;
-  position: relative;
-  text-align: center;
-}
+    .hero-right {
+      flex: 1 1 45%;
+      position: relative;
+      text-align: center;
+    }
 
-.hero-image-wrapper {
-  position: relative;
-  display: inline-block;
-}
+    .hero-image-wrapper {
+      position: relative;
+      display: inline-block;
+    }
 
-.hero-image {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 30px;
-  box-shadow: 0 15px 40px rgba(0, 120, 255, 0.15);
-}
+    .hero-image {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 30px;
+      box-shadow: 0 15px 40px rgba(0, 120, 255, 0.15);
+    }
 
-.floating-tag {
-  position: absolute;
-  background: #fff;
-  padding: 10px 18px;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  color: #0078ff;
-  font-weight: 600;
-  font-size: 0.9rem;
-  animation: float 5s ease-in-out infinite;
-}
+    .floating-tag {
+      position: absolute;
+      background: #fff;
+      padding: 10px 18px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      color: #0078ff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      animation: float 5s ease-in-out infinite;
+    }
 
-.tag1 {
-  top: 10%;
-  right: -12%;
-}
+    .tag1 {
+      top: 10%;
+      right: -12%;
+    }
 
-.tag2 {
-  bottom: 18%;
-  right: 5%;
-}
+    .tag2 {
+      bottom: 18%;
+      right: 5%;
+    }
 
-.tag3 {
-  top: 50%;
-  left: -10%;
-}
+    .tag3 {
+      top: 50%;
+      left: -10%;
+    }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
+    @keyframes float {
 
-@media (max-width: 900px) {
-  .retirement-hero-modern{
-    margin-top: 30px;
-  }
-  
-}
+      0%,
+      100% {
+        transform: translateY(0);
+      }
 
-</style>
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .retirement-hero-modern {
+        margin-top: 30px;
+      }
+
+    }
+  </style>
   <!-- Retirement Planning Benefits -->
   <section class="investment-benefits retirement-benefits">
     <div class="container">
@@ -534,13 +627,13 @@
         <h2>
           <span class="retirement-txt">Retirement</span> Planning Benefits
         </h2>
-        <div class="title-underline"></div>
+
         <p class="section-description">
           Secure your future with our comprehensive retirement planning
           solutions
         </p>
       </div>
-  
+
       <div class="benefits-grid">
         <div class="benefit-card" data-benefit="tax">
           <div class="benefit-icon">
@@ -558,7 +651,7 @@
             </button>
           </div>
         </div>
-  
+
         <div class="benefit-card" data-benefit="wealth">
           <div class="benefit-icon">
             <i class="fas fa-chart-line"></i>
@@ -573,7 +666,7 @@
             </button>
           </div>
         </div>
-  
+
         <div class="benefit-card" data-benefit="security">
           <div class="benefit-icon">
             <i class="fas fa-shield-alt"></i>
@@ -588,7 +681,7 @@
             </button>
           </div>
         </div>
-  
+
         <div class="benefit-card" data-benefit="legacy">
           <div class="benefit-icon">
             <i class="fas fa-hand-holding-heart"></i>
@@ -603,7 +696,7 @@
             </button>
           </div>
         </div>
-  
+
         <div class="benefit-card" data-benefit="health">
           <div class="benefit-icon">
             <i class="fas fa-heartbeat"></i>
@@ -618,7 +711,7 @@
             </button>
           </div>
         </div>
-  
+
         <div class="benefit-card" data-benefit="personal">
           <div class="benefit-icon">
             <i class="fas fa-user-cog"></i>
@@ -635,7 +728,7 @@
         </div>
       </div>
     </div>
-  
+
     <!-- Modal -->
     <div class="benefit-modal" id="benefitModal">
       <div class="modal-content">
@@ -646,203 +739,200 @@
     </div>
   </section>
 
-    <style>
-      .learn-more-btn {
-  background: none;
-  border: none;
-  color: #0078ff;
-  font-weight: 600;
-  cursor: pointer;
-  font-size: 1rem;
-}
+  <style>
+    .learn-more-btn {
+      background: none;
+      border: none;
+      color: #0078ff;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 1rem;
+    }
 
-.learn-more-btn:hover {
-  text-decoration: underline;
-}
+    .learn-more-btn:hover {
+      text-decoration: underline;
+    }
 
-/* Modal Styling */
-.benefit-modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+    /* Modal Styling */
+    .benefit-modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
 
-.modal-content {
-  background: #fff;
-  margin: auto;
-  padding: 30px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  position: relative;
-  animation: fadeIn 0.3s ease-in-out;
-}
+    .modal-content {
+      background: #fff;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      position: relative;
+      animation: fadeIn 0.3s ease-in-out;
+    }
 
-.close-modal {
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  font-size: 1.5rem;
-  color: #555;
-  cursor: pointer;
-}
+    .close-modal {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      font-size: 1.5rem;
+      color: #555;
+      cursor: pointer;
+    }
 
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(-10px);}
-  to {opacity: 1; transform: translateY(0);}
-}
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
 
-    </style>
-    <script>
-      const benefitDetails = {
-        tax: {
-          title: "Tax Advantages",
-          desc: "Enjoy tax-deferred growth on your investments and claim tax deductions under various sections. Our advisors help optimize your tax benefits while planning your retirement income."
-        },
-        wealth: {
-          title: "Wealth Accumulation",
-          desc: "Benefit from long-term compounding returns with smart investment options. Build a consistent corpus that ensures financial independence post-retirement."
-        },
-        security: {
-          title: "Financial Security",
-          desc: "Choose from guaranteed income options, fixed annuities, and low-risk funds that secure your future income even during uncertain market conditions."
-        },
-        legacy: {
-          title: "Legacy Planning",
-          desc: "Ensure your loved ones inherit your wealth smoothly. Our plans offer estate management, will assistance, and smooth wealth transfer services."
-        },
-        health: {
-          title: "Health Coverage",
-          desc: "Get retirement plans that include built-in medical coverage or health add-ons, protecting you from rising healthcare costs."
-        },
-        personal: {
-          title: "Personalized Planning",
-          desc: "Our retirement specialists analyze your financial goals, income, and lifestyle to build a plan that's customized just for you."
-        }
-      };
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <script>
+    const benefitDetails = {
+      tax: {
+        title: "Tax Advantages",
+        desc: "Enjoy tax-deferred growth on your investments and claim tax deductions under various sections. Our advisors help optimize your tax benefits while planning your retirement income."
+      },
+      wealth: {
+        title: "Wealth Accumulation",
+        desc: "Benefit from long-term compounding returns with smart investment options. Build a consistent corpus that ensures financial independence post-retirement."
+      },
+      security: {
+        title: "Financial Security",
+        desc: "Choose from guaranteed income options, fixed annuities, and low-risk funds that secure your future income even during uncertain market conditions."
+      },
+      legacy: {
+        title: "Legacy Planning",
+        desc: "Ensure your loved ones inherit your wealth smoothly. Our plans offer estate management, will assistance, and smooth wealth transfer services."
+      },
+      health: {
+        title: "Health Coverage",
+        desc: "Get retirement plans that include built-in medical coverage or health add-ons, protecting you from rising healthcare costs."
+      },
+      personal: {
+        title: "Personalized Planning",
+        desc: "Our retirement specialists analyze your financial goals, income, and lifestyle to build a plan that's customized just for you."
+      }
+    };
 
-      const modal = document.getElementById("benefitModal");
-      const modalTitle = document.getElementById("modalTitle");
-      const modalDesc = document.getElementById("modalDescription");
-      const closeModal = document.querySelector(".close-modal");
+    const modal = document.getElementById("benefitModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDesc = document.getElementById("modalDescription");
+    const closeModal = document.querySelector(".close-modal");
 
-      document.querySelectorAll(".learn-more-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const benefit = benefitDetails[btn.dataset.benefit];
-          modalTitle.textContent = benefit.title;
-          modalDesc.textContent = benefit.desc;
-          modal.style.display = "block";
-        });
+    document.querySelectorAll(".learn-more-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const benefit = benefitDetails[btn.dataset.benefit];
+        modalTitle.textContent = benefit.title;
+        modalDesc.textContent = benefit.desc;
+        modal.style.display = "block";
       });
+    });
 
-      closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-      });
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
 
-      window.addEventListener("click", (e) => {
-        if (e.target === modal) modal.style.display = "none";
-      });
-    </script>
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) modal.style.display = "none";
+    });
+  </script>
 
-  
+
   <!-- Retirement Calculator -->
-  <section id="calculator" class="investment-calculator retirement-calculator">
+  <section id="Calculator" class="investment-Calculator retirement-Calculator">
     <div class="container">
       <div class="section-header centered">
         <span class="section-subtitle">Plan Your Retirement</span>
         <h2>Retirement <span class="retirement-txt">Calculator</span></h2>
-        <div class="title-underline"></div>
         <p class="section-description">
           Estimate how much you need to save for your retirement goals
         </p>
       </div>
 
-      <div class="calculator-container">
-        <div class="calculator-form">
+      <div class="Calculator-container">
+        <div class="Calculator-form">
           <h3 class="form-title">Input Your Details</h3>
 
-          <div class="calculator-group">
-            <label for="current-age" class="calculator-label">Current Age</label>
-            <input type="number" id="current-age" class="calculator-input" placeholder="e.g. 35" min="18" max="70"
+          <div class="Calculator-group">
+            <label for="current-age" class="Calculator-label">Current Age</label>
+            <input type="number" id="current-age" class="Calculator-input" placeholder="e.g. 35" min="18" max="70"
               value="35" />
           </div>
 
-          <div class="calculator-group">
-            <label for="retirement-age" class="calculator-label">Retirement Age</label>
+          <div class="Calculator-group">
+            <label for="retirement-age" class="Calculator-label">Retirement Age</label>
             <div class="slider-container">
-              <input type="range" id="retirement-age" class="calculator-slider" min="45" max="75" value="60" />
-              <div id="retirement-age-value" class="slider-value">
-                60 years
-              </div>
+              <input type="range" id="retirement-age" class="Calculator-slider" min="45" max="75" value="60" />
+              <div id="retirement-age-value" class="slider-value">60 years</div>
             </div>
           </div>
 
-          <div class="calculator-group">
-            <label for="monthly-income" class="calculator-label">Current Monthly Income (₹)</label>
-            <input type="number" id="monthly-income" class="calculator-input" placeholder="e.g. 80,000" min="10000"
+          <div class="Calculator-group">
+            <label for="monthly-income" class="Calculator-label">Current Monthly Income (₹)</label>
+            <input type="number" id="monthly-income" class="Calculator-input" placeholder="e.g. 80,000" min="10000"
               value="80000" />
           </div>
 
-          <div class="calculator-group">
-            <label for="current-savings" class="calculator-label">Current Retirement Savings (₹)</label>
-            <input type="number" id="current-savings" class="calculator-input" placeholder="e.g. 10,00,000" min="0"
+          <div class="Calculator-group">
+            <label for="current-savings" class="Calculator-label">Current Retirement Savings (₹)</label>
+            <input type="number" id="current-savings" class="Calculator-input" placeholder="e.g. 10,00,000" min="0"
               value="1000000" />
           </div>
 
-          <div class="calculator-group">
-            <label for="monthly-contribution" class="calculator-label">Monthly Contribution (₹)</label>
-            <input type="number" id="monthly-contribution" class="calculator-input" placeholder="e.g. 15,000" min="1000"
+          <div class="Calculator-group">
+            <label for="monthly-contribution" class="Calculator-label">Monthly Contribution (₹)</label>
+            <input type="number" id="monthly-contribution" class="Calculator-input" placeholder="e.g. 15,000" min="1000"
               value="15000" />
           </div>
 
-          <div class="calculator-group">
-            <label for="return-rate" class="calculator-label">Expected Annual Return (%)</label>
+          <div class="Calculator-group">
+            <label for="return-rate" class="Calculator-label">Expected Annual Return (%)</label>
             <div class="slider-container">
-              <input type="range" id="return-rate" class="calculator-slider" min="5" max="15" value="8" />
+              <input type="range" id="return-rate" class="Calculator-slider" min="5" max="15" value="8" />
               <div id="return-rate-value" class="slider-value">8%</div>
             </div>
           </div>
 
           <button class="calculate-btn">
-            <i class="fas fa-calculator"></i> Calculate
+            <i class="fas fa-Calculator"></i> Calculate
           </button>
         </div>
 
-        <div class="calculator-result">
+        <div class="Calculator-result">
           <h3 class="result-title">Your Retirement Projection</h3>
-
-          <div class="result-chart">
-            <div class="chart-placeholder">
-              <i class="fas fa-chart-pie"></i>
-              <p>Interactive chart will appear here</p>
-            </div>
-          </div>
+          <canvas id="retirementChart"></canvas>
 
           <div class="result-stats">
             <div class="result-stat">
-              <div class="stat-value">₹1,83,45,625</div>
+              <div class="stat-value" id="corpus-value">₹1,83,45,625</div>
               <div class="stat-label">Retirement Corpus</div>
             </div>
 
             <div class="result-stat">
-              <div class="stat-value">₹91,728</div>
+              <div class="stat-value" id="monthly-income-value">₹91,728</div>
               <div class="stat-label">Monthly Income</div>
             </div>
 
             <div class="result-stat">
-              <div class="stat-value">25</div>
+              <div class="stat-value" id="years-left-value">25</div>
               <div class="stat-label">Years to Retirement</div>
             </div>
 
             <div class="result-stat">
-              <div class="stat-value">₹15,000</div>
+              <div class="stat-value" id="monthly-saving-value">₹15,000</div>
               <div class="stat-label">Required Monthly Saving</div>
             </div>
           </div>
@@ -856,33 +946,84 @@
           </div>
         </div>
       </div>
-
-      <div class="calculator-benefits">
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <i class="fas fa-bolt"></i>
-          </div>
-          <h4>Instant Calculation</h4>
-          <p>Get real-time estimates based on your inputs</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <i class="fas fa-lock"></i>
-          </div>
-          <h4>Private & Secure</h4>
-          <p>Your data remains confidential and is never stored</p>
-        </div>
-
-        <div class="benefit-item">
-          <div class="benefit-icon">
-            <i class="fas fa-sliders-h"></i>
-          </div>
-          <h4>Customizable</h4>
-          <p>Adjust parameters to match your exact needs</p>
-        </div>
-      </div>
     </div>
+
+    <!-- Add Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const retirementSlider = document.getElementById("retirement-age");
+      const returnSlider = document.getElementById("return-rate");
+      const retirementAgeValue = document.getElementById("retirement-age-value");
+      const returnRateValue = document.getElementById("return-rate-value");
+
+      retirementSlider.oninput = () => {
+        retirementAgeValue.textContent = retirementSlider.value + " years";
+      };
+      returnSlider.oninput = () => {
+        returnRateValue.textContent = returnSlider.value + "%";
+      };
+
+      const ctx = document.getElementById("retirementChart").getContext("2d");
+      let chart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [],
+          datasets: [
+            {
+              label: "Projected Corpus (₹)",
+              data: [],
+              borderColor: "#007bff",
+              backgroundColor: "rgba(0, 123, 255, 0.2)",
+              fill: true,
+              tension: 0.3,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: true },
+          },
+          scales: {
+            y: { beginAtZero: true },
+          },
+        },
+      });
+
+      document.querySelector(".calculate-btn").addEventListener("click", () => {
+        const currentAge = parseInt(document.getElementById("current-age").value);
+        const retirementAge = parseInt(document.getElementById("retirement-age").value);
+        const monthlyContribution = parseFloat(document.getElementById("monthly-contribution").value);
+        const currentSavings = parseFloat(document.getElementById("current-savings").value);
+        const annualReturn = parseFloat(document.getElementById("return-rate").value) / 100;
+
+        const years = retirementAge - currentAge;
+        const months = years * 12;
+        const monthlyRate = annualReturn / 12;
+
+        let corpus = currentSavings;
+        const dataPoints = [];
+        const labels = [];
+
+        for (let i = 1; i <= months; i++) {
+          corpus = corpus * (1 + monthlyRate) + monthlyContribution;
+          if (i % 12 === 0) {
+            labels.push(`Year ${i / 12}`);
+            dataPoints.push(Math.round(corpus));
+          }
+        }
+
+        chart.data.labels = labels;
+        chart.data.datasets[0].data = dataPoints;
+        chart.update();
+
+        document.getElementById("corpus-value").textContent = "₹" + corpus.toLocaleString();
+        document.getElementById("years-left-value").textContent = years;
+        document.getElementById("monthly-saving-value").textContent = "₹" + monthlyContribution.toLocaleString();
+        document.getElementById("monthly-income-value").textContent =
+          "₹" + Math.round((corpus * 0.06) / 12).toLocaleString(); // 6% withdrawal rate
+      });
+    </script>
   </section>
 
   <!-- Retirement Planning Process -->
@@ -893,7 +1034,7 @@
         <h2>
           <span class="retirement-txt">Retirement </span>Planning Process
         </h2>
-        <div class="title-underline"></div>
+
         <p>
           Our streamlined process helps you create the perfect retirement
           strategy
@@ -985,7 +1126,7 @@
       <div class="section-header centered">
         <span class="section-subtitle">Common Questions</span>
         <h2>Retirement Planning <span class="retirement-txt"> FAQs</span></h2>
-        <div class="title-underline"></div>
+
         <p>Everything you need to know about our retirement plans</p>
       </div>
 
@@ -1147,8 +1288,7 @@
       <div class="footer-content">
         <div class="footer-logo">
           <div class="footer-logo-img">
-            <img src="./images/logo.png" alt="Wealth Blue Print Logo" loading="lazy"
-              class="footer-logo-image" />
+            <img src="./images/logo.png" alt="Wealth Blue Print Logo" loading="lazy" class="footer-logo-image" />
           </div>
           <p>Your partner for financial growth and security</p>
           <div class="social-icons">
@@ -1202,7 +1342,7 @@
         <p>&copy; 2025 Wealth Blue Print Financial Advisors. All rights reserved.</p>
         <ul class="footer-legal">
           <li><a href="privacypolicy.html">Privacy Policy</a></li>
-          
+
         </ul>
       </div>
     </div>

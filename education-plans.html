@@ -121,19 +121,19 @@
         }
 
         /* 🎓 Goal Calculator */
-        .calculator-section {
+        .Calculator-section {
             padding: 90px 0;
             background: var(--gradient);
             color: var(--white);
             text-align: center;
         }
 
-        .calculator-section h2 {
+        .Calculator-section h2 {
             font-size: 2rem;
             margin-bottom: 30px;
         }
 
-        .calculator-box {
+        .Calculator-box {
             background: var(--white);
             color: var(--text-color);
             border-radius: 15px;
@@ -144,7 +144,7 @@
             animation: fadeIn 1.5s ease;
         }
 
-        .calculator-box input {
+        .Calculator-box input {
             width: 100%;
             padding: 12px;
             margin: 10px 0;
@@ -152,7 +152,7 @@
             border-radius: 8px;
         }
 
-        .calculator-box button {
+        .Calculator-box button {
             background: var(--gradient);
             color: var(--white);
             padding: 12px 25px;
@@ -163,7 +163,7 @@
             transition: var(--transition);
         }
 
-        .calculator-box button:hover {
+        .Calculator-box button:hover {
             transform: translateY(-2px);
         }
 
@@ -268,13 +268,13 @@
                         <h2><span class="highlight">wealthblue</span>print</h2>
                     </a>
                 </div>
-    
+
                 <div class="hamburger" id="hamburger">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
                 </div>
-    
+
                 <nav id="nav-menu">
                     <ul id="menu-items">
                         <li class="dropdown">
@@ -284,7 +284,7 @@
                                 <a href="retirement-plans.html">Retirement Plans</a>
                                 <a href="child-plans.html">Child Plans</a>
                                 <a href="term-insurance.html">Term Insurance</a>
-                                <a href="calculators.html">calculators</a>
+                                <a href="Calculators.html">Calculators</a>
                             </div>
                         </li>
                         <li class="dropdown">
@@ -320,7 +320,7 @@
                         </li>
                     </ul>
                 </nav>
-    
+
                 <div class="navbar-actions desktop-only">
                     <a href="investment-plans.html" class="btn-primary">Get Started</a>
                 </div>
@@ -333,7 +333,7 @@
         <div class="container">
             <h1>Plan Your Child’s Bright Future</h1>
             <p>Smart education planning ensures your child’s dreams are never limited by finances.</p>
-            <a href="#calculator" class="cta-btn">Start Planning Now</a>
+            <a href="#Calculator" class="cta-btn">Start Planning Now</a>
         </div>
     </section>
 
@@ -365,9 +365,9 @@
     </section>
 
     <!-- 🧮 Goal Calculator -->
-    <section class="calculator-section" id="calculator">
+    <section class="Calculator-section" id="Calculator">
         <h2>🎯 Estimate Your Education Goal</h2>
-        <div class="calculator-box">
+        <div class="Calculator-box">
             <input type="number" id="currentCost" placeholder="Current Cost of Education (₹)" />
             <input type="number" id="years" placeholder="Years until Education" />
             <input type="number" id="inflation" placeholder="Expected Inflation Rate (%)" />
@@ -384,13 +384,13 @@
             margin: 0;
             padding: 0;
         }
-    
+
         .benefits-section {
             text-align: center;
             padding: 80px 20px;
             background: linear-gradient(135deg, #ffffff, #f3f6ff);
         }
-    
+
         .benefits-section h2 {
             font-size: 2.5rem;
             font-weight: 700;
@@ -399,7 +399,7 @@
             position: relative;
             display: inline-block;
         }
-    
+
         .benefits-section h2::after {
             content: "";
             position: absolute;
@@ -411,7 +411,7 @@
             background: #3f51b5;
             border-radius: 2px;
         }
-    
+
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -419,7 +419,7 @@
             max-width: 1100px;
             margin: 0 auto;
         }
-    
+
         .benefit-card {
             background: #fff;
             border-radius: 16px;
@@ -430,7 +430,7 @@
             position: relative;
             overflow: hidden;
         }
-    
+
         .benefit-card::before {
             content: "";
             position: absolute;
@@ -441,114 +441,114 @@
             background: linear-gradient(120deg, rgba(63, 81, 181, 0.15), rgba(63, 81, 181, 0));
             transition: all 0.5s ease;
         }
-    
+
         .benefit-card:hover::before {
             left: 100%;
         }
-    
+
         .benefit-card:hover {
             transform: translateY(-8px) scale(1.03);
             box-shadow: 0 10px 24px rgba(63, 81, 181, 0.25);
         }
-    
+
         .benefit-card i {
             font-size: 2.5rem;
             color: #3f51b5;
             margin-bottom: 15px;
             transition: color 0.3s ease;
         }
-    
+
         .benefit-card:hover i {
             color: #1a237e;
         }
-    
+
         .benefit-card h3 {
             font-size: 1.25rem;
             margin-bottom: 10px;
             color: #222;
         }
-    
+
         .benefit-card p {
             color: #555;
             font-size: 0.95rem;
             line-height: 1.6;
         }
-    
+
         /* Subtle animation on load */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
-    
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-    
+
         .benefit-card {
             animation: fadeInUp 0.7s ease forwards;
         }
-    
+
         .benefit-card:nth-child(2) {
             animation-delay: 0.1s;
         }
-    
+
         .benefit-card:nth-child(3) {
             animation-delay: 0.2s;
         }
-    
+
         .benefit-card:nth-child(4) {
             animation-delay: 0.3s;
         }
-    
+
         .benefit-card:nth-child(5) {
             animation-delay: 0.4s;
         }
-    
+
         .benefit-card:nth-child(6) {
             animation-delay: 0.5s;
         }
     </style>
     </head>
-    
+
     <body>
-    
+
         <section class="benefits-section">
             <h2>Why Choose Wealth Blue Print</h2>
-    
+
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <i class="fas fa-lightbulb"></i>
                     <h3>Smart Planning Tools</h3>
-                    <p>Use intelligent calculators and AI-driven insights to plan accurately and effectively.</p>
+                    <p>Use intelligent Calculators and AI-driven insights to plan accurately and effectively.</p>
                 </div>
-    
+
                 <div class="benefit-card">
                     <i class="fas fa-user-shield"></i>
                     <h3>Trusted Experts</h3>
                     <p>Get professional guidance from experienced financial planners dedicated to your goals.</p>
                 </div>
-    
+
                 <div class="benefit-card">
                     <i class="fas fa-hand-holding-usd"></i>
                     <h3>Affordable Investment Options</h3>
                     <p>Choose from flexible, high-return investment plans designed for your education goals.</p>
                 </div>
-    
+
                 <div class="benefit-card">
                     <i class="fas fa-chart-line"></i>
                     <h3>Data-Driven Insights</h3>
                     <p>Make confident decisions with reports powered by real-time financial analytics.</p>
                 </div>
-    
+
                 <div class="benefit-card">
                     <i class="fas fa-clock"></i>
                     <h3>24/7 Portfolio Access</h3>
                     <p>Monitor and manage your investments anytime, anywhere through your secure dashboard.</p>
                 </div>
-    
+
                 <div class="benefit-card">
                     <i class="fas fa-heart"></i>
                     <h3>Client-Centric Approach</h3>
@@ -557,11 +557,11 @@
             </div>
         </section>
 
-    <!-- 🚀 CTA Footer -->
-    <section class="cta-footer">
-        <h2>Secure Your Child’s Future Today</h2>
-        <a href="contact.html">Talk to Our Advisor</a>
-    </section>
+        <!-- 🚀 CTA Footer -->
+        <section class="cta-footer">
+            <h2>Secure Your Child’s Future Today</h2>
+            <a href="contact.html">Talk to Our Advisor</a>
+        </section>
 
         <footer>
             <div class="container">
@@ -572,14 +572,14 @@
                         </div>
                         <p>Your partner for financial growth and security</p>
                         <div class="social-icons">
-                            <a href="https://www.facebook.com/growwellimf/" target="/" aria-label="Follow us on Facebook"><i
-                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.facebook.com/growwellimf/" target="/"
+                                aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://x.com/Growwell__?t=QZcsQv6QemM2qT4bfejZeg&s=08" target="/"
                                 aria-label="Follow us on X"><i class="fab fa-twitter"></i></a>
                             <a href="https://www.linkedin.com/company/grow-well-imf/about/" target="/"
                                 aria-label="Follow us on Linkedin"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://www.instagram.com/growwell.imf/" target="/" aria-label="Follow us on Instagram"><i
-                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/growwell.imf/" target="/"
+                                aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="footer-links">
@@ -622,26 +622,26 @@
                     <p>&copy; 2025 wealth blue print Financial Advisors. All rights reserved.</p>
                     <ul class="footer-legal">
                         <li><a href="privacypolicy.html">Privacy Policy</a></li>
-        
+
                     </ul>
                 </div>
             </div>
         </footer>
 
-    <script>
-        function calculateGoal() {
-            const cost = parseFloat(document.getElementById("currentCost").value);
-            const years = parseFloat(document.getElementById("years").value);
-            const inflation = parseFloat(document.getElementById("inflation").value) / 100;
-            if (!cost || !years || !inflation) {
-                document.getElementById("result").innerText = "Please fill all fields correctly.";
-                return;
+        <script>
+            function calculateGoal() {
+                const cost = parseFloat(document.getElementById("currentCost").value);
+                const years = parseFloat(document.getElementById("years").value);
+                const inflation = parseFloat(document.getElementById("inflation").value) / 100;
+                if (!cost || !years || !inflation) {
+                    document.getElementById("result").innerText = "Please fill all fields correctly.";
+                    return;
+                }
+                const futureCost = cost * Math.pow(1 + inflation, years);
+                document.getElementById("result").innerText =
+                    "Estimated Future Cost: ₹" + futureCost.toFixed(2);
             }
-            const futureCost = cost * Math.pow(1 + inflation, years);
-            document.getElementById("result").innerText =
-                "Estimated Future Cost: ₹" + futureCost.toFixed(2);
-        }
-    </script>
-</body>
+        </script>
+    </body>
 
 </html>

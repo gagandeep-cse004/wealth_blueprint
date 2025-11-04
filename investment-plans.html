@@ -8,7 +8,7 @@
   <meta name="description"
     content="Compare customized investment plans designed for wealth creation, tax savings, and future financial security. Start your investment journey with Wealth Blue Print." />
   <meta name="keywords"
-    content="Wealth Blue Print, investment planning, best investment plan, investment plans, tax savings, investment calculator" />
+    content="Wealth Blue Print, investment planning, best investment plan, investment plans, tax savings, investment Calculator" />
   <meta name="robots" content="investment-plans, follow" />
   <link rel="canonical" href="https://Wealth Blue Printimf.com/" />
   <meta property="og:title" content="Best Investment Plans for You | Wealth Blue Print" />
@@ -23,7 +23,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8504842908769623"
     crossorigin="anonymous"></script>
 
-  
+
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/investment-plans.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -40,7 +40,8 @@
       <div class="navbar">
         <div class="logo">
           <a href="index.html">
-            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo" class="brand-logo" /></a>
+            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo"
+              class="brand-logo" /></a>
           <a href="index.html">
             <h2><span class="highlight">wealthblue</span>print</h2>
           </a>
@@ -61,7 +62,7 @@
                 <a href="retirement-plans.html">Retirement Plans</a>
                 <a href="child-plans.html">Child Plans</a>
                 <a href="term-insurance.html">Term Insurance</a>
-                <a href="calculators.html">calculators</a>
+                <a href="Calculators.html">Calculators</a>
               </div>
             </li>
             <li class="dropdown">
@@ -112,7 +113,7 @@
       <div class="section-header centered">
         <span class="section-subtitle" style="margin-top: 30px;">Why Invest With Us</span>
         <h2>The Wealth Blue Print <span class="investment-txt" style="color: white;"> Advantage </span></h2>
-        <div class="title-underline"></div>
+
       </div>
 
       <div class="benefits-grid">
@@ -189,88 +190,81 @@
     </div>
   </section>
   <!-- Investment Calculator -->
-  <section id="calculator" class="investment-calculator">
+  <!-- Include Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <section id="Calculator" class="investment-Calculator">
     <div class="container">
       <div class="section-header centered">
         <span class="section-subtitle">Plan Your Investment</span>
         <h2>Investment <span class="calculate-txt">Calculator</span></h2>
-        <div class="title-underline"></div>
         <p>See how your investments can grow over time</p>
       </div>
 
-      <div class="calculator-container">
-        <div class="calculator-form">
-          <div class="calculator-group">
-            <label for="investment-amount" class="calculator-label">Initial Investment Amount (₹)</label>
-            <input type="number" id="investment-amount" class="calculator-input" placeholder="e.g. 100000" min="1000"
+      <div class="Calculator-container">
+        <div class="Calculator-form">
+          <div class="Calculator-group">
+            <label for="investment-amount" class="Calculator-label">Initial Investment Amount (₹)</label>
+            <input type="number" id="investment-amount" class="Calculator-input" placeholder="e.g. 100000" min="1000"
               value="100000" />
           </div>
 
-          <div class="calculator-group">
-            <label for="investment-period" class="calculator-label">Investment Period (Years)</label>
-            <input type="range" id="investment-period" class="calculator-slider" min="1" max="30" value="10" />
-            <div id="period-value" style="margin-top: 10px; text-align: right">
-              10 years
-            </div>
+          <div class="Calculator-group">
+            <label for="investment-period" class="Calculator-label">Investment Period (Years)</label>
+            <input type="range" id="investment-period" class="Calculator-slider" min="1" max="30" value="10" />
+            <div id="period-value" style="margin-top: 10px; text-align: right">10 years</div>
           </div>
 
-          <div class="calculator-group">
-            <label for="return-rate" class="calculator-label">Expected Annual Return (%)</label>
-            <input type="range" id="return-rate" class="calculator-slider" min="5" max="24" value="12" />
-            <div id="rate-value" style="margin-top: 10px; text-align: right">
-              12%
-            </div>
+          <div class="Calculator-group">
+            <label for="return-rate" class="Calculator-label">Expected Annual Return (%)</label>
+            <input type="range" id="return-rate" class="Calculator-slider" min="5" max="24" value="12" />
+            <div id="rate-value" style="margin-top: 10px; text-align: right">12%</div>
           </div>
 
-          <div class="calculator-group">
-            <label for="monthly-contribution" class="calculator-label">Monthly Contribution (₹)</label>
-            <input type="number" id="monthly-contribution" class="calculator-input" placeholder="e.g. 5000" min="0"
+          <div class="Calculator-group">
+            <label for="monthly-contribution" class="Calculator-label">Monthly Contribution (₹)</label>
+            <input type="number" id="monthly-contribution" class="Calculator-input" placeholder="e.g. 5000" min="0"
               value="5000" />
           </div>
 
-          <div class="calculator-group">
-            <label for="investment-plan" class="calculator-label">Investment Plan</label>
-            <select id="investment-plan" class="calculator-input">
+          <div class="Calculator-group">
+            <label for="investment-plan" class="Calculator-label">Investment Plan</label>
+            <select id="investment-plan" class="Calculator-input">
               <option value="secure">Wealth Blue Print Secure (8-10%)</option>
-              <option value="balanced" selected>
-                Wealth Blue Print Balanced (12-15%)
-              </option>
+              <option value="balanced" selected>Wealth Blue Print Balanced (12-15%)</option>
               <option value="accelerate">Wealth Blue Print Accelerate (18-24%)</option>
             </select>
           </div>
+
+          <!-- Added Calculate Button -->
+          <button id="calculate-btn" class="calculate-btn"
+            style="margin-top: 15px; background-color: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+            Calculate
+          </button>
         </div>
 
-        <div class="calculator-result">
+        <div class="Calculator-result">
           <h3 class="result-title">Your Investment Growth</h3>
 
           <div class="result-chart">
-            <!-- Chart visualization would be implemented with JavaScript -->
-            <div style="width: 100%; text-align: center">
-              <i class="fas fa-chart-line" style="font-size: 60px; opacity: 0.5"></i>
-              <p style="margin-top: 15px">
-                Interactive chart will appear here
-              </p>
-            </div>
+            <canvas id="investmentChart" width="400" height="250"></canvas>
           </div>
 
-          <div class="result-stats">
+          <div class="result-stats" id="result-stats">
             <div class="result-stat">
-              <div class="stat-value">₹32,25,215</div>
+              <div class="stat-value">₹0</div>
               <div class="stat-label">Future Value</div>
             </div>
-
             <div class="result-stat">
-              <div class="stat-value">₹26,45,215</div>
+              <div class="stat-value">₹0</div>
               <div class="stat-label">Total Growth</div>
             </div>
-
             <div class="result-stat">
-              <div class="stat-value">₹1,00,000</div>
+              <div class="stat-value">₹0</div>
               <div class="stat-label">Initial Investment</div>
             </div>
-
             <div class="result-stat">
-              <div class="stat-value">₹6,00,000</div>
+              <div class="stat-value">₹0</div>
               <div class="stat-label">Total Contributions</div>
             </div>
           </div>
@@ -279,90 +273,200 @@
     </div>
   </section>
 
+  <script>
+    const periodSlider = document.getElementById("investment-period");
+    const rateSlider = document.getElementById("return-rate");
+    const periodValue = document.getElementById("period-value");
+    const rateValue = document.getElementById("rate-value");
+
+    periodSlider.oninput = () => (periodValue.textContent = periodSlider.value + " years");
+    rateSlider.oninput = () => (rateValue.textContent = rateSlider.value + "%");
+
+    const ctx = document.getElementById("investmentChart").getContext("2d");
+    let chart;
+
+    document.getElementById("calculate-btn").addEventListener("click", () => {
+      const principal = parseFloat(document.getElementById("investment-amount").value);
+      const years = parseInt(document.getElementById("investment-period").value);
+      const rate = parseFloat(document.getElementById("return-rate").value) / 100;
+      const monthly = parseFloat(document.getElementById("monthly-contribution").value);
+
+      const months = years * 12;
+      let totalInvestment = principal + monthly * months;
+      let futureValue = principal * Math.pow(1 + rate, years);
+      for (let i = 1; i <= months; i++) {
+        futureValue += monthly * Math.pow(1 + rate / 12, months - i);
+      }
+
+      const totalGrowth = futureValue - totalInvestment;
+
+      const stats = document.querySelectorAll("#result-stats .stat-value");
+      stats[0].textContent = "₹" + futureValue.toFixed(0);
+      stats[1].textContent = "₹" + totalGrowth.toFixed(0);
+      stats[2].textContent = "₹" + principal.toFixed(0);
+      stats[3].textContent = "₹" + (monthly * months).toFixed(0);
+
+      const data = [];
+      for (let i = 1; i <= years; i++) {
+        let yearValue = principal * Math.pow(1 + rate, i);
+        data.push(yearValue.toFixed(0));
+      }
+
+      if (chart) chart.destroy();
+      chart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: Array.from({ length: years }, (_, i) => "Year " + (i + 1)),
+          datasets: [
+            {
+              label: "Investment Growth (₹)",
+              data,
+              borderColor: "#007bff",
+              borderWidth: 2,
+              fill: false,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+          },
+        },
+      });
+    });
+  </script>
+
+
   <!-- Investment Process -->
-  <section class="investment-process">
+  <section id="investment-process" class="investment-process">
     <div class="container">
       <div class="section-header centered">
         <span class="section-subtitle">How To Invest</span>
         <h2><span class="investment-txt">Simple </span>Investment Process</h2>
-        <div class="title-underline"></div>
         <p>We've made investing simple and hassle-free</p>
       </div>
 
       <div class="process-steps">
         <div class="process-step">
           <div class="process-step-number">1</div>
-          <div class="process-step-content">
-            <div class="process-step-icon">
-              <i class="fas fa-calendar-check"></i>
-            </div>
-            <h3 class="process-step-title">Schedule a Consultation</h3>
-            <p class="process-step-description">
-              Book a free consultation with our financial advisors to discuss
-              your financial goals, risk tolerance, and investment timeline.
-            </p>
-          </div>
+          <div class="process-step-icon"><i class="fas fa-calendar-check"></i></div>
+          <h3 class="process-step-title">Schedule a Consultation</h3>
+          <p>Book a free consultation with our financial advisors to discuss your financial goals,
+            risk tolerance, and investment timeline.</p>
         </div>
 
         <div class="process-step">
           <div class="process-step-number">2</div>
-          <div class="process-step-content">
-            <div class="process-step-icon">
-              <i class="fas fa-chart-pie"></i>
-            </div>
-            <h3 class="process-step-title">Receive Personalized Plan</h3>
-            <p class="process-step-description">
-              Our experts will analyze your financial situation and create a
-              customized investment strategy tailored to your unique needs.
-            </p>
-          </div>
+          <div class="process-step-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3 class="process-step-title">Receive Personalized Plan</h3>
+          <p>Our experts will analyze your financial situation and create a customized investment
+            strategy tailored to your unique needs.</p>
         </div>
 
         <div class="process-step">
           <div class="process-step-number">3</div>
-          <div class="process-step-content">
-            <div class="process-step-icon">
-              <i class="fas fa-file-signature"></i>
-            </div>
-            <h3 class="process-step-title">Complete Documentation</h3>
-            <p class="process-step-description">
-              Complete the necessary KYC and investment documentation. Our
-              team will guide you through the entire process.
-            </p>
-          </div>
+          <div class="process-step-icon"><i class="fas fa-file-signature"></i></div>
+          <h3 class="process-step-title">Complete Documentation</h3>
+          <p>Complete the necessary KYC and investment documentation. Our team will guide you through
+            the entire process.</p>
         </div>
 
         <div class="process-step">
           <div class="process-step-number">4</div>
-          <div class="process-step-content">
-            <div class="process-step-icon">
-              <i class="fas fa-hand-holding-usd"></i>
-            </div>
-            <h3 class="process-step-title">Make Your Investment</h3>
-            <p class="process-step-description">
-              Fund your account through our secure payment gateway. Choose
-              between lump sum investments or systematic monthly
-              contributions.
-            </p>
-          </div>
+          <div class="process-step-icon"><i class="fas fa-hand-holding-usd"></i></div>
+          <h3 class="process-step-title">Make Your Investment</h3>
+          <p>Fund your account through our secure payment gateway. Choose between lump sum investments
+            or systematic monthly contributions.</p>
         </div>
 
         <div class="process-step">
           <div class="process-step-number">5</div>
-          <div class="process-step-content">
-            <div class="process-step-icon">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <h3 class="process-step-title">Monitor & Track Progress</h3>
-            <p class="process-step-description">
-              Access your investment dashboard to track performance, view
-              detailed reports, and receive regular updates on your portfolio.
-            </p>
-          </div>
+          <div class="process-step-icon"><i class="fas fa-chart-line"></i></div>
+          <h3 class="process-step-title">Monitor & Track Progress</h3>
+          <p>Access your investment dashboard to track performance, view detailed reports, and receive
+            regular updates on your portfolio.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <style>
+    /* Target only this section */
+    #investment-process .process-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      justify-items: center;
+      justify-content: center;
+    }
+
+    /* Center last two cards */
+    #investment-process .process-step:nth-child(4),
+    #investment-process .process-step:nth-child(5) {
+      grid-column: auto;
+      justify-self: center;
+    }
+
+    /* Card styling */
+    #investment-process .process-step {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    #investment-process .process-step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    #investment-process .process-step-number {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #0066cc;
+    }
+
+    #investment-process .process-step-icon i {
+      font-size: 40px;
+      color: #0066cc;
+      margin-bottom: 15px;
+    }
+
+    #investment-process .process-step-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    #investment-process .process-step-description {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 992px) {
+      #investment-process .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      #investment-process .process-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
 
   <!-- FAQ Section -->
   <section class="investment-faq">
@@ -372,7 +476,7 @@
         <h2>
           Frequently Asked <span class="investment-txt">Questions</span>
         </h2>
-        <div class="title-underline"></div>
+
         <p>Everything you need to know about our investment plans</p>
       </div>
 
@@ -518,8 +622,7 @@
       <div class="footer-content">
         <div class="footer-logo">
           <div class="footer-logo-img">
-            <img src="./images/logo.png" alt="Wealth Blue Print Logo" loading="lazy"
-              class="footer-logo-image" />
+            <img src="./images/logo.png" alt="Wealth Blue Print Logo" loading="lazy" class="footer-logo-image" />
           </div>
           <p>Your partner for financial growth and security</p>
           <div class="social-icons">
@@ -573,7 +676,7 @@
         <p>&copy; 2025 Wealth Blue Print Financial Advisors. All rights reserved.</p>
         <ul class="footer-legal">
           <li><a href="privacypolicy.html">Privacy Policy</a></li>
-          
+
         </ul>
       </div>
     </div>

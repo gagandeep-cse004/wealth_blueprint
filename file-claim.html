@@ -33,13 +33,14 @@
 </head>
 
 <body>
-  
+
   <header>
     <div class="container">
       <div class="navbar">
         <div class="logo">
           <a href="index.html">
-            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo" class="brand-logo" /></a>
+            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo"
+              class="brand-logo" /></a>
           <a href="index.html">
             <h2><span class="highlight">wealthblue</span>print</h2>
           </a>
@@ -60,7 +61,7 @@
                 <a href="retirement-plans.html">Retirement Plans</a>
                 <a href="child-plans.html">Child Plans</a>
                 <a href="term-insurance.html">Term Insurance</a>
-                <a href="calculators.html">calculators</a>
+                <a href="Calculators.html">Calculators</a>
               </div>
             </li>
             <li class="dropdown">
@@ -132,7 +133,7 @@
             expedite your claim processing.
           </p>
         </div>
-        
+
         <div class="claim-form">
           <form id="claimForm" action="#" method="post">
             <div class="form-group">
@@ -280,8 +281,7 @@
       <div class="footer-content">
         <div class="footer-logo">
           <div class="footer-logo-img">
-            <img src="./images/logo.png" alt="Wealth Blue Print Logo" loading="lazy"
-              class="footer-logo-image" />
+            <img src="./images/logo.png" alt="Wealth Blue Print Logo" loading="lazy" class="footer-logo-image" />
           </div>
           <p>Your partner for financial growth and security</p>
           <div class="social-icons">
@@ -335,7 +335,7 @@
         <p>&copy; 2025 Wealth Blue Print Financial Advisors. All rights reserved.</p>
         <ul class="footer-legal">
           <li><a href="privacypolicy.html">Privacy Policy</a></li>
-          
+
         </ul>
       </div>
     </div>
@@ -357,51 +357,51 @@
         ]
       }
     </script>
-    <script>
-      
-      document
-        .getElementById("claimForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-  
-          
-          const policyType = document.getElementById("policyType").value;
-          const policyNumber = document.getElementById("policyNumber").value;
-          const fullName = document.getElementById("fullName").value;
-          const email = document.getElementById("email").value;
-  
-          if (!policyType || !policyNumber || !fullName || !email) {
-            alert("Please fill in all required fields");
-            return;
-          }
-  
-          // Simulate form submission
-          const submitBtn = document.querySelector(".btn-submit");
+  <script>
+
+    document
+      .getElementById("claimForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+
+        const policyType = document.getElementById("policyType").value;
+        const policyNumber = document.getElementById("policyNumber").value;
+        const fullName = document.getElementById("fullName").value;
+        const email = document.getElementById("email").value;
+
+        if (!policyType || !policyNumber || !fullName || !email) {
+          alert("Please fill in all required fields");
+          return;
+        }
+
+        // Simulate form submission
+        const submitBtn = document.querySelector(".btn-submit");
+        submitBtn.innerHTML =
+          '<i class="fas fa-spinner fa-spin"></i> Processing...';
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+          // Generate a random claim reference number
+          const claimRef =
+            "CL-" + Math.floor(100000 + Math.random() * 900000);
+
+          // Show success message
+          alert(
+            `Your claim has been submitted successfully!\n\nClaim Reference: ${claimRef}\n\nPlease save this reference number for tracking your claim status.`
+          );
+
+          // Reset form
+          document.getElementById("claimForm").reset();
           submitBtn.innerHTML =
-            '<i class="fas fa-spinner fa-spin"></i> Processing...';
-          submitBtn.disabled = true;
-  
-          setTimeout(() => {
-            // Generate a random claim reference number
-            const claimRef =
-              "CL-" + Math.floor(100000 + Math.random() * 900000);
-  
-            // Show success message
-            alert(
-              `Your claim has been submitted successfully!\n\nClaim Reference: ${claimRef}\n\nPlease save this reference number for tracking your claim status.`
-            );
-  
-            // Reset form
-            document.getElementById("claimForm").reset();
-            submitBtn.innerHTML =
-              '<i class="fas fa-paper-plane"></i> Submit Claim';
-            submitBtn.disabled = false;
-  
-            // Redirect to tracking page
-            window.location.href = "track-claim.html?ref=" + claimRef;
-          }, 2000);
-        });
-    </script>
+            '<i class="fas fa-paper-plane"></i> Submit Claim';
+          submitBtn.disabled = false;
+
+          // Redirect to tracking page
+          window.location.href = "track-claim.html?ref=" + claimRef;
+        }, 2000);
+      });
+  </script>
 </body>
 
 </html>

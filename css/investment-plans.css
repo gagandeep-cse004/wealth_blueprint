@@ -7,8 +7,9 @@
     position: relative;
     overflow: hidden;
     color: var(--dark-color);
-    
+
 }
+
 /* Navbar Layout Improvements */
 .navbar {
     justify-content: space-between;
@@ -28,9 +29,11 @@
     opacity: 0.05;
     z-index: 1;
 }
-.investment-txt{
+
+.investment-txt {
     color: var(--accent-color);
 }
+
 .calculate-txt {
     color: var(--accent-color);
 }
@@ -198,7 +201,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    display: none; /* Hide all floating elements */
+    display: none;
+    /* Hide all floating elements */
 }
 
 .floating-card {
@@ -213,8 +217,10 @@
     align-items: center;
     gap: 10px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    animation: none; /* Disable animation */
-    display: none; /* Hide floating cards */
+    animation: none;
+    /* Disable animation */
+    display: none;
+    /* Hide floating cards */
 }
 
 .floating-card i {
@@ -249,8 +255,10 @@
     position: absolute;
     border-radius: 50%;
     opacity: 0.2;
-    animation: none; /* Disable animation */
-    display: none; /* Hide floating shapes */
+    animation: none;
+    /* Disable animation */
+    display: none;
+    /* Hide floating shapes */
 }
 
 .shape-1 {
@@ -281,9 +289,12 @@
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-15px);
     }
@@ -388,26 +399,26 @@
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .investment-hero-content {
         max-width: 100%;
         text-align: center;
     }
-    
+
     .investment-hero-stats {
         justify-content: center;
     }
-    
+
     .investment-hero-cta {
         justify-content: center;
     }
-    
+
     .investment-hero-visual {
         height: 400px;
         margin: 0 auto;
         max-width: 500px;
     }
-    
+
     .hero-chart {
         width: 250px;
         height: 250px;
@@ -418,16 +429,16 @@
     .investment-hero {
         padding: 100px 0 80px;
     }
-    
+
     .investment-hero h1 {
         font-size: 2.6rem;
     }
-    
+
     .investment-hero p {
         font-size: 1.05rem;
         padding: 0 20px;
     }
-    
+
     .investment-hero-cta {
         flex-direction: column;
         width: 100%;
@@ -435,51 +446,51 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .btn-hero {
         width: 100%;
     }
-    
+
     .investment-hero-stats {
         flex-direction: column;
         gap: 15px;
         align-items: center;
     }
-    
+
     .hero-stat {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         padding-bottom: 15px;
         width: 100%;
         text-align: center;
     }
-    
+
     .hero-stat::after {
         display: none;
     }
-    
+
     .hero-stat:last-child {
         border-bottom: none;
     }
-    
+
     .investment-hero-visual {
         height: 350px;
     }
-    
+
     .floating-card {
         padding: 10px 15px;
         font-size: 0.8rem;
     }
-    
+
     .hero-chart {
         width: 220px;
         height: 220px;
         padding: 20px;
     }
-    
+
     .partner-logos {
         gap: 20px;
     }
-    
+
     .partner-logo {
         font-size: 0.9rem;
     }
@@ -500,7 +511,7 @@
 }
 
 .benefit-card {
-    background: #f4acb7;
+    background: #f4f2f2;
     border-radius: 15px;
     padding: 40px 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
@@ -510,7 +521,7 @@
     align-items: center;
     text-align: center;
     border: 2px solid transparent;
-    color: rgb(24, 13, 13);
+    color: rgb(255, 255, 255);
 }
 
 
@@ -523,6 +534,7 @@
     /* 🖤 Set all text inside to black */
     transition: all 0.4s ease;
 }
+
 /* Removing different border colors for individual cards */
 .benefit-card:nth-child(1):hover,
 .benefit-card:nth-child(2):hover,
@@ -530,7 +542,8 @@
 .benefit-card:nth-child(4):hover,
 .benefit-card:nth-child(5):hover,
 .benefit-card:nth-child(6):hover {
-    border-color: #ffbb33; /* Yellow for all cards */
+    border-color: #ffbb33;
+    /* Yellow for all cards */
 }
 
 .benefit-icon {
@@ -586,7 +599,8 @@
     transition: all 0.3s ease;
 }
 
-.plan-tab.active, .plan-tab:hover {
+.plan-tab.active,
+.plan-tab:hover {
     /* background-color: #4864e0; */
     background: var(--accent-color);
     color: #fff;
@@ -622,6 +636,7 @@
     /* border-color: #4864e0; */
     border-color: var(--accent-color);
 }
+
 .plan-card.popular {
     border-color: var(--accent-color);
 }
@@ -737,7 +752,7 @@
 }
 
 /* Investment Calculator Section - Responsive Update */
-.investment-calculator {
+.investment-Calculator {
     padding: 100px 0;
     background: #7bf1f1;
     position: relative;
@@ -749,29 +764,31 @@
 }
 
 
-.calculator-container {
+.Calculator-container {
     display: flex;
     background: rgb(15, 4, 4);
     border-radius: 20px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     margin-top: 50px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
 }
 
-.calculator-form {
+.Calculator-form {
     flex: 1;
     padding: 40px;
     background: #f8f9fb;
     border-right: 1px solid #f0f3f8;
-    min-width: 300px; /* Ensure minimum width */
+    min-width: 300px;
+    /* Ensure minimum width */
 }
 
-.calculator-group {
+.Calculator-group {
     margin-bottom: 25px;
 }
 
-.calculator-label {
+.Calculator-label {
     display: block;
     font-weight: 600;
     margin-bottom: 10px;
@@ -779,7 +796,7 @@
     font-size: 1rem;
 }
 
-.calculator-input {
+.Calculator-input {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #e1e8f5;
@@ -788,13 +805,13 @@
     transition: all 0.3s ease;
 }
 
-.calculator-input:focus {
+.Calculator-input:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(30, 86, 160, 0.1);
     outline: none;
 }
 
-.calculator-slider {
+.Calculator-slider {
     -webkit-appearance: none;
     width: 100%;
     height: 8px;
@@ -804,7 +821,7 @@
     margin: 15px 0;
 }
 
-.calculator-slider::-webkit-slider-thumb {
+.Calculator-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 20px;
@@ -814,12 +831,13 @@
     cursor: pointer;
 }
 
-.calculator-result {
+.Calculator-result {
     flex: 1;
     padding: 40px;
     background: linear-gradient(135deg, #0c2340 0%, #1a3a6c 100%);
     color: #fff;
-    min-width: 300px; /* Ensure minimum width */
+    min-width: 300px;
+    /* Ensure minimum width */
 }
 
 .result-title {
@@ -866,27 +884,28 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* Media queries for calculator responsiveness */
+/* Media queries for Calculator responsiveness */
 @media screen and (max-width: 1200px) {
-    .calculator-container {
+    .Calculator-container {
         margin: 40px auto;
         max-width: 95%;
     }
 }
 
 @media screen and (max-width: 992px) {
-    .calculator-container {
+    .Calculator-container {
         flex-direction: column;
         max-width: 100%;
         margin: 30px auto;
     }
-    
-    .calculator-form, .calculator-result {
+
+    .Calculator-form,
+    .Calculator-result {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
+
     .result-stats {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -895,68 +914,71 @@
 }
 
 @media screen and (max-width: 768px) {
-    .investment-calculator {
+    .investment-Calculator {
         padding: 60px 0;
     }
-    
-    .calculator-form, .calculator-result {
+
+    .Calculator-form,
+    .Calculator-result {
         padding: 25px;
     }
-    
-    .calculator-label {
+
+    .Calculator-label {
         font-size: 0.9rem;
     }
-    
-    .calculator-input {
+
+    .Calculator-input {
         padding: 10px;
         font-size: 0.9rem;
     }
-    
+
     .result-title {
         font-size: 1.2rem;
         margin-bottom: 15px;
     }
-    
+
     .result-stats {
         gap: 15px;
     }
-    
+
     .stat-value {
         font-size: 1.2rem;
     }
-    
+
     .stat-label {
         font-size: 0.8rem;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .investment-calculator {
+    .investment-Calculator {
         padding: 40px 0;
     }
-    
-    .calculator-form, .calculator-result {
+
+    .Calculator-form,
+    .Calculator-result {
         padding: 20px;
     }
-    
-    .calculator-group {
+
+    .Calculator-group {
         margin-bottom: 15px;
     }
-    
+
     .result-stats {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
+
     .result-stat {
         padding: 12px;
     }
-    
-    .calculator-slider {
+
+    .Calculator-slider {
         margin: 10px 0;
     }
-    
-    #period-value, #rate-value {
+
+    #period-value,
+    #rate-value {
         font-size: 0.85rem;
     }
 }
@@ -1115,23 +1137,28 @@
 
 /* Process step specific icons */
 .process-step:nth-child(1) .process-step-icon i {
-    color: #4864e0; /* Blue */
+    color: #4864e0;
+    /* Blue */
 }
 
 .process-step:nth-child(2) .process-step-icon i {
-    color: #2cb67d; /* Green */
+    color: #2cb67d;
+    /* Green */
 }
 
 .process-step:nth-child(3) .process-step-icon i {
-    color: #ff7849; /* Orange */
+    color: #ff7849;
+    /* Orange */
 }
 
 .process-step:nth-child(4) .process-step-icon i {
-    color: #7e57c2; /* Purple */
+    color: #7e57c2;
+    /* Purple */
 }
 
 .process-step:nth-child(5) .process-step-icon i {
-    color: #ff5e7d; /* Pink */
+    color: #ff5e7d;
+    /* Pink */
 }
 
 .process-step:hover .process-step-icon i {
@@ -1186,31 +1213,31 @@
     }
 }
 
-@media screen and (max-width: 768px) {    
+@media screen and (max-width: 768px) {
     .process-steps {
         grid-template-columns: 1fr;
         margin-top: 60px;
     }
-    
+
     .process-step {
         max-width: 450px;
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .process-step-title {
         font-size: 1.5rem;
     }
-    
+
     .process-step-description {
         font-size: 1rem;
     }
-    
+
     .process-step-icon {
         width: 80px;
         height: 80px;
     }
-    
+
     .process-step-icon i {
         font-size: 2.4rem;
     }
@@ -1278,11 +1305,13 @@
 
 /* Media Queries */
 @media screen and (max-width: 992px) {
-    .benefits-grid, .plans-grid {
+
+    .benefits-grid,
+    .plans-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    .calculator-container {
+
+    .Calculator-container {
         grid-template-columns: 1fr;
         gap: 40px;
     }
@@ -1292,28 +1321,29 @@
     .investment-hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     .investment-hero-content p {
         font-size: 1.1rem;
     }
-    
-    .benefits-grid, .plans-grid {
+
+    .benefits-grid,
+    .plans-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .plans-tabs {
         flex-wrap: wrap;
     }
-    
+
     .process-step {
         flex-direction: column;
     }
-    
+
     .process-step-content {
         margin-left: 0;
         margin-top: 20px;
     }
-    
+
     .process-steps::before {
         display: none;
     }
@@ -1323,4 +1353,4 @@
     .investment-hero-cta {
         flex-direction: column;
     }
-} 
+}

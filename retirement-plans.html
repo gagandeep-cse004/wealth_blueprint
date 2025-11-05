@@ -844,381 +844,361 @@
 
 
   <!-- Retirement Calculator -->
-  <section id="Calculator" class="investment-Calculator retirement-Calculator">
-    <div class="container">
-      <div class="section-header centered">
-        <span class="section-subtitle">Plan Your Retirement</span>
-        <h2>Retirement <span class="retirement-txt">Calculator</span></h2>
-        <p class="section-description">
-          Estimate how much you need to save for your retirement goals
-        </p>
-      </div>
 
-      <div class="Calculator-container">
-        <div class="Calculator-form">
-          <h3 class="form-title">Input Your Details</h3>
+  <div class="container">
+    <div class="section-header centered">
+      <span class="section-subtitle">Plan Your Retirement</span>
+      <h2>Retirement <span class="retirement-txt">Calculator</span></h2>
+      <p class="section-description">
+        Estimate how much you need to save for your retirement goals
+      </p>
+    </div>
 
-          <div class="Calculator-group">
-            <label for="current-age" class="Calculator-label">Current Age</label>
-            <input type="number" id="current-age" class="Calculator-input" placeholder="e.g. 35" min="18" max="70"
-              value="35" />
-          </div>
+    <div class="Calculator-container" style="background-color: rgb(68, 53, 53);">
+      <!-- ====== INPUT FORM ====== -->
+      <div class="Calculator-form">
+        <h3 class="result-title">Enter your details</h3>
 
-          <div class="Calculator-group">
-            <label for="retirement-age" class="Calculator-label">Retirement Age</label>
-            <div class="slider-container">
-              <input type="range" id="retirement-age" class="Calculator-slider" min="45" max="75" value="60" />
-              <div id="retirement-age-value" class="slider-value">60 years</div>
-            </div>
-          </div>
-
-          <div class="Calculator-group">
-            <label for="monthly-income" class="Calculator-label">Current Monthly Income (₹)</label>
-            <input type="number" id="monthly-income" class="Calculator-input" placeholder="e.g. 80,000" min="10000"
-              value="80000" />
-          </div>
-
-          <div class="Calculator-group">
-            <label for="current-savings" class="Calculator-label">Current Retirement Savings (₹)</label>
-            <input type="number" id="current-savings" class="Calculator-input" placeholder="e.g. 10,00,000" min="0"
-              value="1000000" />
-          </div>
-
-          <div class="Calculator-group">
-            <label for="monthly-contribution" class="Calculator-label">Monthly Contribution (₹)</label>
-            <input type="number" id="monthly-contribution" class="Calculator-input" placeholder="e.g. 15,000" min="1000"
-              value="15000" />
-          </div>
-
-          <div class="Calculator-group">
-            <label for="return-rate" class="Calculator-label">Expected Annual Return (%)</label>
-            <div class="slider-container">
-              <input type="range" id="return-rate" class="Calculator-slider" min="5" max="15" value="8" />
-              <div id="return-rate-value" class="slider-value">8%</div>
-            </div>
-          </div>
-
-          <button class="calculate-btn">
-            <i class="fas fa-Calculator"></i> Calculate
-          </button>
+        <div class="Calculator-group">
+          <label for="current-age" class="Calculator-label">Current Age</label>
+          <input type="number" id="current-age" class="Calculator-input" placeholder="e.g. 35" min="18" max="70"
+            value="35" />
         </div>
 
-        <div class="Calculator-result">
-          <h3 class="result-title">Your Retirement Projection</h3>
-          <canvas id="retirementChart"></canvas>
+        <div class="Calculator-group">
+          <label for="retirement-age" class="Calculator-label">Retirement Age</label>
+          <div class="slider-container">
+            <input type="range" id="retirement-age" class="Calculator-slider" min="45" max="75" value="60" />
+            <div id="retirement-age-value" class="slider-value">60 years</div>
+          </div>
+        </div>
 
-          <div class="result-stats">
-            <div class="result-stat">
-              <div class="stat-value" id="corpus-value">₹1,83,45,625</div>
-              <div class="stat-label">Retirement Corpus</div>
-            </div>
+        <div class="Calculator-group">
+          <label for="monthly-income" class="Calculator-label">Current Monthly Income (₹)</label>
+          <input type="number" id="monthly-income" class="Calculator-input" placeholder="e.g. 80,000" min="10000"
+            value="80000" />
+        </div>
 
-            <div class="result-stat">
-              <div class="stat-value" id="monthly-income-value">₹91,728</div>
-              <div class="stat-label">Monthly Income</div>
-            </div>
+        <div class="Calculator-group">
+          <label for="current-savings" class="Calculator-label">Current Retirement Savings (₹)</label>
+          <input type="number" id="current-savings" class="Calculator-input" placeholder="e.g. 10,00,000" min="0"
+            value="1000000" />
+        </div>
 
-            <div class="result-stat">
-              <div class="stat-value" id="years-left-value">25</div>
-              <div class="stat-label">Years to Retirement</div>
-            </div>
+        <div class="Calculator-group">
+          <label for="monthly-contribution" class="Calculator-label">Monthly Contribution (₹)</label>
+          <input type="number" id="monthly-contribution" class="Calculator-input" placeholder="e.g. 15,000" min="1000"
+            value="15000" />
+        </div>
 
-            <div class="result-stat">
-              <div class="stat-value" id="monthly-saving-value">₹15,000</div>
-              <div class="stat-label">Required Monthly Saving</div>
-            </div>
+        <div class="Calculator-group">
+          <label for="return-rate" class="Calculator-label">Expected Annual Return (%)</label>
+          <div class="slider-container">
+            <input type="range" id="return-rate" class="Calculator-slider" min="5" max="15" value="8" />
+            <div id="return-rate-value" class="slider-value">8%</div>
+          </div>
+        </div>
+
+        <button class="calculate-btn">
+          <i class="fas fa-calculator"></i> Calculate
+        </button>
+      </div>
+
+      <!-- ====== RESULT SECTION ====== -->
+      <div class="Calculator-result" style="background-color: rgb(68, 53, 53);">
+        <h3 class="result-title">Your Retirement Projection</h3>
+        <canvas id="retirementChart"></canvas>
+
+        <div class="result-stats">
+          <div class="result-stat">
+            <div class="stat-value" id="corpus-value">₹1,83,45,625</div>
+            <div class="stat-label">Retirement Corpus</div>
           </div>
 
-          <div class="result-note">
-            <p>
-              <i class="fas fa-info-circle"></i> These projections are
-              estimates based on your inputs and market assumptions. Actual
-              results may vary.
-            </p>
+          <div class="result-stat">
+            <div class="stat-value" id="monthly-income-value">₹91,728</div>
+            <div class="stat-label">Monthly Income</div>
           </div>
+
+          <div class="result-stat">
+            <div class="stat-value" id="years-left-value">25</div>
+            <div class="stat-label">Years to Retirement</div>
+          </div>
+
+          <div class="result-stat">
+            <div class="stat-value" id="monthly-saving-value">₹15,000</div>
+            <div class="stat-label">Required Monthly Saving</div>
+          </div>
+        </div>
+
+        <div class="result-note">
+          <p>
+            <i class="fas fa-info-circle"></i> These projections are estimates based on your inputs and market
+            assumptions. Actual results may vary.
+          </p>
         </div>
       </div>
     </div>
+  </div>
 
-    <style>
-      /* Slider container fix */
-.slider-container {
-  position: relative;
-  margin-top: 8px;
-  margin-bottom: 25px;
-}
+  <style>
+    /* ====== SLIDER BASE ====== */
+    .slider-container {
+      position: relative;
+      margin-top: 8px;
+      margin-bottom: 25px;
+    }
 
-/* Style the slider */
-.Calculator-slider {
-  width: 100%;
-  appearance: none;
-  height: 6px;
-  border-radius: 5px;
-  background: #f3f3f3;
-  outline: none;
-  transition: background 0.3s;
-}
-.Calculator-slider::-webkit-slider-thumb {
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  background: #ebebeb;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-.Calculator-slider::-webkit-slider-thumb:hover {
-  transform: scale(1.15);
-}
+    .Calculator-slider {
+      width: 100%;
+      appearance: none;
+      height: 6px;
+      border-radius: 5px;
+      background: #f3f3f3;
+      outline: none;
+      transition: background 0.3s;
+    }
 
-/* Slider value display (the “10%” or “60 years”) */
-.slider-value {
-  position: absolute;
-  top: -25px; /* Move it above the slider */
-  right: 0;
-  background: rgba(0, 0, 0, 0.4);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 500;
-  padding: 2px 8px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-/* Center the calculator form on small screens */
-@media (max-width: 768px) {
-  .Calculator-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+    .Calculator-slider::-webkit-slider-thumb {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      background: #ebebeb;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
 
-  .Calculator-form {
-    width: 90%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
+    .Calculator-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
 
-  .Calculator-result {
-    width: 90%;
-    margin-top: 25px;
-  }
-}
-      /* ✅ Mobile optimization for Retirement Projection section */
-@media (max-width: 480px) {
-  .Calculator-result {
-    padding: 18px 12px !important;
-    margin: 0 auto !important;
-    width: 95% !important;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
+    .slider-value {
+      position: absolute;
+      top: -25px;
+      right: 0;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
 
-  .Calculator-result h3,
-  .Calculator-result h4,
-  .Calculator-result p {
-    text-align: center;
-  }
+    /* ====== BASE LAYOUT ====== */
+    .Calculator-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
-  .Calculator-result canvas {
-    display: block;
-    margin: 0 auto;
-    width: 100% !important;
-    height: auto !important;
-  }
+    .Calculator-form,
+    .Calculator-result {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 25px 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
 
-  .result-stats {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-  }
+    .form-title {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
 
-  .result-stat {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    padding: 12px 10px;
-  }
+    /* ====== TABLET (<= 992px) ====== */
+    @media (max-width: 992px) {
+      .Calculator-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px;
+      }
 
-  /* Make sure the main center card is fully centered */
-  .retirement-section,
-  .projection-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
-/* 📱 Center "Input Your Details" Form on All Screens */
-@media (max-width: 768px) {
-  .Calculator-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
+      .Calculator-form,
+      .Calculator-result {
+        width: 90%;
+        max-width: 450px;
+        margin: 0 auto;
+      }
+    }
 
-  .Calculator-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    /* ====== MOBILE (<= 600px) ====== */
+    @media (max-width: 600px) {
+      .Calculator-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        padding: 10px 0;
+      }
 
-    width: 90%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+      .Calculator-form {
+        width: 92%;
+        max-width: 380px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 20px 15px;
+      }
 
-  .Calculator-form h3 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-  }
+      .Calculator-form h3 {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
 
-  .Calculator-group {
-    width: 100%;
-    margin-bottom: 18px;
-  }
+      .Calculator-group {
+        width: 100%;
+        text-align: left;
+      }
 
-  .Calculator-input {
-    width: 100%;
-    text-align: center;
-  }
-}
+      .Calculator-input {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.95rem;
+      }
 
-/* Extra refinement for smaller phones */
-@media (max-width: 480px) {
-  .Calculator-form {
-    width: 92%;
-    max-width: 360px;
-    margin: 0 auto;
-    padding: 18px 12px;
-  }
+      .calculate-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+        margin-top: 15px;
+      }
 
-  .Calculator-form h3 {
-    font-size: 1.1rem;
-  }
+      .Calculator-result {
+        width: 92%;
+        max-width: 400px;
+        margin: 20px auto 0 auto;
+        text-align: center;
+        padding: 18px 12px;
+      }
 
-  .Calculator-input {
-    font-size: 0.95rem;
-    padding: 10px;
-  }
+      .Calculator-result canvas {
+        display: block;
+        margin: 0 auto;
+        width: 100% !important;
+        height: auto !important;
+      }
 
-  .calculate-btn {
-    width: 100%;
-    font-size: 1rem;
-    padding: 12px;
-    margin-top: 10px;
-  }
-}
+      .result-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+      }
 
-    </style>
+      .result-stat {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 12px 10px;
+      }
+    }
+  </style>
 
-    <!-- Add Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      const retirementSlider = document.getElementById("retirement-age");
-      const returnSlider = document.getElementById("return-rate");
-      const retirementAgeValue = document.getElementById("retirement-age-value");
-      const returnRateValue = document.getElementById("return-rate-value");
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const retirementSlider = document.getElementById("retirement-age");
+    const returnSlider = document.getElementById("return-rate");
+    const retirementAgeValue = document.getElementById("retirement-age-value");
+    const returnRateValue = document.getElementById("return-rate-value");
 
-      retirementSlider.oninput = () => {
-        retirementAgeValue.textContent = retirementSlider.value + " years";
-      };
-      returnSlider.oninput = () => {
-        returnRateValue.textContent = returnSlider.value + "%";
-      };
+    retirementSlider.oninput = () => {
+      retirementAgeValue.textContent = retirementSlider.value + " years";
+    };
+    returnSlider.oninput = () => {
+      returnRateValue.textContent = returnSlider.value + "%";
+    };
 
-      const ctx = document.getElementById("retirementChart").getContext("2d");
-      let chart = new Chart(ctx, {
-        type: "line",
-        data: {
-          labels: [],
-          datasets: [
-            {
-              label: "Projected Corpus (₹)",
-              data: [],
-              borderColor: "#00d4ff",
-              backgroundColor: "rgba(0, 212, 255, 0.2)",
-              fill: true,
-              tension: 0.3,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              display: true,
-              labels: {
-                color: "#fff",
-                font: { size: 12, family: "Poppins" },
-                usePointStyle: true,   // ✅ makes the marker round
-                pointStyle: "circle",  // ✅ ensures it's a circle
-                padding: 20,           // nice spacing between icon & text
-              },
-            },
-
-            tooltip: {
-              titleColor: "#fff", // ✅ tooltip title text white
-              bodyColor: "#fff", // ✅ tooltip content text white
-              backgroundColor: "rgba(30, 30, 30, 0.8)", // subtle dark bg
+    const ctx = document.getElementById("retirementChart").getContext("2d");
+    let chart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: [],
+        datasets: [
+          {
+            label: "Projected Corpus (₹)",
+            data: [],
+            borderColor: "#00d4ff",
+            backgroundColor: "rgba(0, 212, 255, 0.2)",
+            fill: true,
+            tension: 0.3,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            labels: {
+              color: "#fff",
+              font: { size: 12, family: "Poppins" },
+              usePointStyle: true,
+              pointStyle: "circle",
+              padding: 20,
             },
           },
-          scales: {
-            x: {
-              ticks: { color: "#fff" }, // ✅ x-axis labels white
-              grid: { color: "rgba(255, 255, 255, 0.1)" },
-            },
-            y: {
-              ticks: { color: "#fff" }, // ✅ y-axis labels white
-              grid: { color: "rgba(255, 255, 255, 0.1)" },
-            },
+          tooltip: {
+            titleColor: "#fff",
+            bodyColor: "#fff",
+            backgroundColor: "rgba(30, 30, 30, 0.8)",
           },
         },
-      });
+        scales: {
+          x: {
+            ticks: { color: "#fff" },
+            grid: { color: "rgba(255,255,255,0.1)" },
+          },
+          y: {
+            ticks: { color: "#fff" },
+            grid: { color: "rgba(255,255,255,0.1)" },
+          },
+        },
+      },
+    });
 
-      document.querySelector(".calculate-btn").addEventListener("click", () => {
-        const currentAge = parseInt(document.getElementById("current-age").value);
-        const retirementAge = parseInt(document.getElementById("retirement-age").value);
-        const monthlyContribution = parseFloat(document.getElementById("monthly-contribution").value);
-        const currentSavings = parseFloat(document.getElementById("current-savings").value);
-        const annualReturn = parseFloat(document.getElementById("return-rate").value) / 100;
+    document.querySelector(".calculate-btn").addEventListener("click", () => {
+      const currentAge = parseInt(document.getElementById("current-age").value);
+      const retirementAge = parseInt(document.getElementById("retirement-age").value);
+      const monthlyContribution = parseFloat(document.getElementById("monthly-contribution").value);
+      const currentSavings = parseFloat(document.getElementById("current-savings").value);
+      const annualReturn = parseFloat(document.getElementById("return-rate").value) / 100;
 
-        const years = retirementAge - currentAge;
-        const months = years * 12;
-        const monthlyRate = annualReturn / 12;
+      const years = retirementAge - currentAge;
+      const months = years * 12;
+      const monthlyRate = annualReturn / 12;
 
-        let corpus = currentSavings;
-        const dataPoints = [];
-        const labels = [];
+      let corpus = currentSavings;
+      const dataPoints = [];
+      const labels = [];
 
-        for (let i = 1; i <= months; i++) {
-          corpus = corpus * (1 + monthlyRate) + monthlyContribution;
-          if (i % 12 === 0) {
-            labels.push(`Year ${i / 12}`);
-            dataPoints.push(Math.round(corpus));
-          }
+      for (let i = 1; i <= months; i++) {
+        corpus = corpus * (1 + monthlyRate) + monthlyContribution;
+        if (i % 12 === 0) {
+          labels.push(`Year ${i / 12}`);
+          dataPoints.push(Math.round(corpus));
         }
+      }
 
-        chart.data.labels = labels;
-        chart.data.datasets[0].data = dataPoints;
-        chart.update();
+      chart.data.labels = labels;
+      chart.data.datasets[0].data = dataPoints;
+      chart.update();
 
-        document.getElementById("corpus-value").textContent = "₹" + corpus.toLocaleString();
-        document.getElementById("years-left-value").textContent = years;
-        document.getElementById("monthly-saving-value").textContent = "₹" + monthlyContribution.toLocaleString();
-        document.getElementById("monthly-income-value").textContent =
-          "₹" + Math.round((corpus * 0.06) / 12).toLocaleString();
-      });
-    </script>
-
-  </section>
+      document.getElementById("corpus-value").textContent = "₹" + corpus.toLocaleString();
+      document.getElementById("years-left-value").textContent = years;
+      document.getElementById("monthly-saving-value").textContent = "₹" + monthlyContribution.toLocaleString();
+      document.getElementById("monthly-income-value").textContent =
+        "₹" + Math.round((corpus * 0.06) / 12).toLocaleString();
+    });
+  </script>
+</section>
 
   <!-- Retirement Planning Process -->
   <section class="investment-process">

@@ -61,7 +61,7 @@
                 <a href="retirement-plans.html">Retirement Plans</a>
                 <a href="child-plans.html">Child Plans</a>
                 <a href="term-insurance.html">Term Insurance</a>
-                <a href="Calculators.html">Calculators</a>
+                <a href="calculators.html">Calculators</a>
               </div>
             </li>
             <li class="dropdown">
@@ -778,6 +778,63 @@
         width: 100%;
       }
     }
+    /* ===== Custom Beautiful Range Slider ===== */
+
+.range-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 5px;
+  outline: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Track */
+.range-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 5px;
+}
+
+.range-slider::-moz-range-track {
+  height: 6px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 5px;
+}
+
+/* Thumb */
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  background: #ffffff;
+  border: 3px solid #3b82f6;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -8px;
+  transition: 0.2s ease;
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.range-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 3px solid #3b82f6;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.range-slider::-moz-range-thumb:hover {
+  transform: scale(1.15);
+}
+
   </style>
 </section>
 

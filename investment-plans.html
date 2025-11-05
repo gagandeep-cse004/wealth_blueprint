@@ -62,7 +62,7 @@
                 <a href="retirement-plans.html">Retirement Plans</a>
                 <a href="child-plans.html">Child Plans</a>
                 <a href="term-insurance.html">Term Insurance</a>
-                <a href="Calculators.html">Calculators</a>
+                <a href="calculators.html">Calculators</a>
               </div>
             </li>
             <li class="dropdown">
@@ -196,7 +196,7 @@
   <section id="Calculator" class="investment-Calculator">
     <div class="container">
       <div class="section-header centered">
-        <span class="section-subtitle">Plan Your Investment</span>
+        <span class="section-subtitle" style="margin-top: 0px;">Plan Your Investment</span>
         <h2>Investment <span class="calculate-txt">Calculator</span></h2>
         <p>See how your investments can grow over time</p>
       </div>
@@ -364,10 +364,16 @@
           responsive: true,
           plugins: {
             legend: {
+              display: true,
               labels: {
                 color: "#fff",
+                font: { size: 10, family: "Poppins" },
+                usePointStyle: true,   // ✅ makes the marker round
+                pointStyle: "circle",  // ✅ ensures it's a circle
+                padding: 10,           // nice spacing between icon & text
               },
             },
+
           },
           scales: {
             x: {

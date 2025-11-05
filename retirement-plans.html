@@ -361,7 +361,7 @@
                 <a href="retirement-plans.html">Retirement Plans</a>
                 <a href="child-plans.html">Child Plans</a>
                 <a href="term-insurance.html">Term Insurance</a>
-                <a href="Calculators.html">Calculators</a>
+                <a href="calculators.html">Calculators</a>
               </div>
             </li>
             <li class="dropdown">
@@ -984,7 +984,27 @@
   border-radius: 6px;
   transition: all 0.3s ease;
 }
+/* Center the calculator form on small screens */
+@media (max-width: 768px) {
+  .Calculator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
+  .Calculator-form {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .Calculator-result {
+    width: 90%;
+    margin-top: 25px;
+  }
+}
+      
     </style>
 
     <!-- Add Chart.js -->
@@ -1024,10 +1044,14 @@
             legend: {
               display: true,
               labels: {
-                color: "#fff", // ✅ white legend text
-                font: { size: 14, family: "Poppins" },
+                color: "#fff",
+                font: { size: 12, family: "Poppins" },
+                usePointStyle: true,   // ✅ makes the marker round
+                pointStyle: "circle",  // ✅ ensures it's a circle
+                padding: 20,           // nice spacing between icon & text
               },
             },
+
             tooltip: {
               titleColor: "#fff", // ✅ tooltip title text white
               bodyColor: "#fff", // ✅ tooltip content text white

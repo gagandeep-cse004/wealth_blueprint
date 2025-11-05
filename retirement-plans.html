@@ -1004,7 +1004,54 @@
     margin-top: 25px;
   }
 }
-      
+      /* ✅ Mobile optimization for Retirement Projection section */
+@media (max-width: 480px) {
+  .Calculator-result {
+    padding: 18px 12px !important;
+    margin: 0 auto !important;
+    width: 95% !important;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Calculator-result h3,
+  .Calculator-result h4,
+  .Calculator-result p {
+    text-align: center;
+  }
+
+  .Calculator-result canvas {
+    display: block;
+    margin: 0 auto;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .result-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .result-stat {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 12px 10px;
+  }
+
+  /* Make sure the main center card is fully centered */
+  .retirement-section,
+  .projection-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
     </style>
 
     <!-- Add Chart.js -->

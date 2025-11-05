@@ -39,7 +39,7 @@
       <div class="navbar">
         <div class="logo">
           <a href="index.html">
-            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo"
+            <img src="./images/logobetter.png" alt="company_logo"
               class="brand-logo" /></a>
           <a href="index.html">
             <h2><span class="highlight">wealthblue</span>print</h2>
@@ -511,339 +511,264 @@
   <!-- Term Insurance Plans -->
 
   <!-- Premium Calculator -->
-  <section id="Calculator" class="term-Calculator">
-    <div class="container">
-      <div class="section-header centered">
-        <span class="section-subtitle" style="background-color: #F9D423;">Premium Estimator</span>
-        <h2 style="color: white;">Calculate Your <span class="benefits-txt">Premium</span></h2>
+<section id="Calculator" class="term-Calculator">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="section-subtitle" style="background-color: #F9D423;">Premium Estimator</span>
+      <h2>Calculate Your <span class="benefits-txt">Premium</span></h2>
+      <p>Get an instant estimate of your term insurance premium</p>
+    </div>
 
-        <p>Get an instant estimate of your term insurance premium</p>
+    <div class="Calculator-wrapper">
+      <!-- Form -->
+      <div class="Calculator-form">
+        <div class="Calculator-header">
+          <h3>Enter Your Details</h3>
+          <p>Provide your information for an accurate premium estimate</p>
+        </div>
+        <form id="premium-Calculator">
+          <div class="form-group">
+            <label for="age">Your Age</label>
+            <input type="number" id="age" class="form-control" min="18" max="65" value="30" />
+            <input type="range" id="age-slider" class="range-slider" min="18" max="65" value="30" />
+          </div>
+
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" class="form-control">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="coverage">Coverage Amount (₹)</label>
+            <select id="coverage" class="form-control">
+              <option value="5000000">₹50 Lakhs</option>
+              <option value="10000000" selected>₹1 Crore</option>
+              <option value="20000000">₹2 Crore</option>
+              <option value="50000000">₹5 Crore</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="term">Policy Term (Years)</label>
+            <input type="number" id="term" class="form-control" min="5" max="40" value="30" />
+            <input type="range" id="term-slider" class="range-slider" min="5" max="40" value="30" />
+          </div>
+
+          <div class="form-group">
+            <label for="smoker">Do you smoke?</label>
+            <select id="smoker" class="form-control">
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </div>
+
+          <button type="button" id="calculate-btn" class="btn-primary premium-button">
+            Calculate Premium
+          </button>
+        </form>
       </div>
 
-      <div class="Calculator-wrapper">
-        <div class="Calculator-form">
-          <div class="Calculator-header">
-            <h3>Enter Your Details</h3>
-            <p>Provide your information for an accurate premium estimate</p>
-          </div>
-          <form id="premium-Calculator">
-            <div class="form-group">
-              <label for="age">Your Age</label>
-              <input type="number" id="age" class="form-control" min="18" max="65" value="30" />
-              <input type="range" id="age-slider" class="range-slider" min="18" max="65" value="30" />
-            </div>
-
-            <div class="form-group">
-              <label for="gender">Gender</label>
-              <select id="gender" class="form-control">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="coverage">Coverage Amount (₹)</label>
-              <select id="coverage" class="form-control">
-                <option value="5000000">₹50 Lakhs</option>
-                <option value="10000000" selected>₹1 Crore</option>
-                <option value="20000000">₹2 Crore</option>
-                <option value="50000000">₹5 Crore</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="term">Policy Term (Years)</label>
-              <input type="number" id="term" class="form-control" min="5" max="40" value="30" />
-              <input type="range" id="term-slider" class="range-slider" min="5" max="40" value="30" />
-            </div>
-
-            <div class="form-group">
-              <label for="smoker">Do you smoke?</label>
-              <select id="smoker" class="form-control">
-                <option value="no">No</option>
-                <option value="yes">Yes</option>
-              </select>
-            </div>
-
-            <button type="button" id="calculate-btn" class="btn-primary premium-button">
-              Calculate Premium
-            </button>
-          </form>
+      <!-- Results -->
+      <div class="Calculator-result">
+        <div class="result-header">
+          <h3>Your Premium Estimate</h3>
+          <p>Based on the information you provided</p>
         </div>
 
-        <div class="Calculator-result">
-          <div class="result-header">
-            <h3>Your Premium Estimate</h3>
-            <p>Based on the information you provided</p>
-          </div>
-
-          <div class="result-card">
-            <div class="result-label" style="color: rgb(0, 0, 0);">Monthly Premium</div>
-            <div class="result-value">₹899</div>
-          </div>
-
-          <div class="result-card">
-            <div class="result-label" style="color: rgb(0, 0, 0);">Annual Premium</div>
-            <div class="result-value">₹10,788</div>
-          </div>
-
-          <div class="result-card">
-            <div class="result-label" style="color: rgb(0, 0, 0);">Tax Benefit (Sec 80C)</div>
-            <div class="result-value">₹2,158</div>
-          </div>
-
-          <button class="calc-btn">Talk to an Advisor</button>
+        <div class="result-card">
+          <div class="result-label">Monthly Premium</div>
+          <div class="result-value" id="monthly-premium">₹899</div>
         </div>
+
+        <div class="result-card">
+          <div class="result-label">Annual Premium</div>
+          <div class="result-value" id="annual-premium">₹10,788</div>
+        </div>
+
+        <div class="result-card">
+          <div class="result-label">Tax Benefit (Sec 80C)</div>
+          <div class="result-value" id="tax-benefit">₹2,158</div>
+        </div>
+
+        <div class="chart-container">
+          <canvas id="premiumChart"></canvas>
+        </div>
+
+        <a href="advisor.html" class="calc-btn">Talk to an Advisor</a>
       </div>
     </div>
-  </section>
+  </div>
 
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Slider Sync
+    const ageInput = document.getElementById("age");
+    const ageSlider = document.getElementById("age-slider");
+    const termInput = document.getElementById("term");
+    const termSlider = document.getElementById("term-slider");
+
+    ageSlider.oninput = () => (ageInput.value = ageSlider.value);
+    ageInput.oninput = () => (ageSlider.value = ageInput.value);
+    termSlider.oninput = () => (termInput.value = termSlider.value);
+    termInput.oninput = () => (termSlider.value = termInput.value);
+
+    // Chart Setup (Light background with dark text)
+    const ctx = document.getElementById("premiumChart").getContext("2d");
+    let premiumChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: [],
+        datasets: [
+          {
+            label: "Estimated Annual Premium (₹)",
+            data: [],
+            backgroundColor: "rgba(37, 99, 235, 0.8)",
+            borderColor: "#1d4ed8",
+            borderWidth: 1.5,
+            borderRadius: 8,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { labels: { color: "#000", font: { size: 13 } } },
+        },
+        scales: {
+          x: {
+            ticks: { color: "#000", font: { size: 12, weight: "bold" } },
+            grid: { color: "rgba(0,0,0,0.1)" },
+          },
+          y: {
+            ticks: { color: "#000", font: { size: 12, weight: "bold" } },
+            grid: { color: "rgba(0,0,0,0.1)" },
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+
+    // Calculation Logic
+    document.getElementById("calculate-btn").addEventListener("click", () => {
+      const age = parseInt(document.getElementById("age").value);
+      const gender = document.getElementById("gender").value;
+      const coverage = parseInt(document.getElementById("coverage").value);
+      const term = parseInt(document.getElementById("term").value);
+      const smoker = document.getElementById("smoker").value;
+
+      let basePremium = coverage / 100000;
+      basePremium *= (1 + (age - 30) * 0.03);
+      basePremium *= smoker === "yes" ? 1.3 : 1;
+      basePremium *= gender === "male" ? 1.05 : 0.95;
+      basePremium /= (term / 10);
+
+      const monthlyPremium = Math.round(basePremium);
+      const annualPremium = monthlyPremium * 12;
+      const taxBenefit = Math.round(annualPremium * 0.2);
+
+      document.getElementById("monthly-premium").textContent = "₹" + monthlyPremium.toLocaleString();
+      document.getElementById("annual-premium").textContent = "₹" + annualPremium.toLocaleString();
+      document.getElementById("tax-benefit").textContent = "₹" + taxBenefit.toLocaleString();
+
+      const labels = [];
+      const data = [];
+      for (let i = 5; i <= 40; i += 5) {
+        let est = (basePremium * (term / i)).toFixed(0);
+        labels.push(i + " yrs");
+        data.push(est);
+      }
+
+      premiumChart.data.labels = labels;
+      premiumChart.data.datasets[0].data = data;
+      premiumChart.update();
+    });
+  </script>
 
   <style>
-    /* 🌟 Term Calculator Section */
     .term-Calculator {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
+      background: linear-gradient(135deg, #1e293b, #334155, #475569);
       color: #fff;
-      padding: 100px 0;
-      position: relative;
-      overflow: hidden;
+      padding: 80px 20px;
     }
 
-    /* Decorative glow background */
-    .term-Calculator::before {
-      content: "";
-      position: absolute;
-      top: -10%;
-      left: -10%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(0, 212, 255, 0.3), transparent 70%);
-      filter: blur(120px);
-      z-index: 0;
+    .result-label{
+      color: black;
     }
-
-    .term-Calculator::after {
-      content: "";
-      position: absolute;
-      bottom: -10%;
-      right: -10%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(107, 91, 255, 0.3), transparent 70%);
-      filter: blur(120px);
-      z-index: 0;
+    .result-value{
+      color: black;
     }
-
-    /* 🏷 Section Header */
-    .section-header.centered {
-      text-align: center;
-      margin-bottom: 60px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .section-subtitle {
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 30px;
-      font-weight: 600;
-      color: #111827;
-      font-size: 0.9rem;
-    }
-
     .section-header h2 {
-      font-size: 2.4rem;
-      margin-top: 1rem;
-      font-weight: 700;
+      color: #f9fafb;
     }
 
-    .section-header .benefits-txt {
-      background: linear-gradient(90deg, #00d4ff, #6b5bff, #ff2e63);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .section-header p {
-      color: #cbd5e1;
-      margin-top: 0.6rem;
-      font-size: 1.1rem;
-    }
-
-    .title-underline {
-      width: 70px;
-      height: 4px;
-      background: linear-gradient(90deg, #00d4ff, #6b5bff);
-      border-radius: 10px;
-      margin: 12px auto;
-    }
-
-    /* 🧮 Calculator Layout */
     .Calculator-wrapper {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
       flex-wrap: wrap;
-      position: relative;
-      z-index: 2;
+      justify-content: center;
+      gap: 2rem;
     }
 
-    /* 💡 Form & Result Panels */
     .Calculator-form,
     .Calculator-result {
-      flex: 1;
-      min-width: 320px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
-      padding: 30px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 25px rgba(0, 212, 255, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      flex: 1 1 45%;
+      backdrop-filter: blur(8px);
     }
 
-    .Calculator-form:hover,
-    .Calculator-result:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 40px rgba(0, 212, 255, 0.25);
-    }
-
-    /* 🧾 Headers */
-    .Calculator-header h3,
-    .result-header h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-
-    .Calculator-header p,
-    .result-header p {
-      color: #9ca3af;
-      font-size: 0.95rem;
-      margin-top: 5px;
-      margin-bottom: 20px;
-    }
-
-    /* 🧍‍♂️ Form Controls */
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: #e2e8f0;
-    }
-
-    .form-control {
+    .form-control,
+    select {
       width: 100%;
-      padding: 10px 14px;
-      border-radius: 10px;
+      padding: 10px;
+      border-radius: 8px;
       border: none;
       outline: none;
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-      font-size: 1rem;
-      transition: box-shadow 0.3s ease;
+      color: #0f172a;
     }
 
-    .form-control:focus {
-      box-shadow: 0 0 0 2px #00d4ff;
-    }
-
-    /* 🎚 Range Sliders */
     .range-slider {
       width: 100%;
-      margin-top: 8px;
-      -webkit-appearance: none;
-      height: 6px;
-      border-radius: 5px;
-      background: #334155;
-      outline: none;
-      cursor: pointer;
-    }
-
-    .range-slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #00d4ff, #6b5bff);
-      box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .range-slider::-webkit-slider-thumb:hover {
-      transform: scale(1.2);
-    }
-
-    /* 💰 Calculate Button */
-    .premium-button {
-      width: 100%;
       margin-top: 10px;
-      background: linear-gradient(90deg, #00d4ff, #6b5bff);
+    }
+
+    .premium-button {
+      background: #3b82f6;
       color: #fff;
       border: none;
-      padding: 14px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 30px;
+      padding: 10px;
+      border-radius: 10px;
       cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 15px rgba(107, 91, 255, 0.3);
-    }
-
-    .premium-button:hover {
-      box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
-      transform: translateY(-3px);
-    }
-
-    /* 🧾 Result Cards */
-    .result-card {
-      background: rgba(255, 255, 255, 0.07);
-      border-radius: 15px;
-      padding: 15px 20px;
-      margin-bottom: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 0 10px rgba(0, 212, 255, 0.08);
-    }
-
-    .result-label {
-      color: #cbd5e1;
-      font-size: 1rem;
-    }
-
-    .result-value {
-      font-weight: 700;
-      color: #00d4ff;
-      font-size: 1.2rem;
-    }
-
-    /* 👨‍💼 CTA Button */
-    .calc-btn {
       width: 100%;
-      padding: 12px;
-      background: transparent;
-      border: 2px solid #00d4ff;
-      color: #00d4ff;
+      font-weight: bold;
+    }
+
+    .calc-btn {
+      background: #facc15;
+      color: #1e293b;
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
       font-weight: 600;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      margin-top: 1rem;
     }
 
-    .calc-btn:hover {
-      background: #00d4ff;
-      color: #fff;
-      box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    .chart-container {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 15px;
+      margin-top: 20px;
+      height: 300px;
     }
 
-    /* 📱 Responsive Design */
-    @media (max-width: 992px) {
+    @media (max-width: 900px) {
       .Calculator-wrapper {
         flex-direction: column;
       }
@@ -852,12 +777,13 @@
       .Calculator-result {
         width: 100%;
       }
-
-      .section-header h2 {
-        font-size: 2rem;
-      }
     }
   </style>
+</section>
+
+
+
+
   <!-- FAQ Section -->
   <section class="faq-section">
     <div class="container">

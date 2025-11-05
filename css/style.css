@@ -861,11 +861,7 @@ nav ul li a.active {
 
 /* Extra Small Devices (Mobile Phones) */
 @media screen and (max-width: 576px) {
-    .container {
-        width: 95%;
-        max-width: 540px;
-        padding: 0 10px;
-    }
+    
     
     .section-header h2 {
         font-size: 1.8rem;

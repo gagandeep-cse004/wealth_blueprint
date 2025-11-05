@@ -339,7 +339,7 @@
       <div class="navbar">
         <div class="logo">
           <a href="index.html">
-            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo"
+            <img src="./images/logobetter.png" alt="company_logo"
               class="brand-logo" /></a>
           <a href="index.html">
             <h2><span class="highlight">wealthblue</span>print</h2>
@@ -429,9 +429,7 @@
             <a href="advisor.html" class="btn-primary">
               <i class="fas fa-user-tie"></i> Talk to Our Advisor
             </a>
-            <a href="#plans" class="btn-outline">
-              <i class="fas fa-clipboard-list"></i> View Plans
-            </a>
+            
           </div>
 
           <div class="hero-trust">
@@ -445,10 +443,7 @@
             <img src="./images/retirement.jpg" alt="Happy retired couple" class="hero-image" />
 
             <!-- Floating Elements -->
-            <div class="floating-tag tag1">
-              <i class="fas fa-chart-line"></i>
-              <p>Steady Monthly Income</p>
-            </div>
+            
             <div class="floating-tag tag2">
               <i class="fas fa-piggy-bank"></i>
               <p>Tax-Free Savings</p>
@@ -948,6 +943,53 @@
       </div>
     </div>
 
+    <style>
+      /* Slider container fix */
+.slider-container {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 25px;
+}
+
+/* Style the slider */
+.Calculator-slider {
+  width: 100%;
+  appearance: none;
+  height: 6px;
+  border-radius: 5px;
+  background: #f3f3f3;
+  outline: none;
+  transition: background 0.3s;
+}
+.Calculator-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #ebebeb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.Calculator-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* Slider value display (the “10%” or “60 years”) */
+.slider-value {
+  position: absolute;
+  top: -25px; /* Move it above the slider */
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+    </style>
+
     <!-- Add Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -972,8 +1014,8 @@
             {
               label: "Projected Corpus (₹)",
               data: [],
-              borderColor: "#007bff",
-              backgroundColor: "rgba(0, 123, 255, 0.2)",
+              borderColor: "#00d4ff",
+              backgroundColor: "rgba(0, 212, 255, 0.2)",
               fill: true,
               tension: 0.3,
             },
@@ -982,10 +1024,28 @@
         options: {
           responsive: true,
           plugins: {
-            legend: { display: true },
+            legend: {
+              display: true,
+              labels: {
+                color: "#fff", // ✅ white legend text
+                font: { size: 14, family: "Poppins" },
+              },
+            },
+            tooltip: {
+              titleColor: "#fff", // ✅ tooltip title text white
+              bodyColor: "#fff", // ✅ tooltip content text white
+              backgroundColor: "rgba(30, 30, 30, 0.8)", // subtle dark bg
+            },
           },
           scales: {
-            y: { beginAtZero: true },
+            x: {
+              ticks: { color: "#fff" }, // ✅ x-axis labels white
+              grid: { color: "rgba(255, 255, 255, 0.1)" },
+            },
+            y: {
+              ticks: { color: "#fff" }, // ✅ y-axis labels white
+              grid: { color: "rgba(255, 255, 255, 0.1)" },
+            },
           },
         },
       });
@@ -1021,9 +1081,10 @@
         document.getElementById("years-left-value").textContent = years;
         document.getElementById("monthly-saving-value").textContent = "₹" + monthlyContribution.toLocaleString();
         document.getElementById("monthly-income-value").textContent =
-          "₹" + Math.round((corpus * 0.06) / 12).toLocaleString(); // 6% withdrawal rate
+          "₹" + Math.round((corpus * 0.06) / 12).toLocaleString();
       });
     </script>
+
   </section>
 
   <!-- Retirement Planning Process -->
@@ -1116,6 +1177,20 @@
             </p>
           </div>
         </div>
+        <div class="process-step">
+          <div class="process-step-number">6</div>
+          <div class="process-step-content">
+            <div class="process-step-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="process-step-title">Ongoing Monitoring & Support</h3>
+            <p class="process-step-description">
+              We continuously track your plan’s progress, monitor market trends, and
+              provide expert guidance to keep your retirement strategy on course.
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

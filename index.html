@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-  <!--google adsense-->
+  
   <meta name="google-adsense-account" content="ca-pub-8504842908769623" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8504842908769623"
     crossorigin="anonymous"></script>
@@ -36,7 +36,7 @@
       <div class="navbar">
         <div class="logo">
           <a href="index.html">
-            <img style="height: 90px; width: 90px;" src="./images/logo.png" alt="company_logo"
+            <img  src="./images/logobetter.png" alt="company_logo"
               class="brand-logo" /></a>
           <a href="index.html">
             <h2><span class="highlight">wealthblue</span>print</h2>
@@ -119,7 +119,7 @@
 
   <main>
     <!-- Interactive Financial Strategies Hero Section -->
-    <section class="financial-hero" style="margin-top: 110px;">
+    <section class="financial-hero" style="margin-top: 70px;">
       <div class="hero-bg-shapes"></div>
 
       <div class="container financial-hero-inner">
@@ -134,7 +134,7 @@
           </div>
         </div>
 
-        <div class="financial-hero-visual">
+        <div class="financial-hero-visual" style="margin-top: 15px;">
           <div class="floating-card" style="--delay: 0s;">
             <img src="assets/investment.svg" alt="Investment Icon">
             <h3>Investment Growth</h3>
@@ -152,234 +152,263 @@
     </section>
 
 
-    <style>
-      /* Interactive Financial Strategies Hero */
-      .financial-hero {
-        position: relative;
-        background: radial-gradient(circle at top left, #0f172a, #1e3a8a 40%, #312e81);
-        color: #fff;
-        padding: 1rem 1rem;
-        overflow: hidden;
-      }
+<style>
+  /* Interactive Financial Strategies Hero */
+  .financial-hero {
+    position: relative;
+    background: radial-gradient(circle at top left, #0f172a, #1e3a8a 40%, #312e81);
+    color: #fff;
+    padding: 1rem 1rem;
+    overflow: hidden;
+  }
 
-      /* Glowing animated background orbs */
-      .hero-bg-shapes::before,
-      .hero-bg-shapes::after {
-        content: "";
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(120px);
-        opacity: 0.4;
-        z-index: 0;
-        animation: floatGlow 10s ease-in-out infinite alternate;
-      }
+  .hero-bg-shapes::before,
+  .hero-bg-shapes::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.4;
+    z-index: 0;
+    animation: floatGlow 10s ease-in-out infinite alternate;
+  }
 
-      .hero-bg-shapes::before {
-        top: 10%;
-        left: 5%;
-        width: 300px;
-        height: 300px;
-        background: #60a5fa;
-      }
+  .hero-bg-shapes::before {
+    top: 10%;
+    left: 5%;
+    width: 300px;
+    height: 300px;
+    background: #60a5fa;
+  }
 
-      .hero-bg-shapes::after {
-        bottom: 10%;
-        right: 10%;
-        width: 400px;
-        height: 400px;
-        background: #a78bfa;
-        animation-delay: 3s;
-      }
+  .hero-bg-shapes::after {
+    bottom: 10%;
+    right: 10%;
+    width: 400px;
+    height: 400px;
+    background: #a78bfa;
+    animation-delay: 3s;
+  }
 
-      @keyframes floatGlow {
-        0% {
-          transform: translateY(0) scale(1);
-        }
+  @keyframes floatGlow {
+    0% {
+      transform: translateY(0) scale(1);
+    }
 
-        100% {
-          transform: translateY(-30px) scale(1.1);
-        }
-      }
+    100% {
+      transform: translateY(-30px) scale(1.1);
+    }
+  }
 
-      /* Hero content layout */
-      .financial-hero-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 3rem;
-        position: relative;
-        z-index: 2;
-      }
+  .financial-hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    position: relative;
+    z-index: 2;
+  }
 
-      .financial-hero-text {
-        flex: 1 1 500px;
-        max-width: 600px;
-        animation: fadeUp 1s ease forwards;
-      }
+  .financial-hero-text {
+    flex: 1 1 500px;
+    max-width: 600px;
+    animation: fadeUp 1s ease forwards;
+  }
 
-      .financial-hero-text h1 {
-        font-size: 2.5rem;
-        line-height: 1.2;
-        margin-bottom: 1rem;
-        font-weight: 700;
-        background: linear-gradient(to right, #93c5fd, #60a5fa, #a78bfa);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+  .financial-hero-text h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #93c5fd, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-      .financial-hero-text p {
-        font-size: 1.1rem;
-        line-height: 1.7;
-        color: #e2e8f0;
-        margin-bottom: 2.5rem;
-      }
+  .financial-hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e2e8f0;
+    margin-bottom: 2.5rem;
+  }
 
-      /* Buttons */
-      .hero-buttons {
-        display: flex;
-        gap: 1rem;
-      }
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+  }
 
-      .btn-primary {
-        background: linear-gradient(135deg, #3b82f6, #2563eb);
-        color: white;
-        padding: 0.9rem 1.8rem;
-        border-radius: 12px;
-        font-weight: 600;
-        transition: transform 0.3s, box-shadow 0.3s;
-        box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
-      }
+  .btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 0.9rem 1.8rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+  }
 
-      .btn-primary:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
-      }
+  .btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+  }
 
-      .btn-outline {
-        border: 2px solid #93c5fd;
-        color: #93c5fd;
-        padding: 0.9rem 1.8rem;
-        border-radius: 12px;
-        font-weight: 600;
-        transition: background 0.3s, color 0.3s, transform 0.3s;
-      }
+  .btn-outline {
+    border: 2px solid #93c5fd;
+    color: #93c5fd;
+    padding: 0.9rem 1.8rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+  }
 
-      .btn-outline:hover {
-        background: #93c5fd;
-        color: #1e3a8a;
-        transform: translateY(-3px);
-      }
+  .btn-outline:hover {
+    background: #93c5fd;
+    color: #1e3a8a;
+    transform: translateY(-3px);
+  }
 
-      /* Floating cards */
-      .financial-hero-visual {
-        flex: 1 1 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-        animation: fadeUp 1.2s ease forwards;
-      }
+  /* Floating cards */
+  .financial-hero-visual {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    animation: fadeUp 1.2s ease forwards;
+  }
 
-      .floating-card {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 20px;
-        padding: 2rem;
-        text-align: center;
-        backdrop-filter: blur(10px);
-        width: 170px;
-        animation: floatAnimation 3s ease-in-out infinite;
-        animation-delay: var(--delay);
-        transition: transform 0.4s, box-shadow 0.4s;
-        position: relative;
-        overflow: hidden;
-      }
+  .floating-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    width: 170px;
+    animation: floatAnimation 3s ease-in-out infinite;
+    animation-delay: var(--delay);
+    transition: transform 0.4s, box-shadow 0.4s;
+    position: relative;
+    overflow: hidden;
+  }
 
-      .floating-card::after {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
+  .floating-card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
 
-      .floating-card:hover {
-        transform: translateY(-12px) scale(1.07);
-        box-shadow: 0 0 30px rgba(147, 197, 253, 0.3);
-      }
+  .floating-card:hover {
+    transform: translateY(-12px) scale(1.07);
+    box-shadow: 0 0 30px rgba(147, 197, 253, 0.3);
+  }
 
-      .floating-card:hover::after {
-        opacity: 1;
-      }
+  .floating-card:hover::after {
+    opacity: 1;
+  }
 
-      .floating-card img {
-        width: 60px;
-        margin-bottom: 1rem;
-        animation: pulseIcon 2.5s infinite ease-in-out;
-      }
+  .floating-card img {
+    width: 60px;
+    margin-bottom: 1rem;
+    animation: pulseIcon 2.5s infinite ease-in-out;
+  }
 
-      .floating-card h3 {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #f8fafc;
-      }
+  .floating-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f8fafc;
+  }
 
-      @keyframes pulseIcon {
+  @keyframes pulseIcon {
 
-        0%,
-        100% {
-          transform: scale(1);
-        }
+    0%,
+    100% {
+      transform: scale(1);
+    }
 
-        50% {
-          transform: scale(1.1);
-        }
-      }
+    50% {
+      transform: scale(1.1);
+    }
+  }
 
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
 
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-      @keyframes floatAnimation {
+  @keyframes floatAnimation {
 
-        0%,
-        100% {
-          transform: translateY(0);
-        }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
 
-        50% {
-          transform: translateY(-10px);
-        }
-      }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
 
-      /* Responsive */
-      @media (max-width: 900px) {
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .financial-hero-inner {
+      flex-direction: column;
+      text-align: center;
+      margin-top: 30px;
+    }
 
-        .financial-hero-inner {
-          flex-direction: column;
-          text-align: center;
-          margin-top: 30px;
-        }
+    .financial-hero-visual {
+      gap: 1.5rem;
+    }
 
-        .hero-buttons {
-          justify-content: center;
-        }
-      }
-    </style>
+    .floating-card {
+      width: 45%;
+      padding: 1.5rem;
+    }
+
+    .floating-card img {
+      width: 50px;
+    }
+
+    .floating-card h3 {
+      font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .floating-card {
+      width: 80%;
+      padding: 1.3rem;
+    }
+
+    .floating-card img {
+      width: 45px;
+    }
+
+    .floating-card h3 {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
 
     <!-- Services Section -->
     <section id="services" class="services">

@@ -39,7 +39,7 @@
       <div class="navbar">
         <div class="logo">
           <a href="index.html">
-            <img style="height: 70px; width: 90px;" src="./images/logo.png" alt="company_logo" class="brand-logo" /></a>
+            <img src="./images/logobetter.png" alt="company_logo" class="brand-logo" /></a>
           <a href="index.html">
             <h2><span class="highlight">wealthblue</span>print</h2>
           </a>
@@ -111,7 +111,7 @@
       <p class="section-subtitle">
         Experience a smarter, faster, and more secure renewal process with exclusive member advantages.
       </p>
-
+  
       <div class="benefits-grid">
         <!-- Card 1 -->
         <div class="benefit-card">
@@ -121,7 +121,7 @@
           <h3>Instant Renewal</h3>
           <p>Renew your existing plan within seconds using our automated digital process — no waiting time.</p>
         </div>
-
+  
         <!-- Card 2 -->
         <div class="benefit-card">
           <div class="icon">
@@ -130,7 +130,7 @@
           <h3>Secure Transactions</h3>
           <p>Enjoy end-to-end encrypted payments and data protection for a seamless and worry-free experience.</p>
         </div>
-
+  
         <!-- Card 3 -->
         <div class="benefit-card">
           <div class="icon">
@@ -139,7 +139,7 @@
           <h3>Smart Reminders</h3>
           <p>Never miss your policy renewal date with intelligent reminders and personalized alerts.</p>
         </div>
-
+  
         <!-- Card 4 -->
         <div class="benefit-card">
           <div class="icon">
@@ -148,7 +148,7 @@
           <h3>24/7 Support</h3>
           <p>Our experts are available around the clock to guide you through every step of your renewal journey.</p>
         </div>
-
+  
         <!-- Card 5 -->
         <div class="benefit-card">
           <div class="icon">
@@ -157,7 +157,7 @@
           <h3>Exclusive Discounts</h3>
           <p>Unlock special renewal offers and loyalty rewards that help you save more with every policy update.</p>
         </div>
-
+  
         <!-- Card 6 -->
         <div class="benefit-card">
           <div class="icon">
@@ -169,7 +169,7 @@
       </div>
     </div>
   </section>
-
+  
   <style>
     .smart-benefits {
       background: linear-gradient(135deg, #f7faff, #ffffff);
@@ -178,31 +178,31 @@
       position: relative;
       overflow: hidden;
     }
-
+  
     .section-title {
       font-size: 2.5rem;
       color: #0a3d62;
       margin-bottom: 15px;
       animation: fadeUp 1s ease-out;
     }
-
+  
     .section-title span {
       color: #007bff;
     }
-
+  
     .section-subtitle {
       color: #546e7a;
       font-size: 1.1rem;
       max-width: 650px;
       margin: 0 auto 50px;
     }
-
+  
     .benefits-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 30px;
     }
-
+  
     .benefit-card {
       background: #ffffff;
       border-radius: 20px;
@@ -213,7 +213,7 @@
       overflow: hidden;
       animation: fadeIn 1.5s ease forwards;
     }
-
+  
     .benefit-card::before {
       content: "";
       position: absolute;
@@ -225,20 +225,20 @@
       transition: 0.6s;
       z-index: 0;
     }
-
+  
     .benefit-card:hover::before {
       top: 0;
     }
-
+  
     .benefit-card:hover {
       transform: translateY(-10px) scale(1.02);
       box-shadow: 0 15px 30px rgba(0, 123, 255, 0.2);
     }
-
+  
     .icon {
       margin-bottom: 20px;
     }
-
+  
     .icon img {
       width: 70px;
       height: 70px;
@@ -246,11 +246,11 @@
       position: relative;
       z-index: 1;
     }
-
+  
     .benefit-card:hover .icon img {
       transform: rotate(10deg) scale(1.1);
     }
-
+  
     .benefit-card h3 {
       font-size: 1.4rem;
       color: #007bff;
@@ -258,44 +258,54 @@
       position: relative;
       z-index: 1;
     }
-
+  
     .benefit-card p {
       font-size: 1rem;
       color: #455a64;
       position: relative;
       z-index: 1;
     }
-
+  
     @keyframes fadeIn {
       from {
         opacity: 0;
         transform: translateY(40px);
       }
-
+  
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
+  
     @keyframes fadeUp {
       from {
         opacity: 0;
         transform: translateY(20px);
       }
-
+  
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
-    /* Responsive */
+  
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  
     @media (max-width: 768px) {
+      .benefits-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+  
       .section-title {
         font-size: 2rem;
       }
-
+  
       .benefit-card {
         padding: 25px;
       }
@@ -304,7 +314,7 @@
 
 
 
-
+  
   <!-- Benefits Section -->
   <section class="benefits-section">
     <div class="container">

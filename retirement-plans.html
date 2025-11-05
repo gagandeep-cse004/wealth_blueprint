@@ -1051,6 +1051,71 @@
     justify-content: center;
   }
 }
+/* 📱 Center "Input Your Details" Form on All Screens */
+@media (max-width: 768px) {
+  .Calculator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .Calculator-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .Calculator-form h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .Calculator-group {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .Calculator-input {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Extra refinement for smaller phones */
+@media (max-width: 480px) {
+  .Calculator-form {
+    width: 92%;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 18px 12px;
+  }
+
+  .Calculator-form h3 {
+    font-size: 1.1rem;
+  }
+
+  .Calculator-input {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .calculate-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+    margin-top: 10px;
+  }
+}
 
     </style>
 

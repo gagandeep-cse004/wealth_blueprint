@@ -533,26 +533,36 @@
 
 /* Responsive stacking */
 @media (max-width: 768px) {
+
+  /* ✅ Line goes to LEFT side on mobile */
   .timeline-container::before {
-    left: 20px;
-    transform: none;
+    left: 0px !important;
+    right: auto !important;
+    transform: none !important;
   }
+
+  /* ✅ Circles stay aligned with the line (same style as now) */
+  .timeline-year {
+    left: 36px !important;
+    right: auto !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 5;
+  }
+
+  /* ✅ Cards appear to the RIGHT side of circles */
   .timeline-item {
-    width: 100%;
-    padding-left: 90px;
-    text-align: center;
-    left: 0;
+    width: 100% !important;
+    padding-left: 70px !important; /* leave space for circle + line */
+    padding-right: 10px !important;
+    margin-bottom: 60px !important;
+    text-align: left !important;
   }
+
+  /* remove desktop positioning */
   .timeline-item.left,
   .timeline-item.right {
-    left: 20px;
+    left: 0 !important;
   }
-  .timeline-year {
-    left: 10px;
-    right: auto;
-    transform: translateY(-50%);
-  }
- 
 }
 
   /* = VALUES = */

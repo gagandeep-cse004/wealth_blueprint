@@ -200,7 +200,7 @@
         <h2>Investment <span class="calculate-txt">Calculator</span></h2>
         <p>See how your investments can grow over time</p>
       </div>
-
+  
       <div class="Calculator-container">
         <div class="Calculator-form">
           <div class="Calculator-group">
@@ -208,25 +208,25 @@
             <input type="number" id="investment-amount" class="Calculator-input" placeholder="e.g. 100000" min="1000"
               value="100000" />
           </div>
-
+  
           <div class="Calculator-group">
             <label for="investment-period" class="Calculator-label">Investment Period (Years)</label>
             <input type="range" id="investment-period" class="Calculator-slider" min="1" max="30" value="10" />
             <div id="period-value" style="margin-top: 10px; text-align: right">10 years</div>
           </div>
-
+  
           <div class="Calculator-group">
             <label for="return-rate" class="Calculator-label">Expected Annual Return (%)</label>
             <input type="range" id="return-rate" class="Calculator-slider" min="5" max="24" value="12" />
             <div id="rate-value" style="margin-top: 10px; text-align: right">12%</div>
           </div>
-
+  
           <div class="Calculator-group">
             <label for="monthly-contribution" class="Calculator-label">Monthly Contribution (₹)</label>
             <input type="number" id="monthly-contribution" class="Calculator-input" placeholder="e.g. 5000" min="0"
               value="5000" />
           </div>
-
+  
           <div class="Calculator-group">
             <label for="investment-plan" class="Calculator-label">Investment Plan</label>
             <select id="investment-plan" class="Calculator-input">
@@ -235,21 +235,18 @@
               <option value="accelerate">Wealth Blue Print Accelerate (18-24%)</option>
             </select>
           </div>
-
-          <!-- Added Calculate Button -->
-          <button id="calculate-btn" class="calculate-btn"
-            style="margin-top: 15px; background-color: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
-            Calculate
-          </button>
+  
+          <!-- Animated Calculate Button -->
+          <button id="calculate-btn" class="calculate-btn">Calculate</button>
         </div>
-
+  
         <div class="Calculator-result">
           <h3 class="result-title">Your Investment Growth</h3>
-
+  
           <div class="result-chart">
             <canvas id="investmentChart" width="400" height="250"></canvas>
           </div>
-
+  
           <div class="result-stats" id="result-stats">
             <div class="result-stat">
               <div class="stat-value">₹0</div>
@@ -272,7 +269,43 @@
       </div>
     </div>
   </section>
-
+  
+  <style>
+    .calculate-btn {
+      margin-top: 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+      animation: pulse 2s infinite;
+    }
+  
+    .calculate-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(0, 123, 255, 0.8);
+    }
+  
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+      }
+  
+      50% {
+        box-shadow: 0 0 25px rgba(0, 123, 255, 0.9);
+      }
+  
+      100% {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+      }
+    }
+  </style>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
     const periodSlider = document.getElementById("investment-period");
     const rateSlider = document.getElementById("return-rate");
@@ -321,7 +354,7 @@
             {
               label: "Investment Growth (₹)",
               data,
-              borderColor: "#007bff",
+              borderColor: "#00bfff",
               borderWidth: 2,
               fill: false,
             },
@@ -330,7 +363,21 @@
         options: {
           responsive: true,
           plugins: {
-            legend: { display: false },
+            legend: {
+              labels: {
+                color: "#fff",
+              },
+            },
+          },
+          scales: {
+            x: {
+              ticks: { color: "#fff" },
+              grid: { color: "rgba(255,255,255,0.1)" },
+            },
+            y: {
+              ticks: { color: "#fff" },
+              grid: { color: "rgba(255,255,255,0.1)" },
+            },
           },
         },
       });

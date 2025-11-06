@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIP - Systematic Investment Plan</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./css//style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        :root {
+            --primary: #10b981;
+            --bg: #f9fffb;
+            --text: #0f172a;
+            --muted: #475569;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 60px 10%;
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        p {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        /* Hero / Intro Section */
+        .intro {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            align-items: center;
+            gap: 30px;
+        }
+
+        .intro img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .intro-text {
+            padding: 20px;
+        }
+
+        .intro-text h1 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Benefits */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .benefit {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.2);
+        }
+
+        .benefit h3 {
+            color: var(--primary);
+        }
+
+        /* SIP Calculator */
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .calc-card {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-row {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #d1d5db;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+        input:focus {
+            border-color: var(--primary);
+        }
+
+        button.cta {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button.cta:hover {
+            background: #059669;
+        }
+
+        #sipChart {
+            width: 100%;
+            max-height: 260px;
+            margin-top: 20px;
+        }
+
+        /* FAQ */
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            background: #ecfdf5;
+            color: var(--primary);
+            width: 100%;
+            text-align: left;
+            font-weight: 600;
+            padding: 16px 18px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-weight: 700;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            background: #f9fffb;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-answer p {
+            padding: 14px 20px;
+            color: var(--muted);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/logobetter.png" alt="company_logo" class="brand-logo" /></a>
+                    <a href="index.html">
+                        <h2><span class="highlight">wealthblue</span>print</h2>
+                    </a>
+                </div>
+    
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+    
+                <nav id="nav-menu">
+                    <ul id="menu-items">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Products</a>
+                            <div class="dropdown-menu">
+                                <a href="investment-plans.html">Investment Plans</a>
+                                <a href="retirement-plans.html">Retirement Plans</a>
+                                <a href="child-plans.html">Child Plans</a>
+                                <a href="term-insurance.html">Term Insurance</a>
+                                <a href="mutualfunds.html">Mutual Funds</a>
+                                <a href="sip.html">SIP</a>
+                                <a href="equity.html">Equity</a>
+                                <a href="calculators.html">Calculators</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Renew</a>
+                            <div class="dropdown-menu">
+                                <a href="renew-policy.html">Renew Policy</a>
+                                <a href="check-status.html">Check Status</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Claim</a>
+                            <div class="dropdown-menu">
+                                <a href="file-claim.html">File a Claim</a>
+                                <a href="track-claim.html">Track Claim</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Help</a>
+                            <div class="dropdown-menu">
+                                <a href="faqs.html">FAQs</a>
+                                <a href="contact.html">Contact Us</a>
+                                <a href="support.html">Customer Support</a>
+                                <a href="advisor.html">Find an Advisor</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">About</a>
+                            <div class="dropdown-menu">
+                                <a href="our-story.html">Our Story</a>
+                                <a href="leadership.html">Leadership</a>
+                                <a href="careers.html">Careers</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <div class="navbar-actions desktop-only">
+                    <a href="investment-plans.html" class="btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- SIP Intro -->
+<section id="sip-intro" class="sip-section" style="margin-top: 100px;">
+    <div class="sip-wrapper">
+        <div class="sip-text fade-in-left">
+            <h1>📊 Systematic Investment Plan (SIP)</h1>
+            <p>
+                SIP lets you invest small, fixed amounts regularly into mutual funds —
+                turning your savings into a disciplined investment habit.
+                You benefit from <strong>rupee-cost averaging</strong> and the
+                <strong>power of compounding</strong> over time.
+            </p>
+            <p>
+                <strong>Plan for long-term success:</strong> Stay consistent, diversify your portfolio,
+                and review performance periodically.
+            </p>
+
+            <button class="cta"
+                onclick="document.getElementById('sip-calculator').scrollIntoView({ behavior: 'smooth' });">
+                💰 Calculate Your SIP
+            </button>
+        </div>
+
+        <div class="sip-image fade-in-right">
+            <div class="image-card floating">
+                <img style="margin: auto;" src="https://cdn-icons-png.flaticon.com/512/7475/7475993.png" alt="SIP Illustration">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* 🌟 SIP INTRO SECTION */
+    .sip-section {
+        background: linear-gradient(135deg, #f0faff, #e0f7fa);
+        padding: 80px 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .sip-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 60px;
+        align-items: center;
+        max-width: 1200px;
+    }
+
+    /* 🧩 Text Styling */
+    .sip-text h1 {
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-weight: 700;
+        color: #1e3a8a;
+        margin-bottom: 16px;
+        line-height: 1.2;
+    }
+
+    .sip-text p {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 12px;
+    }
+
+    /* 💰 CTA Button */
+    .cta {
+        margin-top: 24px;
+        background: linear-gradient(90deg, #2563eb, #3b82f6);
+        color: white;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 1.05rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+    }
+
+    .cta:hover {
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+    }
+
+    /* 🖼️ Image Card */
+    .image-card {
+        background: white;
+        padding: 25px;
+        border-radius: 18px;
+        box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+        transition: all 0.4s ease;
+    }
+
+    .image-card:hover {
+        transform: scale(1.05) rotate(1deg);
+        box-shadow: 0 16px 35px rgba(37, 99, 235, 0.3);
+    }
+
+    .image-card img {
+        width: 320px;
+        transition: transform 0.5s ease;
+    }
+
+    .image-card img:hover {
+        transform: scale(1.08);
+    }
+
+    /* ✨ Floating Animation */
+    @keyframes floating {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .floating {
+        animation: floating 5s ease-in-out infinite;
+    }
+
+    /* 🎞️ Fade-in Animations */
+    .fade-in-left {
+        opacity: 0;
+        transform: translateX(-40px);
+        animation: fadeInLeft 1s ease forwards;
+    }
+
+    .fade-in-right {
+        opacity: 0;
+        transform: translateX(40px);
+        animation: fadeInRight 1s ease forwards;
+    }
+
+    @keyframes fadeInLeft {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInRight {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* 📱 RESPONSIVE DESIGN */
+    @media (max-width: 1024px) {
+        .sip-section {
+            padding: 70px 8%;
+        }
+
+        .sip-wrapper {
+            gap: 40px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .sip-section {
+            padding: 60px 6%;
+        }
+
+        .sip-wrapper {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .sip-text h1 {
+            font-size: 1.9rem;
+        }
+
+        .sip-text p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .cta {
+            padding: 12px 24px;
+            font-size: 1rem;
+        }
+
+        .image-card img {
+            width: 240px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .sip-section {
+            padding: 50px 5%;
+        }
+
+        .sip-text h1 {
+            font-size: 1.6rem;
+        }
+
+        .sip-text p {
+            font-size: 0.95rem;
+        }
+
+        .cta {
+            width: 100%;
+            padding: 12px;
+        }
+
+        .image-card img {
+            width: 200px;
+        }
+    }
+</style>
+
+
+    <!-- SIP Benefits -->
+    <section class="sip-benefits-section">
+        <h2>✨ Benefits of SIP</h2>
+    
+        <div class="benefits-grid">
+            <div class="benefit-card fade-up">
+                <h3>📅 Disciplined Investing</h3>
+                <p>Develop a regular investing habit and avoid emotional decisions — invest consistently without timing the
+                    market.</p>
+            </div>
+    
+            <div class="benefit-card fade-up" style="animation-delay: 0.2s;">
+                <h3>💹 Rupee Cost Averaging</h3>
+                <p>Invest regularly — buy more units when markets are low and fewer when high, balancing long-term risk.</p>
+            </div>
+    
+            <div class="benefit-card fade-up" style="animation-delay: 0.4s;">
+                <h3>💰 Power of Compounding</h3>
+                <p>Let your returns generate further returns — the longer you stay invested, the faster your wealth grows.
+                </p>
+            </div>
+    
+            <div class="benefit-card fade-up" style="animation-delay: 0.6s;">
+                <h3>⚙️ Flexibility</h3>
+                <p>Modify, pause, or increase your SIP anytime to match your changing financial goals or income levels.</p>
+            </div>
+    
+            <div class="benefit-card fade-up" style="animation-delay: 0.8s;">
+                <h3>📈 Goal-Oriented</h3>
+                <p>Set clear financial targets — SIPs help you achieve goals like buying a home, funding education, or
+                    retirement planning.</p>
+            </div>
+    
+            <div class="benefit-card fade-up" style="animation-delay: 1s;">
+                <h3>🛡️ Risk Mitigation</h3>
+                <p>Investing over time reduces market volatility impact — a smoother journey toward long-term wealth
+                    creation.</p>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        /* 🌟 SIP Benefits Section */
+        .sip-benefits-section {
+            background: linear-gradient(135deg, #f8fbff, #e0f7fa);
+            padding: 80px 10%;
+            text-align: center;
+        }
+    
+        .sip-benefits-section h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            color: #1e3a8a;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+    
+        /* 🧩 Grid Layout */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            justify-items: center;
+        }
+    
+        /* 💡 Benefit Card Styling */
+        .benefit-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px 20px;
+            text-align: left;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            border: 2px solid transparent;
+        }
+    
+        .benefit-card h3 {
+            color: #2563eb;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+    
+        .benefit-card p {
+            color: #475569;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+    
+        /* 🎨 Hover Animations */
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            border: 2px solid #3b82f6;
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.25);
+            background: linear-gradient(180deg, #ffffff, #f0faff);
+        }
+    
+        /* ✨ Fade-Up Animation */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeUp 1s ease forwards;
+        }
+    
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        /* 📱 Responsive Tweaks */
+        @media (max-width: 768px) {
+            .sip-benefits-section {
+                padding: 60px 6%;
+            }
+    
+            .benefit-card {
+                text-align: center;
+            }
+        }
+    </style>
+
+    <!-- SIP Calculator -->
+    <!-- 💰 SIP CALCULATOR SECTION -->
+    <section id="sip-calculator" class="sip-calc-section">
+        <h2>💰 SIP Calculator</h2>
+        <p class="muted-text">
+            Calculate how your small monthly investments can grow into a big corpus over time.
+        </p>
+    
+        <div class="calc-grid">
+            <!-- 🧾 Left: Input Panel -->
+            <div class="calc-card fade-in-left">
+                <h3>Enter Your SIP Details</h3>
+    
+                <div class="form-row">
+                    <label>Monthly SIP Amount (₹)</label>
+                    <input id="sipAmount" type="number" value="5000" min="0" />
+                </div>
+    
+                <div class="form-row">
+                    <label>Expected Annual Return (%)</label>
+                    <input id="sipReturn" type="number" value="12" step="0.1" min="0" />
+                </div>
+    
+                <div class="form-row">
+                    <label>Investment Period (Years)</label>
+                    <input id="sipYears" type="number" value="10" min="1" />
+                </div>
+    
+                <div class="button-group">
+                    <button class="cta" onclick="calculateSIP()">Calculate</button>
+                    <button class="cta outline" onclick="resetSIP()">Reset</button>
+                </div>
+            </div>
+    
+            <!-- 📊 Right: Results + Chart -->
+            <div class="calc-card fade-in-right">
+                <h3>Your SIP Growth</h3>
+                <div id="sipResult" class="result-box">
+                    <p>💡 Enter your SIP details and click <strong>Calculate</strong> to view your investment growth.</p>
+                    <p>This tool helps you visualize how regular investments can compound over time.</p>
+                </div>
+                <canvas id="sipChart" style="max-height:220px; margin-top:10px;"></canvas>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ✅ Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        
+
+        document.addEventListener("DOMContentLoaded", () => {
+            renderChart([0, 2, 4, 6, 8, 10], [0, 15000, 35000, 60000, 90000, 130000]);
+        });
+
+        function calculateSIP() {
+            const amount = parseFloat(document.getElementById('sipAmount').value);
+            const rate = parseFloat(document.getElementById('sipReturn').value) / 100 / 12;
+            const years = parseFloat(document.getElementById('sipYears').value);
+            const months = years * 12;
+
+            const futureValue = amount * (((Math.pow(1 + rate, months) - 1) / rate) * (1 + rate));
+            const invested = amount * months;
+            const gain = futureValue - invested;
+
+            document.getElementById('sipResult').innerHTML = `
+        <p><strong>📦 Invested Amount:</strong> ₹${invested.toLocaleString()}</p>
+        <p><strong>💹 Estimated Value:</strong> ₹${futureValue.toLocaleString(undefined, { maximumFractionDigits: 0 })}</p>
+        <p><strong>💰 Wealth Gain:</strong> ₹${gain.toLocaleString(undefined, { maximumFractionDigits: 0 })}</p>
+        <p style="font-size:0.9rem; color:#475569;">Assumes monthly compounding at ${document.getElementById('sipReturn').value}% annual return.</p>
+      `;
+
+            const labels = Array.from({ length: years + 1 }, (_, i) => i);
+            const values = labels.map(year =>
+                amount * (((Math.pow(1 + rate, year * 12) - 1) / rate) * (1 + rate))
+            );
+
+            renderChart(labels, values);
+        }
+
+        function renderChart(labels, data) {
+            if (sipChart) sipChart.destroy();
+            const ctx = document.getElementById('sipChart').getContext('2d');
+            sipChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels.map(y => `${y} yr`),
+                    datasets: [{
+                        label: 'Portfolio Value (₹)',
+                        data: data,
+                        borderColor: '#2563eb',
+                        backgroundColor: 'rgba(37,99,235,0.1)',
+                        fill: true,
+                        tension: 0.35,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { mode: 'index', intersect: false }
+                    },
+                    scales: {
+                        x: { title: { display: true, text: 'Years' } },
+                        y: { title: { display: true, text: 'Value (₹)' }, beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        function resetSIP() {
+            document.getElementById('sipAmount').value = 5000;
+            document.getElementById('sipReturn').value = 12;
+            document.getElementById('sipYears').value = 10;
+            document.getElementById('sipResult').innerHTML = `
+        <p>💡 Enter your SIP details and click <strong>Calculate</strong> to view your investment growth.</p>
+        <p>This tool helps you visualize how regular investments can compound over time.</p>
+      `;
+            renderChart([0, 2, 4, 6, 8, 10], [0, 15000, 35000, 60000, 90000, 130000]);
+        }
+    </script>
+    
+    <style>
+        .calc-card:hover{
+            border: 2px solid lightgreen;
+        }
+        /* 🌟 SIP CALCULATOR */
+        .sip-calc-section {
+            padding: 80px 10%;
+            background: linear-gradient(135deg, #f0faff, #e0f7fa);
+            border-radius: 12px;
+            text-align: center;
+        }
+    
+        .sip-calc-section h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+    
+        .muted-text {
+            color: #475569;
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+    
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            align-items: stretch;
+            justify-content: center;
+        }
+    
+        .calc-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 400px;
+        }
+    
+        .calc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
+        }
+    
+        .calc-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+    
+        .form-row {
+            margin-bottom: 16px;
+        }
+    
+        label {
+            display: block;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 6px;
+        }
+    
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: 0.3s ease;
+        }
+    
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 6px rgba(37, 99, 235, 0.3);
+        }
+    
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+        }
+    
+        .cta {
+            flex: 1;
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+    
+        .cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+        }
+    
+        .cta.outline {
+            background: transparent;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+    
+        .cta.outline:hover {
+            background: #2563eb;
+            color: #fff;
+        }
+    
+        .result-box {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            color: #1e293b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    
+        /* 🎞️ Animations */
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            animation: fadeInLeft 1s ease forwards;
+        }
+    
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(40px);
+            animation: fadeInRight 1s ease forwards;
+        }
+    
+        @keyframes fadeInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    
+        @keyframes fadeInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    
+        /* 📱 Responsive */
+        @media (max-width: 900px) {
+            .calc-grid {
+                grid-template-columns: 1fr;
+            }
+    
+            .sip-calc-section {
+                padding: 60px 6%;
+            }
+    
+            .calc-card {
+                min-height: auto;
+            }
+    
+            #sipChart {
+                max-height: 200px;
+            }
+        }
+    </style>
+
+    <!-- FAQ -->
+    <section id="sip-faq" class="faq-section">
+        <h2>📘 Frequently Asked Questions</h2>
+        <p class="faq-intro">Find quick answers about SIPs — how they work, their benefits, and flexibility.</p>
+    
+        <div class="faq">
+            <div class="faq-item">
+                <button class="faq-question">What is SIP?</button>
+                <div class="faq-answer">
+                    <p>A SIP (Systematic Investment Plan) allows you to invest a fixed sum at regular intervals in mutual
+                        funds, promoting consistency and the power of compounding.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <button class="faq-question">Can I change or stop my SIP?</button>
+                <div class="faq-answer">
+                    <p>Yes! SIPs are flexible — you can increase, pause, or stop your investments anytime based on your
+                        financial situation.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <button class="faq-question">Are SIPs safe?</button>
+                <div class="faq-answer">
+                    <p>SIP returns depend on market performance and the fund you choose. However, long-term SIPs usually
+                        reduce risk through rupee-cost averaging.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <button class="faq-question">How much should I invest through SIP?</button>
+                <div class="faq-answer">
+                    <p>That depends on your goals! Start small — even ₹500 per month — and gradually increase your SIP as
+                        your income grows.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <button class="faq-question">When is the best time to start a SIP?</button>
+                <div class="faq-answer">
+                    <p>The best time is <strong>now!</strong> The earlier you start, the more you benefit from compounding.
+                        Time in the market matters more than timing the market.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 🧠 SCRIPT -->
+    <script>
+        const questions = document.querySelectorAll(".faq-question");
+        questions.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const item = btn.parentElement;
+                item.classList.toggle("active");
+
+                const answer = item.querySelector(".faq-answer");
+                if (item.classList.contains("active")) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = null;
+                }
+            });
+        });
+    </script>
+    
+    <!-- 💅 STYLE -->
+    <style>
+        /* 🌟 FAQ SECTION */
+        .faq-section {
+            background: linear-gradient(135deg, #f0faff, #e0f7fa);
+            padding: 80px 10%;
+            border-radius: 16px;
+            margin-top: 60px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        }
+    
+        .faq-section h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+    
+        .faq-intro {
+            text-align: center;
+            color: #475569;
+            margin-bottom: 40px;
+            font-size: 1.05rem;
+        }
+    
+        /* 🧩 FAQ Container */
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    
+        .faq-item {
+            background: #ffffff;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            overflow: hidden;
+            border: 1.5px solid #e2e8f0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(37, 99, 235, 0.05);
+        }
+    
+        .faq-item:hover {
+            border-color: #2563eb;
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12);
+            transform: translateY(-2px);
+        }
+    
+        /* 🧠 Question Button */
+        .faq-question {
+            width: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            text-align: left;
+            font-weight: 600;
+            padding: 16px 20px;
+            font-size: 1.05rem;
+            cursor: pointer;
+            color: #1e293b;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+    
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #2563eb;
+            transition: transform 0.3s ease;
+        }
+    
+        .faq-item.active .faq-question::after {
+            content: '−';
+            transform: rotate(180deg);
+        }
+    
+        .faq-question:hover {
+            color: #2563eb;
+        }
+    
+        /* 📖 Answer */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            background: #f9fafb;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+    
+        .faq-item.active .faq-answer {
+            padding: 16px 20px;
+        }
+    
+        .faq-answer p {
+            color: #475569;
+            line-height: 1.7;
+            font-size: 0.98rem;
+            margin: 0;
+        }
+    
+        /* 🎞️ Animations */
+        .faq-item {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards;
+        }
+    
+        .faq-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+    
+        .faq-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+    
+        .faq-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+    
+        .faq-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+    
+        .faq-item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+    
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        /* 📱 Responsive */
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 60px 6%;
+            }
+    
+            .faq-question {
+                font-size: 1rem;
+            }
+    
+            .faq-answer p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-img">
+                        <img src="./images/logo.png" alt="Growwell Logo" loading="lazy" class="footer-logo-image" />
+                    </div>
+                    <p>Your partner for financial growth and security</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/growwellimf/" target="/" aria-label="Follow us on Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/Growwell__?t=QZcsQv6QemM2qT4bfejZeg&s=08" target="/"
+                            aria-label="Follow us on X"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/grow-well-imf/about/" target="/"
+                            aria-label="Follow us on Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/growwell.imf/" target="/" aria-label="Follow us on Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="./investment-plans.html">Products</a></li>
+                            <li><a href="./renew-policy.html">Renew</a></li>
+                            <li><a href="./advisor.html">Testimonials</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="investment-plans.html">Financial Planning</a></li>
+                            <li><a href="child-plans.html">Child Planning</a></li>
+                            <li><a href="investment-plans.html">Investment Planning</a></li>
+                            <li><a href="retirement-plans.html">Retirement Planning</a></li>
+                            <li><a href="term-insurance.html">Term Insurance</a></li>
+                            <li><a href="#">Tax Advisory</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="leadership.html">Leadership</a></li>
+                            <li><a href="advisor.html">Advisor</a></li>
+                            <li>
+                                <a href="retirement-plans.html">Financial Calculators</a>
+                            </li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 wealth blue print Financial Advisors. All rights reserved.</p>
+                <ul class="footer-legal">
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+    
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // SIP Calculator + Chart
+        let sipChart;
+        function calculateSIP() {
+            const P = parseFloat(document.getElementById('sipAmount').value);
+            const r = parseFloat(document.getElementById('sipReturn').value) / 100 / 12;
+            const n = parseInt(document.getElementById('sipYears').value) * 12;
+
+            const FV = P * ((Math.pow(1 + r, n) - 1) / r) * (1 + r);
+            const invested = P * n;
+            const gain = FV - invested;
+
+            document.getElementById('sipResult').innerHTML =
+                `Invested: ₹${invested.toLocaleString()}<br>Estimated Value: ₹${FV.toLocaleString()}<br>Gain: ₹${gain.toLocaleString()}`;
+
+            const labels = Array.from({ length: n / 12 + 1 }, (_, i) => i);
+            const data = labels.map(year => P * ((Math.pow(1 + r, year * 12) - 1) / r) * (1 + r));
+
+            if (sipChart) sipChart.destroy();
+            const ctx = document.getElementById('sipChart').getContext('2d');
+            sipChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels.map(y => y + " yr"),
+                    datasets: [{
+                        label: 'Future Value (₹)',
+                        data: data,
+                        borderColor: '#10b981',
+                        backgroundColor: 'rgba(16,185,129,0.1)',
+                        fill: true,
+                        tension: 0.3,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false } },
+                    scales: { x: { grid: { display: false } }, y: { beginAtZero: true } }
+                }
+            });
+        }
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    if (i !== item) i.classList.remove('active');
+                });
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

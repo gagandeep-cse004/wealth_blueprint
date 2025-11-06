@@ -1,0 +1,1930 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mutual Funds Guide — Green & Teal Theme (SIP Calculator & Charts)</title>
+  <meta name="description" content="Comprehensive Mutual Funds guide with interactive charting and single SIP calculator. Green-teal theme, animated, content-rich." />
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <!-- ScrollReveal for reveal animations -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  </head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/logobetter.png" alt="company_logo" class="brand-logo" /></a>
+                    <a href="index.html">
+                        <h2><span class="highlight">wealthblue</span>print</h2>
+                    </a>
+                </div>
+    
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+    
+                <nav id="nav-menu">
+                    <ul id="menu-items">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Products</a>
+                            <div class="dropdown-menu">
+                                <a href="investment-plans.html">Investment Plans</a>
+                                <a href="retirement-plans.html">Retirement Plans</a>
+                                <a href="child-plans.html">Child Plans</a>
+                                <a href="term-insurance.html">Term Insurance</a>
+                                <a href="mutualfunds.html">Mutual Funds</a>
+                                <a href="sip.html">SIP</a>
+                                <a href="equity.html">Equity</a>
+                                <a href="calculators.html">Calculators</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Renew</a>
+                            <div class="dropdown-menu">
+                                <a href="renew-policy.html">Renew Policy</a>
+                                <a href="check-status.html">Check Status</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Claim</a>
+                            <div class="dropdown-menu">
+                                <a href="file-claim.html">File a Claim</a>
+                                <a href="track-claim.html">Track Claim</a>
+                            </div>
+                        </li>
+    
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Help</a>
+                            <div class="dropdown-menu">
+                                <a href="faqs.html">FAQs</a>
+                                <a href="contact.html">Contact Us</a>
+                                <a href="support.html">Customer Support</a>
+                                <a href="advisor.html">Find an Advisor</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">About</a>
+                            <div class="dropdown-menu">
+                                <a href="our-story.html">Our Story</a>
+                                <a href="leadership.html">Leadership</a>
+                                <a href="careers.html">Careers</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <div class="navbar-actions desktop-only">
+                    <a href="investment-plans.html" class="btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+  
+
+    <!-- Header / Nav -->
+     
+    
+    <!-- Hero -->
+    <div class="hero" style="margin-top:20px; overflow:hidden; position:relative;">
+        <main>
+            <div class="card fade-up" id="introCard">
+                <div class="hero-content">
+                    <!-- ✅ LEFT SIDE -->
+                    <div class="hero-text">
+                        <div class="pill">Beginner → Advanced</div>
+                        <h1 class="hero-title">Mutual Funds — Understand, Compare & Invest Wisely</h1>
+                        <p class="lead">
+                            Mutual funds let you invest smartly by pooling your money with others to build a diversified
+                            portfolio.
+                            Learn how to compare, choose, and grow wealth with confidence — step by step.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="cta" onclick="document.getElementById('mutual-funds-info').scrollIntoView({behavior:'smooth'})">
+                                🚀 Start Learning
+                            </button>
+                        </div>
+
+                    </div>
+    
+                    <!-- ✅ RIGHT SIDE -->
+                    <div class="hero-visual">
+                        <div class="floating-card">
+                            <div class="icon-box">📈</div>
+                            <div>
+                                <div class="heading">Plan for growth</div>
+                                <div class="muted small">Diversify, invest with discipline, review performance.</div>
+                            </div>
+                        </div>
+    
+                        <div class="checklist">
+                            <div class="muted small" style="font-weight:600">Quick checklist</div>
+                            <ul>
+                                <li>Define goal & horizon</li>
+                                <li>Assess risk tolerance</li>
+                                <li>Prefer SIP for discipline</li>
+                            </ul>
+                        </div>
+    
+                        <div class="hero-actions">
+                            <button class="cta alt"
+                                onclick="document.getElementById('calculator').scrollIntoView({behavior:'smooth'})">
+                                💰 SIP Calculator
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <style>
+        /* HERO */
+        .hero {
+            margin-top: 40px;
+            /* Reduced space from navbar */
+            display: flex;
+            justify-content: center;
+        }
+    
+        .card {
+            background: linear-gradient(135deg, #f8fffc, #f0fdf4);
+            border-radius: 20px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+            padding: 48px 60px;
+            width: 100%;
+            max-width: 1100px;
+            transition: transform 0.5s ease;
+        }
+    
+        .card:hover {
+            transform: translateY(-3px);
+        }
+    
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+    
+        /* LEFT SIDE */
+        .hero-text {
+            flex: 1.2;
+        }
+    
+        .pill {
+            display: inline-block;
+            background: linear-gradient(90deg, #10b981, #34d399);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+        }
+    
+        .hero-title {
+            margin-top: 16px;
+            font-size: 2.3rem;
+            color: #1e293b;
+            transition: color 0.3s ease;
+        }
+    
+        .hero-title:hover {
+            color: #0d9488;
+        }
+    
+        .lead {
+            margin-top: 10px;
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    
+        .hero-buttons {
+            margin-top: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+    
+        /* CTA Buttons */
+        .cta {
+            background: linear-gradient(90deg, #059669, #10b981);
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+    
+        .cta:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+        }
+    
+        .cta.alt {
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+        }
+    
+        /* RIGHT SIDE */
+        .hero-visual {
+            width: 300px;
+            animation: fadeInUp 1.2s ease;
+        }
+    
+        .floating-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: white;
+            border-radius: 14px;
+            padding: 14px 18px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s ease;
+            animation: floatY 4s ease-in-out infinite;
+        }
+    
+        .floating-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+    
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(90deg, #059669, #10b981);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            font-weight: 800;
+        }
+    
+        .heading {
+            font-weight: 700;
+            font-size: 16px;
+            color: #065f46;
+        }
+    
+        .checklist {
+            margin-top: 16px;
+            background: #f0fdf4;
+            border-radius: 10px;
+            padding: 14px 18px;
+            box-shadow: inset 0 0 0 1px rgba(16, 185, 129, 0.15);
+            transition: all 0.3s ease;
+        }
+    
+        .checklist:hover {
+            transform: scale(1.02);
+            background: #ecfdf5;
+        }
+    
+        .checklist ul {
+            margin-top: 8px;
+            padding-left: 18px;
+            color: #475569;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    
+        .hero-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+        }
+    
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+    
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        @keyframes floatY {
+    
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+    
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .card {
+                padding: 32px;
+            }
+    
+            .hero-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+    
+            .hero-visual {
+                width: 100%;
+            }
+    
+            .hero-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+
+   
+
+        <!-- LONG CONTENT SECTIONS START -->
+        <section id="mutual-funds-info" class="section" >
+            <div class="card fade-up"
+                style="background:linear-gradient(135deg,#f8fffc,#f0fdf4);border-radius:20px;padding:50px;">
+                <h2 class="section-title">💼 What are Mutual Funds & Their Types</h2>
+                <p class="muted intro-text">
+                    Mutual funds pool money from multiple investors and invest in a diversified mix of assets — equities, bonds,
+                    or money market instruments.
+                    Managed by professionals, they simplify investing for beginners and experts alike by offering
+                    diversification, liquidity, and long-term growth.
+                </p>
+        
+                <!-- How it Works -->
+                <div class="info-grid">
+                    <div class="info-block">
+                        <h3>How it works — simplified</h3>
+                        <ol>
+                            <li>💰 <strong>Pooling:</strong> Investors buy fund units, pooling their money together.</li>
+                            <li>📊 <strong>Management:</strong> Fund managers allocate investments strategically.</li>
+                            <li>📈 <strong>Returns:</strong> Profits and income are distributed based on unit holdings.</li>
+                            <li>💹 <strong>NAV:</strong> The Net Asset Value reflects the per-unit price, updated daily.</li>
+                        </ol>
+        
+                        <blockquote class="highlight">
+                            <strong>Remember:</strong> Mutual funds make diversification and professional management accessible
+                            — no need to pick individual stocks.
+                        </blockquote>
+                    </div>
+        
+                    <div class="vocab-block">
+                        <h3>Key Vocabulary</h3>
+                        <div class="vocab-grid">
+                            <div class="vocab-item" style="margin-top: 10px;">
+                                <strong>NAV</strong>
+                                <p class="muted">Net Asset Value = (Assets − Liabilities) / Outstanding Units. Reflects daily
+                                    unit value.</p>
+                            </div>
+                            <div class="vocab-item" style="margin-top: 10px;">
+                                <strong>Expense Ratio</strong>
+                                <p class="muted">Annual percentage covering fund management & operational costs. Lower = better
+                                    returns.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Types of Funds -->
+                <h3 style="text-align: center;margin-top: 20px;font-size: 20px;">Types of Mutual Funds — By Asset, Approach & Goal</h3>
+                <p class="muted" style="text-align: center;">
+                    Mutual funds vary based on what they invest in and your financial goals.
+                    Here are the main categories to help you choose wisely:
+                </p>
+        
+                <div class="types-grid">
+                    <div class="type-card">
+                        <h4>📈 Equity Funds</h4>
+                        <p class="muted">Invest in stocks for long-term growth. Expect higher volatility but potential high
+                            returns.</p>
+                        <ul>
+                            <li>Large-cap funds</li>
+                            <li>Mid/small-cap funds</li>
+                            <li>Sector / thematic funds</li>
+                        </ul>
+                    </div>
+        
+                    <div class="type-card">
+                        <h4>💵 Debt Funds</h4>
+                        <p class="muted">Invest in bonds & government securities. Lower risk, suitable for stable income.</p>
+                    </div>
+        
+                    <div class="type-card">
+                        <h4>⚖️ Hybrid Funds</h4>
+                        <p class="muted">Blend of equity + debt for balanced risk and return. Great for moderate investors.</p>
+                    </div>
+        
+                    <div class="type-card">
+                        <h4>📊 Index / Passive Funds</h4>
+                        <p class="muted">Track a market index. Low-cost and simple for beginners seeking predictable returns.
+                        </p>
+                    </div>
+        
+                    <div class="type-card">
+                        <h4>💧 Liquid & Money Market</h4>
+                        <p class="muted">Short-term parking for cash — low risk, high liquidity.</p>
+                    </div>
+        
+                    <div class="type-card">
+                        <h4>🎯 Target-Date / Goal Funds</h4>
+                        <p class="muted">Auto-adjust allocations toward conservative assets as you approach a goal year.</p>
+                    </div>
+                </div>
+            </div>
+        
+           
+        </section>
+        
+        <style>
+            .section-title {
+                font-size: 2rem;
+                color: #1e293b;
+                text-align: center;
+                margin-bottom: 20px;
+                font-weight: 700;
+                animation: fadeInDown 1s ease;
+            }
+        
+            .intro-text {
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto 30px;
+                font-size: 1rem;
+                color: #475569;
+                animation: fadeIn 1.2s ease;
+            }
+        
+            .info-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 40px;
+                margin-top: 20px;
+            }
+        
+            .info-block ol {
+                padding-left: 20px;
+                line-height: 1.8;
+                color: #334155;
+            }
+        
+            /* .highlight {
+                margin-top: 12px;
+                padding: 12px;
+                border-left: 4px solid var(--accent, #10b981);
+                background: linear-gradient(90deg, rgba(16, 185, 129, 0.05), transparent);
+                border-radius: 8px;
+                transition: all 0.3s ease;
+            }
+        
+            .highlight:hover {
+                background: rgba(16, 185, 129, 0.1);
+                transform: scale(1.02);
+            } */
+        
+            .vocab-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 20px;
+            }
+        
+            .vocab-item {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 14px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+                transition: all 0.3s ease;
+            }
+        
+            .vocab-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            }
+        
+            /* Types grid */
+            .types-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 16px;
+                margin-top: 24px;
+            }
+        
+            .type-card {
+                background: white;
+                border-radius: 14px;
+                padding: 20px;
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+                transition: all 0.35s ease;
+                border-top: 4px solid transparent;
+            }
+        
+            .type-card:hover {
+                transform: translateY(-6px);
+                border-top-color: var(--accent, #10b981);
+                box-shadow: 0 8px 20px rgba(16, 185, 129, 0.15);
+            }
+        
+            .type-card h4 {
+                color: #0f766e;
+                margin-bottom: 6px;
+            }
+        
+            .type-card ul {
+                margin-top: 8px;
+                padding-left: 18px;
+                color: #64748b;
+                font-size: 14px;
+            }
+        
+            /* Floating background animation */
+            .float-circle {
+                position: absolute;
+                border-radius: 50%;
+                opacity: 0.15;
+                z-index: -1;
+            }
+        
+            .circle-a {
+                width: 180px;
+                height: 180px;
+                background: #34d399;
+                top: -60px;
+                left: -80px;
+                animation: floatCircle 12s ease-in-out infinite alternate;
+            }
+        
+            .circle-b {
+                width: 220px;
+                height: 220px;
+                background: #60a5fa;
+                bottom: -100px;
+                right: -100px;
+                animation: floatCircle 14s ease-in-out infinite alternate-reverse;
+            }
+        
+            /* Animations */
+            @keyframes fadeInDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+        
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+        
+                to {
+                    opacity: 1;
+                }
+            }
+        
+            @keyframes floatCircle {
+        
+                0%,
+                100% {
+                    transform: translate(0, 0) scale(1);
+                }
+        
+                50% {
+                    transform: translate(20px, -20px) scale(1.1);
+                }
+            }
+        
+            /* Responsive */
+            @media (max-width: 768px) {
+                .card {
+                    padding: 30px;
+                }
+        
+                .section-title {
+                    font-size: 1.6rem;
+                }
+            }
+        </style>
+        
+        
+
+        <!-- ✅ BENEFITS SECTION -->
+        <section id="benefits" class="section">
+            <div class="card fade-up benefits-card">
+                <h2 class="section-title">✨ Benefits of Investing in Mutual Funds</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="icon-box">🌐</div>
+                        <h3>Diversification</h3>
+                        <p class="muted">Reduces single-company risk by holding many securities within a single fund.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon-box">👨‍💼</div>
+                        <h3>Professional Management</h3>
+                        <p class="muted">Expert fund managers analyze markets and manage portfolios to maximize efficiency.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon-box">💰</div>
+                        <h3>Accessibility</h3>
+                        <p class="muted">Start small with SIPs and grow wealth steadily without timing the market.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon-box">🔍</div>
+                        <h3>Liquidity & Transparency</h3>
+                        <p class="muted">Redeem anytime at NAV and access regular fund reports and disclosures.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon-box">📉</div>
+                        <h3>Cost Efficiency</h3>
+                        <p class="muted">Index funds have lower fees, letting you keep more of your returns.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon-box">🎯</div>
+                        <h3>Goal-based Options</h3>
+                        <p class="muted">Select funds tailored to your goals — retirement, education, or short-term saving.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ✅ CHART SECTION -->
+        <section id="charts" class="section">
+            <div class="card fade-up chart-card">
+                <!-- Main centered heading -->
+                <h2 class="section-title main-title">
+                    📊 Interactive Chart — Hypothetical Growth Scenarios
+                </h2>
+                <p class="muted section-intro">
+                    See how ₹10,000 might grow under various average annual returns.
+                    These are <strong>illustrative</strong>, not predictions.
+                </p>
+        
+                <div class="chart-layout">
+                    <!-- 📈 Chart on Left -->
+                    <div class="chart-left">
+                        <canvas id="growthChart" aria-label="Hypothetical growth chart"></canvas>
+                    </div>
+        
+                    <!-- 📝 Buttons + Info on Right -->
+                    <div class="chart-right">
+                        <div class="scenario-buttons">
+                            <button class="cta scenario" onclick="setScenario('conservative')">🌿 Conservative (6%)</button>
+                            <button class="cta scenario alt" onclick="setScenario('balanced')">⚖️ Balanced (9%)</button>
+                            <button class="cta scenario blue" onclick="setScenario('aggressive')">🚀 Aggressive (12%)</button>
+                        </div>
+        
+                        <p class="muted tip-text">
+                            Tap a button to visualize compounding differences. Notice how small rate changes grow over time!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .chart-card {
+  background: linear-gradient(135deg, #f0f9ff, #e0f7f9);
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+  padding: 60px 50px;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* 🏷 Center heading and intro */
+.chart-card .main-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.section-intro {
+  text-align: center;
+  color: #475569;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Layout for chart + controls */
+.chart-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+}
+
+/* Left Chart */
+.chart-left {
+  animation: fadeInLeft 1.2s ease forwards;
+}
+.chart-left canvas {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.5s ease;
+}
+.chart-left canvas:hover {
+  transform: scale(1.03);
+}
+
+/* Right Content */
+.chart-right {
+  text-align: left;
+  animation: fadeInRight 1.2s ease forwards;
+}
+.tip-text {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* Buttons */
+.scenario-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+.cta.scenario {
+  background: linear-gradient(90deg, #059669, #10b981);
+  transition: all 0.3s ease;
+}
+.cta.scenario.alt {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+.cta.scenario.blue {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+}
+.cta.scenario:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ✨ Animations */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+  .chart-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  .chart-right {
+    text-align: center;
+  }
+  .chart-left canvas {
+    max-width: 100%;
+  }
+}
+.benefit-item:hover{
+    border: 2px solid lightgreen;
+}
+
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            const ctx = document.getElementById("growthChart").getContext("2d");
+
+            // Base data
+            let baseAmount = 10000;
+            let years = Array.from({ length: 11 }, (_, i) => i); // 0–10 years
+
+            function calculateGrowth(rate) {
+                return years.map(y => baseAmount * Math.pow(1 + rate / 100, y));
+            }
+
+            // Chart setup
+            let growthChart = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: years.map(y => `${y}y`),
+                    datasets: [{
+                        label: "Investment Value (₹)",
+                        data: calculateGrowth(9),
+                        borderColor: "#059669",
+                        backgroundColor: "rgba(16, 185, 129, 0.15)",
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 4,
+                        pointHoverRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { mode: "index", intersect: false }
+                    },
+                    interaction: { mode: "nearest", axis: "x", intersect: false },
+                    scales: {
+                        y: {
+                            ticks: { callback: val => "₹" + val.toLocaleString() },
+                            beginAtZero: false
+                        }
+                    },
+                    animation: {
+                        duration: 1200,
+                        easing: "easeOutQuart"
+                    }
+                }
+            });
+
+            // Scenario switching
+            function setScenario(type) {
+                const rates = { conservative: 6, balanced: 9, aggressive: 12 };
+                const colors = {
+                    conservative: "#10b981",
+                    balanced: "#f59e0b",
+                    aggressive: "#2563eb"
+                };
+
+                const rate = rates[type];
+                const color = colors[type];
+
+                growthChart.data.datasets[0].data = calculateGrowth(rate);
+                growthChart.data.datasets[0].borderColor = color;
+                growthChart.data.datasets[0].backgroundColor = color + "33";
+                growthChart.update();
+            }
+        </script>
+
+        <style>
+            /* 🌿 GLOBAL REFINEMENT */
+body {
+  margin: 0;
+  background: #f2f7f5;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #072020;
+  scroll-behavior: smooth;
+}
+main, section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.section {
+  padding: 50px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* ✨ HERO */
+.hero {
+  margin: 0;
+  background: linear-gradient(135deg, #f8fffc, #ecfdf5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+}
+.hero-text {
+  flex: 1.2;
+  min-width: 300px;
+}
+.hero-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: #0f172a;
+  margin-top: 14px;
+}
+.hero-title:hover {
+  color: #0d9488;
+}
+.lead {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+.cta {
+  background: linear-gradient(90deg, #059669, #10b981);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);
+}
+.cta.alt {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+}
+.hero-visual {
+  width: 300px;
+  min-width: 260px;
+  animation: fadeInUp 1.2s ease;
+}
+.floating-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 14px 16px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+  animation: floatY 4s ease-in-out infinite;
+}
+.icon-box {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(90deg, #059669, #10b981);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 800;
+}
+.checklist {
+  margin-top: 16px;
+  background: #f0fdf4;
+  border-radius: 10px;
+  padding: 14px 18px;
+  box-shadow: inset 0 0 0 1px rgba(16, 185, 129, 0.15);
+}
+.checklist ul {
+  padding-left: 20px;
+  margin-top: 8px;
+  color: #475569;
+  font-size: 14px;
+}
+.hero-actions {
+  margin-top: 16px;
+}
+
+/* 💼 INFO SECTION */
+#mutual-funds-info .card {
+  background: linear-gradient(135deg, #f8fffc, #f0fdf4);
+  padding: 50px 40px;
+}
+.section-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #1e293b;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 999px;
+}
+.intro-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: #475569;
+}
+.types-grid, .info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.type-card, .vocab-item {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.type-card:hover, .vocab-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-top: 3px solid var(--accent, #10b981);
+}
+
+/* 🌟 BENEFITS */
+#benefits {
+  background: linear-gradient(135deg, #f8fffc, #effef8);
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+.benefit-item {
+  background: white;
+  border-radius: 16px;
+  padding: 22px 20px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: all 0.35s ease;
+}
+.benefit-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 20px rgba(16, 185, 129, 0.15);
+}
+.benefit-item .icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  margin: 0 auto 10px;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  color: white;
+  font-size: 20px;
+}
+
+/* 📊 CHARTS */
+.chart-card {
+  background: linear-gradient(135deg, #f0f9ff, #e0f7f9);
+  padding: 50px 40px;
+  text-align: center;
+}
+.scenario-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* 💰 CALCULATOR */
+#calculator .card {
+  background: linear-gradient(135deg, #f8fffc, #f0fdf4);
+  padding: 50px 40px;
+}
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-top: 6px;
+  font-size: 15px;
+}
+input:focus {
+  border-color: #10b981;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th, td {
+  text-align: left;
+  padding: 6px;
+  font-size: 14px;
+  color: #334155;
+}
+th {
+  font-weight: 600;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* 🧩 FAQ + FOOTER */
+#faqs h3 {
+  margin-top: 16px;
+  color: #065f46;
+}
+footer {
+  text-align: center;
+  padding: 20px 10px 40px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* 🌈 ANIMATIONS */
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes floatY {
+  0%,100% {transform: translateY(0);}
+  50% {transform: translateY(-10px);}
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-visual {
+    width: 100%;
+    animation: fadeInUp 1s ease;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .section {
+    padding: 40px 16px;
+  }
+}
+@media (max-width: 600px) {
+  .card {
+    padding: 30px 20px;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .benefit-item p {
+    font-size: 0.9rem;
+  }
+  .cta {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+        </style>
+        
+        <style>
+            /* ✅ Shared Section Styling */
+            .section {
+               
+                display: flex;
+                justify-content: center;
+            }
+        
+            .section-title {
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: #0f172a;
+                text-align: center;
+                position: relative;
+            }
+        
+            .section-title::after {
+                content: "";
+                display: block;
+                width: 60px;
+                height: 3px;
+                background: linear-gradient(90deg, #10b981, #34d399);
+                margin: 10px auto 0;
+                border-radius: 999px;
+            }
+        
+            /* ✅ BENEFITS GRID */
+            .benefits-card {
+                background: linear-gradient(135deg, #f8fffc, #effef8);
+                border-radius: 20px;
+                box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+                padding: 50px 60px;
+                transition: all 0.5s ease;
+            }
+        
+            .benefits-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 18px;
+                margin-top: 28px;
+            }
+        
+            .benefit-item {
+                background: white;
+                border-radius: 16px;
+                padding: 22px 20px;
+                box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+                transition: all 0.35s ease;
+                position: relative;
+                overflow: hidden;
+                animation: fadeInUp 1s ease both;
+            }
+        
+            .benefit-item:hover {
+                transform: translateY(-8px) scale(1.02);
+                box-shadow: 0 12px 20px rgba(16, 185, 129, 0.15);
+            }
+        
+            .benefit-item h3 {
+                color: #065f46;
+                font-size: 1.15rem;
+                margin-bottom: 6px;
+            }
+        
+            .benefit-item p {
+                font-size: 0.95rem;
+                color: #475569;
+            }
+        
+            .benefit-item .icon-box {
+                width: 44px;
+                height: 44px;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(90deg, #10b981, #34d399);
+                color: white;
+                font-size: 20px;
+                margin-bottom: 10px;
+                transition: all 0.4s ease;
+            }
+        
+            .benefit-item:hover .icon-box {
+                transform: rotate(10deg) scale(1.2);
+                background: linear-gradient(90deg, #34d399, #059669);
+            }
+        
+            /* ✅ CHART SECTION */
+            .chart-card {
+                background: linear-gradient(135deg, #f0f9ff, #e0f7f9);
+                border-radius: 20px;
+                box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+                padding: 50px 60px;
+                text-align: center;
+            }
+        
+            .scenario-buttons {
+                margin-top: 24px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+        
+            .cta.scenario {
+                background: linear-gradient(90deg, #059669, #10b981);
+            }
+        
+            .cta.scenario.alt {
+                background: linear-gradient(90deg, #f59e0b, #fbbf24);
+            }
+        
+            .cta.scenario.blue {
+                background: linear-gradient(90deg, #2563eb, #3b82f6);
+            }
+        
+            .cta.scenario:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            }
+        
+            /* ✅ Animations */
+            .fade-up {
+                opacity: 0;
+                transform: translateY(40px);
+                animation: fadeUp 1s ease forwards;
+            }
+        
+            @keyframes fadeUp {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+        
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        
+            /* Responsive */
+            @media (max-width: 768px) {
+        
+                .benefits-card,
+                .chart-card {
+                    padding: 30px 24px;
+                }
+        
+                .section-title {
+                    font-size: 1.5rem;
+                }
+            }
+        </style>
+
+        <!-- Many extra long sections for content (to reach the long-page requirement) -->
+        
+        <section id="calculator" class="section">
+            <div class="card fade-up sip-card">
+                <h2 class="section-title">💰 SIP Calculator — Plan Your Investments Smartly</h2>
+                <p class="muted section-intro">
+                    Enter your monthly SIP amount, expected annual return, and investment period.
+                    The calculator assumes regular monthly contributions compounded monthly —
+                    a simplified but practical model for long-term planning.
+                </p>
+        
+                <div class="sip-grid">
+                    <!-- 🧮 Left Side — Input Form -->
+                    <div class="sip-inputs">
+                        <div class="form-row">
+                            <label>Monthly SIP amount (₹)</label>
+                            <input id="sipAmount" type="number" value="5000" min="0" />
+                        </div>
+        
+                        <div class="form-row">
+                            <label>Expected annual return (%)</label>
+                            <input id="sipReturn" type="number" value="12" step="0.1" min="0" />
+                        </div>
+        
+                        <div class="form-row">
+                            <label>Investment period (years)</label>
+                            <input id="sipYears" type="number" value="10" min="1" />
+                        </div>
+        
+                        <div class="sip-buttons">
+                            <button class="cta" onclick="calculateSIP()">Calculate</button>
+                            <button class="btn-outline" onclick="resetSIP()">Reset</button>
+                        </div>
+        
+                        <div id="sipResult" class="sip-result"></div>
+                    </div>
+        
+                    <!-- 📊 Right Side — Snapshot + Chart -->
+                    <div class="sip-summary">
+                        <h3>SIP Snapshot</h3>
+                        <p class="muted small-text">
+                            A quick look at your invested amount, estimated value, and total gains.
+                        </p>
+        
+                        <table class="sip-table">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Monthly</td>
+                                    <td id="snap-monthly">₹5,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Years</td>
+                                    <td id="snap-years">10</td>
+                                </tr>
+                                <tr>
+                                    <td>Return</td>
+                                    <td id="snap-rate">12%</td>
+                                </tr>
+                                <tr>
+                                    <td>Invested</td>
+                                    <td id="snap-invested">₹600,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Estimated value</td>
+                                    <td id="snap-value">—</td>
+                                </tr>
+                                <tr>
+                                    <td>Estimated gain</td>
+                                    <td id="snap-gain">—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+        
+                        <div class="sip-chart">
+                            <canvas id="sipChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+        
+                <p class="muted note">
+                    ⚠️ Note: This calculator is for educational purposes only.
+                    It does not account for fees, taxes, or inflation. Results are rounded for readability.
+                </p>
+            </div>
+        </section>
+        <style>
+            /* 🎯 SIP CALCULATOR SECTION */
+.sip-card {
+  background: linear-gradient(135deg, #f8fffc, #f0fdf4);
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+.section-intro {
+  text-align: center;
+  color: #475569;
+  line-height: 1.6;
+  max-width: 750px;
+  margin: 0 auto 40px;
+}
+
+/* 🔹 Layout Grid */
+.sip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* 🧮 Input Section */
+.sip-inputs {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 26px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  animation: fadeInLeft 1.2s ease;
+}
+.form-row {
+  margin-bottom: 16px;
+}
+.form-row label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #064e3b;
+}
+input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+input:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  outline: none;
+}
+.sip-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(14, 165, 122, 0.2);
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #065f46;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  background: rgba(16, 185, 129, 0.08);
+  transform: translateY(-2px);
+}
+.sip-result {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* 📊 Summary Section */
+.sip-summary {
+  background: white;
+  border-radius: 16px;
+  padding: 30px 26px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  animation: fadeInRight 1.2s ease;
+}
+.sip-summary h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #064e3b;
+  margin-bottom: 6px;
+}
+.small-text {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+.sip-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+.sip-table th, .sip-table td {
+  text-align: left;
+  padding: 6px;
+  font-size: 0.95rem;
+  color: #334155;
+}
+.sip-table th {
+  border-bottom: 1px solid #e2e8f0;
+}
+.sip-chart {
+  margin-top: 20px;
+}
+.sip-chart canvas {
+  width: 100%;
+  max-height: 220px;
+  transition: transform 0.4s ease;
+}
+.sip-chart canvas:hover {
+  transform: scale(1.03);
+}
+
+/* ⚙️ Note */
+.note {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #64748b;
+}
+
+/* ✨ Animations */
+@keyframes fadeInLeft {
+  from {opacity: 0; transform: translateX(-60px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+@keyframes fadeInRight {
+  from {opacity: 0; transform: translateX(60px);}
+  to {opacity: 1; transform: translateX(0);}
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+  .sip-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .sip-inputs, .sip-summary {
+    text-align: center;
+  }
+}
+
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            let sipChart;
+
+            function calculateSIP() {
+                const amount = parseFloat(document.getElementById("sipAmount").value);
+                const rate = parseFloat(document.getElementById("sipReturn").value);
+                const years = parseInt(document.getElementById("sipYears").value);
+
+                const months = years * 12;
+                const monthlyRate = rate / 12 / 100;
+
+                const futureValue = amount * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) * (1 + monthlyRate);
+                const invested = amount * months;
+                const gain = futureValue - invested;
+
+                document.getElementById("snap-monthly").textContent = "₹" + amount.toLocaleString();
+                document.getElementById("snap-years").textContent = years;
+                document.getElementById("snap-rate").textContent = rate + "%";
+                document.getElementById("snap-invested").textContent = "₹" + invested.toLocaleString();
+                document.getElementById("snap-value").textContent = "₹" + Math.round(futureValue).toLocaleString();
+                document.getElementById("snap-gain").textContent = "₹" + Math.round(gain).toLocaleString();
+                document.getElementById("sipResult").innerHTML = `<strong>Estimated future value:</strong> ₹${Math.round(futureValue).toLocaleString()}`;
+
+                // Chart.js rendering
+                const ctx = document.getElementById("sipChart").getContext("2d");
+                if (sipChart) sipChart.destroy();
+
+                sipChart = new Chart(ctx, {
+                    type: "doughnut",
+                    data: {
+                        labels: ["Invested", "Gain"],
+                        datasets: [{
+                            data: [invested, gain],
+                            backgroundColor: ["#10b981", "#34d399"],
+                            hoverOffset: 6,
+                            borderWidth: 2,
+                            borderColor: "#fff"
+                        }]
+                    },
+                    options: {
+                        cutout: "70%",
+                        plugins: {
+                            legend: { position: "bottom" },
+                            tooltip: { callbacks: { label: ctx => "₹" + ctx.parsed.toLocaleString() } }
+                        },
+                        animation: { duration: 1200, easing: "easeOutQuart" }
+                    }
+                });
+            }
+
+            function resetSIP() {
+                document.getElementById("sipAmount").value = 5000;
+                document.getElementById("sipReturn").value = 12;
+                document.getElementById("sipYears").value = 10;
+                document.getElementById("sipResult").textContent = "";
+                if (sipChart) sipChart.destroy();
+            }
+        </script>
+
+
+        <section id="faqs" class="section">
+            <div class="card fade-up faq-card">
+                <h2 class="section-title">❓ Frequently Asked Questions</h2>
+        
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">Are mutual funds safe?</button>
+                        <div class="faq-answer">
+                            <p>Safety depends on the type of fund. Equity funds are exposed to market risk; debt funds have
+                                interest-rate and credit risk. Time horizon and diversification help manage risk.</p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question">What is SIP?</button>
+                        <div class="faq-answer">
+                            <p>SIP — Systematic Investment Plan — allows you to invest a fixed sum regularly (monthly or
+                                quarterly) into a mutual fund, encouraging disciplined investing and averaging cost over time.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <button class="faq-question">How do I choose a fund?</button>
+                        <div class="faq-answer">
+                            <p>Define your goals, compare funds in the same category, evaluate the expense ratio, review the
+                                fund manager's track record, and check portfolio diversification.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            /* 🌿 FAQ SECTION */
+.faq-card {
+  background: linear-gradient(135deg, #f8fffc, #f0fdf4);
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+  padding: 50px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 30px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item.active {
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Question Button */
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #065f46;
+  padding: 16px 18px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+  background: #ecfdf5;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #10b981;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+/* Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background: #f9fffb;
+  border-top: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.faq-answer p {
+  padding: 14px 18px 18px;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+/* Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .faq-card {
+    padding: 30px 20px;
+  }
+  .faq-question {
+    font-size: 1rem;
+  }
+}
+
+        </style>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const faqButtons = document.querySelectorAll(".faq-question");
+
+        faqButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const faqItem = button.parentElement;
+                const answer = faqItem.querySelector(".faq-answer");
+
+                // Close other open FAQs
+                document.querySelectorAll(".faq-item").forEach((item) => {
+                    if (item !== faqItem) {
+                        item.classList.remove("active");
+                        item.querySelector(".faq-answer").style.maxHeight = "0px";
+                    }
+                });
+
+                // Toggle current FAQ
+                faqItem.classList.toggle("active");
+
+                if (faqItem.classList.contains("active")) {
+                    answer.style.maxHeight = answer.scrollHeight + "px"; // open
+                } else {
+                    answer.style.maxHeight = "0px"; // close
+                }
+            });
+        });
+    });
+</script>
+
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <div class="footer-logo-img">
+                    <img src="./images/logo.png" alt="Wealth Blue Print Logo" loading="lazy"
+                        class="footer-logo-image" />
+                </div>
+                <p style="text-align: left;">Your partner for financial growth and security</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Wealth Blue Printimf/" target="/"
+                        aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/Wealth Blue Print__?t=QZcsQv6QemM2qT4bfejZeg&s=08" target="/"
+                        aria-label="Follow us on X"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/grow-well-imf/about/" target="/"
+                        aria-label="Follow us on Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/Wealth Blue Print.imf/" target="/"
+                        aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links" style="text-align: left;">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="./investment-plans.html">Products</a></li>
+                        <li><a href="./renew-policy.html">Renew</a></li>
+                        <li><a href="./advisor.html">Testimonials</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="investment-plans.html">Financial Planning</a></li>
+                        <li><a href="child-plans.html">Child Planning</a></li>
+                        <li><a href="investment-plans.html">Investment Planning</a></li>
+                        <li><a href="retirement-plans.html">Retirement Planning</a></li>
+                        <li><a href="term-insurance.html">Term Insurance</a></li>
+                        <li><a href="#">Tax Advisory</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="advisor.html">Advisor</a></li>
+                        <li>
+                            <a href="retirement-plans.html">Financial Calculators</a>
+                        </li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Wealth Blue Print Financial Advisors. All rights reserved.</p>
+            <ul class="footer-legal">
+                <li><a href="privacypolicy.html">Privacy Policy</a></li>
+
+            </ul>
+        </div>
+    </div>
+</footer>
+
+        
+</main>
+
+      
+      
+    
+ 
+
+  <!-- JS: charts, calculator, animations -->
+  <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1158,7 +1158,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Event listeners
-    investmentAmount.addEventListener('input', updateCalculator);
+    
     investmentPeriod.addEventListener('input', updateCalculator);
     returnRate.addEventListener('input', updateCalculator);
     monthlyContribution.addEventListener('input', updateCalculator);

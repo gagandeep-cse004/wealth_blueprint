@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equity Investments</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --accent: #3b82f6;
+            --bg: #f8fbff;
+            --text: #0f172a;
+            --muted: #475569;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 60px 10%;
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        p {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        /* Hero / Intro */
+        .intro {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            align-items: center;
+            gap: 40px;
+        }
+
+        .intro img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .intro-text h1 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .intro-text p {
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        /* Benefits */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .benefit {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+        }
+
+        .benefit h3 {
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/logobetter.png" alt="company_logo" class="brand-logo" /></a>
+                    <a href="index.html" style="font-size: 10px;">
+                        <h2><span class="highlight">Wealthblue</span>Print</h2>
+                    </a>
+                </div>
+    
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+    
+                <nav id="nav-menu">
+                    <ul id="menu-items">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Products</a>
+                            <div class="dropdown-menu">
+                                <a href="investment-plans.html">Investment Plans</a>
+                                <a href="retirement-plans.html">Retirement Plans</a>
+                                <a href="child-plans.html">Child Plans</a>
+                                <a href="term-insurance.html">Term Insurance</a>
+                                <a href="mutualfunds.html">Mutual Funds</a>
+                                <a href="sip.html">SIP</a>
+                                <a href="equity.html">Equity</a>
+                                <a href="calculators.html">Calculators</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Renew</a>
+                            <div class="dropdown-menu">
+                                <a href="renew-policy.html">Renew Policy</a>
+                                <a href="check-status.html">Check Status</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Claim</a>
+                            <div class="dropdown-menu">
+                                <a href="file-claim.html">File a Claim</a>
+                                <a href="track-claim.html">Track Claim</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Help</a>
+                            <div class="dropdown-menu">
+                                <a href="faqs.html">FAQs</a>
+                                <a href="contact.html">Contact Us</a>
+                                <a href="support.html">Customer Support</a>
+                                <a href="advisor.html">Find an Advisor</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">About</a>
+                            <div class="dropdown-menu">
+                                <a href="our-story.html">Our Story</a>
+                                <a href="leadership.html">Leadership</a>
+                                <a href="careers.html">Careers</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <div class="navbar-actions desktop-only">
+                    <a href="investment-plans.html" class="btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="equity-section">
+        <div class="equity-wrapper">
+            <div class="equity-text fade-in-left">
+                <h1>📈 Equity Investments</h1>
+                <p>
+                    Equity investing means buying shares of companies to participate in their growth and profits.
+                    Over the long term, equities have consistently outperformed most asset classes —
+                    making them essential for <strong>wealth creation</strong> and <strong>beating inflation</strong>.
+                </p>
+                <p>
+                    <strong>Plan wisely:</strong> Diversify your portfolio across sectors, market caps, and
+                    geographies for balanced growth and reduced volatility.
+                </p>
+    
+                <div class="equity-buttons">
+                    <button class="cta see-chart"
+                        onclick="document.getElementById('chart').scrollIntoView({behavior:'smooth'})">
+                        📊 See Chart
+                    </button>
+                </div>
+            </div>
+    
+            <div class="equity-graphic fade-in-right">
+                <div class="image-wrapper floating">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6311/6311823.png" alt="Equity illustration" />
+                </div>
+                <div class="info-tag tag1">Long-term Growth</div>
+                <div class="info-tag tag2">Diversification</div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        /* 🌟 EQUITY SECTION */
+        .equity-section {
+            background: linear-gradient(135deg, #f8fbff, #e0f7fa);
+            padding: 80px 8%;
+            margin-top: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+    
+        /* ⚙️ Layout */
+        .equity-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            align-items: center;
+            gap: 50px;
+            max-width: 1200px;
+            position: relative;
+        }
+    
+        /* 🧩 Text */
+        .equity-text h1 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 16px;
+        }
+    
+        .equity-text p {
+            color: #475569;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+    
+        /* 🎯 Button */
+        .equity-buttons {
+            margin-top: 24px;
+        }
+    
+        .cta.see-chart {
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.05rem;
+            box-shadow: 0 0 18px rgba(37, 99, 235, 0.25);
+        }
+    
+        .cta.see-chart:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 0 28px rgba(37, 99, 235, 0.45);
+            background: linear-gradient(90deg, #1d4ed8, #2563eb);
+        }
+    
+        /* 📈 Image */
+        .equity-graphic {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .image-wrapper {
+            background: white;
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 12px 25px rgba(59, 130, 246, 0.2);
+            transition: all 0.4s ease;
+        }
+    
+        .image-wrapper:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 16px 35px rgba(37, 99, 235, 0.3);
+        }
+    
+        .image-wrapper img {
+            width: 300px;
+            transition: transform 0.4s ease;
+        }
+    
+        .image-wrapper img:hover {
+            transform: scale(1.08);
+        }
+    
+        /* 🫧 Floating Info Tags */
+        .info-tag {
+            position: absolute;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            color: white;
+            font-size: 0.9rem;
+            padding: 8px 12px;
+            border-radius: 999px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: float 5s ease-in-out infinite;
+            opacity: 0.95;
+        }
+    
+        .tag1 {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+    
+        .tag2 {
+            bottom: 20%;
+            right: 12%;
+            animation-delay: 1.5s;
+        }
+    
+        .tag3 {
+            top: 60%;
+            left: 55%;
+            animation-delay: 3s;
+        }
+    
+        @keyframes float {
+    
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+    
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+    
+        /* ✨ Animation Effects */
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            animation: fadeInLeft 1s ease forwards;
+        }
+    
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(40px);
+            animation: fadeInRight 1s ease forwards;
+        }
+    
+        @keyframes fadeInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    
+        @keyframes fadeInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    
+        /* 📱 Responsive */
+        @media (max-width: 992px) {
+            .equity-wrapper {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+    
+            .equity-text h1 {
+                font-size: 2rem;
+            }
+    
+            .image-wrapper img {
+                width: 240px;
+            }
+    
+            .info-tag {
+                display: none;
+                /* Hide floating tags for simplicity on small screens */
+            }
+        }
+    
+        @media (max-width: 600px) {
+            .cta.see-chart {
+                width: 100%;
+                padding: 12px 0;
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+
+    <!-- Benefits -->
+    <section class="equity-benefits">
+        <h2>🌟 Why Invest in Equities?</h2>
+        <p class="subtitle">
+            Equities are a cornerstone of long-term wealth creation. Discover how they can help you build financial freedom.
+        </p>
+    
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="icon">📈</div>
+                <h3>High Growth Potential</h3>
+                <p>Equities have historically outperformed other asset classes, offering strong capital appreciation over
+                    time.</p>
+            </div>
+    
+            <div class="benefit-card">
+                <div class="icon">🔥</div>
+                <h3>Beat Inflation</h3>
+                <p>Stock returns tend to grow faster than inflation, ensuring your money retains and grows its real value.
+                </p>
+            </div>
+    
+            <div class="benefit-card">
+                <div class="icon">💰</div>
+                <h3>Ownership & Dividends</h3>
+                <p>As a shareholder, you own part of the company — earning potential dividends alongside price growth.</p>
+            </div>
+    
+            <div class="benefit-card">
+                <div class="icon">⚡</div>
+                <h3>Liquidity</h3>
+                <p>Listed stocks can be bought or sold quickly on exchanges, giving you flexibility and quick access to
+                    funds.</p>
+            </div>
+    
+            <div class="benefit-card">
+                <div class="icon">🧩</div>
+                <h3>Diversification</h3>
+                <p>Investing across multiple sectors, geographies, and market caps helps reduce risk and balance your
+                    returns.</p>
+            </div>
+    
+            <div class="benefit-card">
+                <div class="icon">🏆</div>
+                <h3>Wealth Creation</h3>
+                <p>Equities are key for long-term investors aiming to build substantial wealth through compounding growth.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        /* 🌟 Section Base */
+        .equity-benefits {
+            background: linear-gradient(135deg, #f9fcff, #e6f4ff);
+            text-align: center;
+            padding: 80px 8%;
+            color: #1e3a8a;
+            overflow: hidden;
+        }
+    
+        .equity-benefits h2 {
+            font-size: clamp(2rem, 4vw, 2.6rem);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+    
+        .equity-benefits .subtitle {
+            color: #475569;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-inline: auto;
+        }
+    
+        /* 🧱 Cards Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+    
+        /* 💠 Card Styling */
+        .benefit-card {
+            position: relative;
+            background: white;
+            border-radius: 18px;
+            padding: 30px 22px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+    
+        /* 🌀 Animated Border Effect */
+        .benefit-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            border: 2px solid transparent;
+            background: linear-gradient(90deg, #2563eb, #3b82f6, #06b6d4);
+            background-size: 300%;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease, background-position 1s ease;
+        }
+    
+        .benefit-card:hover::before {
+            opacity: 1;
+            background-position: 100%;
+        }
+    
+        /* ✨ Hover Animations */
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 35px rgba(37, 99, 235, 0.25);
+        }
+    
+        /* 🎯 Icons */
+        .benefit-card .icon {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            transition: transform 0.3s ease;
+        }
+    
+        .benefit-card:hover .icon {
+            transform: scale(1.2) rotate(8deg);
+        }
+    
+        /* 🧾 Text */
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            color: #1e40af;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+    
+        .benefit-card p {
+            color: #475569;
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+    
+        /* 📱 Responsive */
+        @media (max-width: 768px) {
+            .benefit-card {
+                padding: 24px 18px;
+            }
+    
+            .benefit-card h3 {
+                font-size: 1.2rem;
+            }
+    
+            .benefit-card p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+
+    <!-- Chart -->
+    <section id="chart" class="equity-chart-section">
+        <div class="chart-content fade-up">
+            <h2>📊 10-Year Hypothetical Equity Growth</h2>
+            <p class="muted">
+                This interactive chart shows how a one-time investment of <strong>₹1,00,000</strong> could potentially grow
+                under different annual return scenarios — <strong>6%</strong>, <strong>10%</strong>, and
+                <strong>14%</strong>.
+                These are <em>illustrative</em> examples, not predictions. Real returns vary based on market conditions.
+            </p>
+    
+            <div class="chart-card">
+                <canvas id="equityChart" aria-label="Equity Growth Chart"></canvas>
+            </div>
+    
+            <div class="legend">
+                <div class="legend-item"><span class="dot conservative"></span>Conservative (6%)</div>
+                <div class="legend-item"><span class="dot moderate"></span>Moderate (10%)</div>
+                <div class="legend-item"><span class="dot aggressive"></span>Aggressive (14%)</div>
+            </div>
+    
+            <p class="note">
+                📈 *This graph demonstrates the power of compounding — small differences in annual return can lead to large
+                differences over time.*
+            </p>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById("equityChart").getContext("2d");
+    const years = Array.from({ length: 11 }, (_, i) => i); // 0–10 years
+    const initial = 100000;
+
+    function calcGrowth(rate) {
+        return years.map((y) => Math.round(initial * Math.pow(1 + rate / 100, y)));
+    }
+
+    const chart = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: years.map((y) => `${y} yr`),
+            datasets: [
+                {
+                    label: "Conservative (6%)",
+                    data: calcGrowth(6),
+                    borderColor: "#3b82f6",
+                    backgroundColor: "#3b82f6",
+                    tension: 0.3,
+                    fill: false,
+                    borderWidth: 3,
+                    pointRadius: 5,              // 🟢 Circle size (default for desktop)
+                    pointHoverRadius: 8,
+                    pointStyle: "circle",        // ✅ Use circle (not rectangle)
+                },
+                {
+                    label: "Moderate (10%)",
+                    data: calcGrowth(10),
+                    borderColor: "#10b981",
+                    backgroundColor: "#10b981",
+                    tension: 0.3,
+                    fill: false,
+                    borderWidth: 3,
+                    pointRadius: 5,
+                    pointHoverRadius: 8,
+                    pointStyle: "circle",
+                },
+                {
+                    label: "Aggressive (14%)",
+                    data: calcGrowth(14),
+                    borderColor: "#f97316",
+                    backgroundColor: "#f97316",
+                    tension: 0.3,
+                    fill: false,
+                    borderWidth: 3,
+                    pointRadius: 5,
+                    pointHoverRadius: 8,
+                    pointStyle: "circle",
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animations: {
+                tension: {
+                    duration: 1500,
+                    easing: "easeInOutQuad",
+                    from: 0.5,
+                    to: 0.3,
+                    loop: false,
+                },
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: "Years",
+                        color: "#334155",
+                        font: { size: 14 },
+                    },
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: "Portfolio Value (₹)",
+                        color: "#334155",
+                        font: { size: 14 },
+                    },
+                    ticks: {
+                        callback: (value) => "₹" + value.toLocaleString(),
+                    },
+                },
+            },
+            plugins: {
+                legend: {
+                    position: "bottom",
+                    labels: {
+                        usePointStyle: true,
+                        pointStyle: "circle",
+                    },
+                },
+                tooltip: {
+                    callbacks: {
+                        label: (ctx) =>
+                            `${ctx.dataset.label}: ₹${ctx.parsed.y.toLocaleString()}`,
+                    },
+                },
+            },
+        },
+    });
+
+    // 📱 Responsive point size for smaller screens
+    function resizePoints() {
+        const isMobile = window.innerWidth < 768;
+        chart.data.datasets.forEach(ds => {
+            ds.pointRadius = isMobile ? 8 : 5;         // Bigger on phones
+            ds.pointHoverRadius = isMobile ? 12 : 8;
+        });
+        chart.update();
+    }
+
+    window.addEventListener("resize", resizePoints);
+    resizePoints(); // Run on load
+</script>
+
+    
+    <style>
+        /* 🌟 Equity Chart Section */
+        .equity-chart-section {
+            padding: 80px 10%;
+            background: linear-gradient(135deg, #f8fbff, #e0f7fa);
+            text-align: center;
+            overflow: hidden;
+        }
+    
+        .equity-chart-section h2 {
+            font-size: clamp(2rem, 4vw, 2.6rem);
+            color: #1e3a8a;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+    
+        .equity-chart-section .muted {
+            color: #475569;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+    
+        /* 🧾 Chart Card */
+        .chart-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.15);
+            margin: 0 auto;
+            max-width: 850px;
+            height: 420px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .chart-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 35px rgba(37, 99, 235, 0.25);
+        }
+    
+        /* 🔵 Legend */
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+    
+        .legend-item {
+            font-weight: 600;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    
+        .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+        }
+    
+        .conservative {
+            background: #3b82f6;
+        }
+    
+        .moderate {
+            background: #10b981;
+        }
+    
+        .aggressive {
+            background: #f97316;
+        }
+    
+        /* 🪶 Fade-up Animation */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeUp 1s ease forwards;
+        }
+    
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        /* 📜 Note */
+        .note {
+            color: #475569;
+            font-size: 0.95rem;
+            margin-top: 20px;
+            max-width: 700px;
+            margin-inline: auto;
+            font-style: italic;
+        }
+    
+        /* 📱 Responsive */
+        @media (max-width: 768px) {
+            .chart-card {
+                height: 320px;
+                padding: 20px;
+            }
+    
+            .legend {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+    
+            .equity-chart-section .muted {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+
+
+    <!-- FAQ -->
+<section id="equity-faq" class="faq-section">
+    <h2>❓ Frequently Asked Questions — Equity Investments</h2>
+    <p class="faq-intro">
+        Clear answers to common questions about equity investing, risk, and strategy.
+    </p>
+
+    <div class="faq">
+        <div class="faq-item">
+            <button class="faq-question">📈 Is equity investment risky?</button>
+            <div class="faq-answer">
+                <p>Yes, equities carry market risk. However, long-term, diversified investments often deliver superior
+                    returns.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">⏳ How long should I stay invested?</button>
+            <div class="faq-answer">
+                <p>Equity investing works best for goals over 5+ years, allowing compounding to overcome short-term
+                    volatility.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">💼 Should I invest directly or via mutual funds?</button>
+            <div class="faq-answer">
+                <p>For beginners, equity mutual funds are better due to diversification and professional management.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">📊 How are returns generated?</button>
+            <div class="faq-answer">
+                <p>Returns come from capital appreciation (share price rise) and dividends paid by companies.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">⚖️ How much should I allocate to equities?</button>
+            <div class="faq-answer">
+                <p>As a guideline: <strong>100 - your age</strong> = % of portfolio in equities. Adjust based on your
+                    risk tolerance.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">💰 Can I lose money in equities?</button>
+            <div class="faq-answer">
+                <p>Yes, in the short term. Over the long term, markets tend to recover and reward disciplined investors.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* 🌟 FAQ Section */
+    .faq-section {
+        background: linear-gradient(135deg, #f0f9ff, #e0f7fa);
+        padding: 80px 10%;
+        text-align: center;
+        border-radius: 16px;
+        overflow: visible;
+    }
+
+    .faq-section h2 {
+        font-size: clamp(2rem, 4vw, 2.6rem);
+        color: #1e3a8a;
+        margin-bottom: 10px;
+    }
+
+    .faq-intro {
+        color: #475569;
+        max-width: 750px;
+        margin: 0 auto 40px;
+        line-height: 1.6;
+    }
+
+    /* FAQ Container */
+    .faq {
+        max-width: 750px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .faq-item {
+        border-radius: 10px;
+        margin-bottom: 16px;
+        background: #ffffff;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .faq-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.15);
+    }
+
+    /* Question Button */
+    .faq-question {
+        width: 100%;
+        background: linear-gradient(90deg, #2563eb, #3b82f6);
+        color: #fff;
+        padding: 16px 22px;
+        border: none;
+        text-align: left;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+        transition: background 0.3s ease;
+    }
+
+    .faq-question:hover {
+        background: linear-gradient(90deg, #1d4ed8, #2563eb);
+    }
+
+    .faq-question::after {
+        content: "+";
+        position: absolute;
+        right: 20px;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-question::after {
+        transform: rotate(45deg);
+    }
+
+    /* Answer Section */
+    .faq-answer {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        background: #f9fafb;
+        transition: max-height 0.5s ease, opacity 0.4s ease, padding 0.3s ease;
+        padding: 0 20px;
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 300px;
+        opacity: 1;
+        padding: 16px 20px;
+    }
+
+    .faq-answer p {
+        color: #334155;
+        font-size: 1rem;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .faq-section {
+            padding: 60px 6%;
+        }
+
+        .faq-question {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<script>
+    // ✅ Works even if placed at top of page
+    document.addEventListener("click", function (e) {
+        if (!e.target.classList.contains("faq-question")) return;
+        const item = e.target.closest(".faq-item");
+
+        // Toggle active state
+        if (item.classList.contains("active")) {
+            item.classList.remove("active");
+        } else {
+            document.querySelectorAll(".faq-item").forEach(f => f.classList.remove("active"));
+            item.classList.add("active");
+        }
+    });
+</script>
+
+   
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-img">
+                        <img src="./images/logo.png" alt="Wealth Blue Print Logo" loading="lazy"
+                            class="footer-logo-image" />
+                    </div>
+                    <p>Your partner for financial growth and security</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/Wealth Blue Printimf/" target="/"
+                            aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/Wealth Blue Print__?t=QZcsQv6QemM2qT4bfejZeg&s=08" target="/"
+                            aria-label="Follow us on X"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/grow-well-imf/about/" target="/"
+                            aria-label="Follow us on Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/Wealth Blue Print.imf/" target="/"
+                            aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="./investment-plans.html">Products</a></li>
+                            <li><a href="./renew-policy.html">Renew</a></li>
+                            <li><a href="./advisor.html">Testimonials</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="investment-plans.html">Financial Planning</a></li>
+                            <li><a href="child-plans.html">Child Planning</a></li>
+                            <li><a href="investment-plans.html">Investment Planning</a></li>
+                            <li><a href="retirement-plans.html">Retirement Planning</a></li>
+                            <li><a href="term-insurance.html">Term Insurance</a></li>
+                            <li><a href="#">Tax Advisory</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="leadership.html">Leadership</a></li>
+                            <li><a href="advisor.html">Advisor</a></li>
+                            <li>
+                                <a href="retirement-plans.html">Financial Calculators</a>
+                            </li>
+                            <li><a href="faqs.html">FAQs</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Wealth Blue Print Financial Advisors. All rights reserved.</p>
+                <ul class="footer-legal">
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+    
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Chart.js for Hypothetical Growth
+        const ctx = document.getElementById('equityChart').getContext('2d');
+        const years = Array.from({ length: 11 }, (_, i) => i);
+        const principal = 100000;
+        const rates = { Conservative: 6, Balanced: 10, Aggressive: 14 };
+        const datasets = Object.keys(rates).map((key, idx) => {
+            const rate = rates[key] / 100;
+            const data = years.map(y => principal * Math.pow(1 + rate, y));
+            const colors = ['#60a5fa', '#2563eb', '#1e3a8a'];
+            return {
+                label: `${key} (${rates[key]}%)`,
+                data,
+                borderColor: colors[idx],
+                backgroundColor: 'transparent',
+                tension: 0.3,
+                borderWidth: 2
+            };
+        });
+
+        new Chart(ctx, {
+            type: 'line',
+            data: { labels: years.map(y => y + " yr"), datasets },
+            options: {
+                responsive: true,
+                plugins: { legend: { position: 'bottom' } },
+                scales: { y: { beginAtZero: false } }
+            }
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    if (i !== item) i.classList.remove('active');
+                });
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const faqs = document.querySelectorAll(".faq-item");
+
+            faqs.forEach(item => {
+                const question = item.querySelector(".faq-question");
+                question.addEventListener("click", () => {
+                    const isActive = item.classList.contains("active");
+                    // Close all others
+                    faqs.forEach(f => f.classList.remove("active"));
+                    // Toggle this one
+                    if (!isActive) item.classList.add("active");
+                });
+            });
+        });
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

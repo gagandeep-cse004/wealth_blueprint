@@ -82,6 +82,7 @@
     --card-bg: #1e1e1e;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -2259,7 +2260,7 @@ nav ul li a.active {
     left: 0;
     width: 100%;
     height: 15px;
-    background: linear-gradient(90deg, var(--accent-color), transparent 80%);
+    
     z-index: 1;
 }
 

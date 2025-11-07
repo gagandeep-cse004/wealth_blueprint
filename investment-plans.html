@@ -306,6 +306,12 @@
         box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
       }
     }
+    @media (max-width:900px) {
+      .calculate-btn{
+        text-align: center;
+        justify-content: center;
+      }
+    }
   </style>
   
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -352,7 +358,7 @@
       chart = new Chart(ctx, {
         type: "line",
         data: {
-          labels: Array.from({ length: years }, (_, i) => "Year " + (i + 1)),
+          labels: Array.from({ length: years }, (_, i) =>   (i + 1)),
           datasets: [
             {
               label: "Investment Growth (₹)",

@@ -200,7 +200,7 @@
     
             <div class="equity-graphic fade-in-right">
                 <div class="image-wrapper floating">
-                    <img src="https://cdn-icons-png.flaticon.com/512/6311/6311823.png" alt="Equity illustration" />
+                    <img src="./images/education.png" alt="Equity illustration" />
                 </div>
                 <div class="info-tag tag1">Long-term Growth</div>
                 <div class="info-tag tag2">Diversification</div>
@@ -603,11 +603,11 @@
     function calcGrowth(rate) {
         return years.map((y) => Math.round(initial * Math.pow(1 + rate / 100, y)));
     }
-
+    const isMobile = window.innerWidth <= 900; 
     const chart = new Chart(ctx, {
         type: "line",
         data: {
-            labels: years.map((y) => `${y} yr`),
+            labels: years.map((y) => `${y}`),
             datasets: [
                 {
                     label: "Conservative (6%)",
@@ -617,8 +617,8 @@
                     tension: 0.3,
                     fill: false,
                     borderWidth: 3,
-                    pointRadius: 5,              // 🟢 Circle size (default for desktop)
-                    pointHoverRadius: 8,
+                    pointRadius: isMobile ? 2 : 4,      // 📱 smaller on phones
+                    pointHoverRadius: isMobile ? 4 : 8,
                     pointStyle: "circle",        // ✅ Use circle (not rectangle)
                 },
                 {
@@ -629,8 +629,8 @@
                     tension: 0.3,
                     fill: false,
                     borderWidth: 3,
-                    pointRadius: 5,
-                    pointHoverRadius: 8,
+                    pointRadius: isMobile ? 2 : 4,      // 📱 smaller on phones
+                    pointHoverRadius: isMobile ? 4 : 8,
                     pointStyle: "circle",
                 },
                 {
@@ -641,8 +641,8 @@
                     tension: 0.3,
                     fill: false,
                     borderWidth: 3,
-                    pointRadius: 5,
-                    pointHoverRadius: 8,
+                    pointRadius: isMobile ? 2 : 4,      // 📱 smaller on phones
+                    pointHoverRadius: isMobile ? 4 : 8,
                     pointStyle: "circle",
                 },
             ],
@@ -702,7 +702,7 @@
     function resizePoints() {
         const isMobile = window.innerWidth < 768;
         chart.data.datasets.forEach(ds => {
-            ds.pointRadius = isMobile ? 8 : 5;         // Bigger on phones
+            ds.pointRadius = isMobile ? 3 : 5;         // Bigger on phones
             ds.pointHoverRadius = isMobile ? 12 : 8;
         });
         chart.update();

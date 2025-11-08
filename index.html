@@ -10,9 +10,11 @@
   <meta name="keywords"
     content="wealth blue print, investment, finance,  Buy Insurance Online, Online Insurance Policies, Secure Your Future, financial planning, education planning, personal financial planning, term insurance, financial planning process, retirement solutions, Financial Security" />
   <meta name="robots" content="index, follow" />
- 
+
   <meta property="og:title" content="wealth blue print | Smart Financial & Investment Planning" />
   <meta property="og:type" content="website" />
+  \
+  <meta property="og:image" content="https://growwellimf.com/images/growwell_logo_01.webp" />
   <meta name="author" content="wealth blue print" />
   <meta name="publisher" content="wealth blue print" />
   <link rel="stylesheet" href="css/style.css" />
@@ -21,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-  
+  <!--google adsense-->
   <meta name="google-adsense-account" content="ca-pub-8504842908769623" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8504842908769623"
     crossorigin="anonymous"></script>
@@ -34,10 +36,10 @@
       <div class="navbar">
         <div class="logo">
           <a href="index.html">
-            <img  src="./images/logobetter.png" alt="company_logo"
+            <img style="height: 70px; width: 110px;" src="./images/logo.png" alt="company_logo"
               class="brand-logo" /></a>
           <a href="index.html">
-            <h2><span class="highlight">Wealthblue</span>Print</h2>
+            <h2><span class="highlight">wealthblue</span>print</h2>
           </a>
         </div>
 
@@ -56,10 +58,7 @@
                 <a href="retirement-plans.html">Retirement Plans</a>
                 <a href="child-plans.html">Child Plans</a>
                 <a href="term-insurance.html">Term Insurance</a>
-                <a href="mutualfunds.html">Mutual Funds</a>
-                <a href="sip.html">SIP</a>
-                <a href="equity.html">Equity</a>
-                <a href="calculators.html">Calculators</a>
+                <a href="Calculators.html">Calculators</a>
               </div>
             </li>
             <li class="dropdown">
@@ -102,10 +101,21 @@
       </div>
     </div>
   </header>
+  <style>
+    /* Navbar Layout Improvements */
+    .navbar {
+
+      justify-content: space-between;
+      gap: 20px;
+      /* adds spacing between logo/nav/button groups */
+    }
+  </style>
+
+
 
   <main>
     <!-- Interactive Financial Strategies Hero Section -->
-    <section class="financial-hero" style="margin-top: 70px;">
+    <section class="financial-hero" style="margin-top: 100px;">
       <div class="hero-bg-shapes"></div>
 
       <div class="container financial-hero-inner">
@@ -120,7 +130,7 @@
           </div>
         </div>
 
-        <div class="financial-hero-visual" style="margin-top: 15px;">
+        <div class="financial-hero-visual">
           <div class="floating-card" style="--delay: 0s;">
             <img src="assets/investment.svg" alt="Investment Icon">
             <h3>Investment Growth</h3>
@@ -138,430 +148,306 @@
     </section>
 
 
-<style>
-  /* 📱 Responsive Design — iPhone Screens */
-@media (max-width: 1000px) {
-  .financial-hero {
-    margin-top: 70px !important;
-    padding: 40px 6%;
-    text-align: center;
-  }
+    <style>
+      /* Interactive Financial Strategies Hero */
+      .financial-hero {
+        position: relative;
+        background: radial-gradient(circle at top left, #0f172a, #1e3a8a 40%, #312e81);
+        color: #fff;
+        padding: 2rem 1rem;
+        overflow: hidden;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
 
-  .financial-hero-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 28px;
-  }
+      /* Glowing animated background orbs */
+      .hero-bg-shapes::before,
+      .hero-bg-shapes::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(120px);
+        opacity: 0.4;
+        z-index: 0;
+        animation: floatGlow 10s ease-in-out infinite alternate;
+      }
 
-  /* 🧩 Text Adjustments */
-  .financial-hero-text h1 {
-    font-size: 1.6rem;
-    line-height: 1.4;
-    color: #1e293b;
-  }
+      .hero-bg-shapes::before {
+        top: 10%;
+        left: 5%;
+        width: 300px;
+        height: 300px;
+        background: #60a5fa;
+      }
 
-  .financial-hero-text p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #475569;
-    margin-top: 8px;
-  }
+      .hero-bg-shapes::after {
+        bottom: 10%;
+        right: 10%;
+        width: 400px;
+        height: 400px;
+        background: #a78bfa;
+        animation-delay: 3s;
+      }
 
-  /* 🎯 Buttons */
-  .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 16px;
-    width: 100%;
-  }
+      @keyframes floatGlow {
+        0% {
+          transform: translateY(0) scale(1);
+        }
 
-  .btn-primary,
-  .btn-outline {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 0.95rem;
-    padding: 12px 0;
-    border-radius: 10px;
-  }
+        100% {
+          transform: translateY(-30px) scale(1.1);
+        }
+      }
 
-  /* 📊 Visual Section */
-  .financial-hero-visual {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 16px;
-    margin-top: 20px !important;
-  }
+      /* Hero content layout */
+      .financial-hero-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 3rem;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-  .floating-card {
-    width: 85%;
-    padding: 16px;
-    border-radius: 14px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
-    background: #fff;
-    text-align: center;
-    animation: none; /* disables large floating animation on small screens */
-  }
+      .financial-hero-text {
+        flex: 1 1 500px;
+        max-width: 600px;
+        animation: fadeUp 1s ease forwards;
+      }
 
-  .floating-card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 8px;
-  }
+      .financial-hero-text h1 {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        background: linear-gradient(to right, #93c5fd, #60a5fa, #a78bfa);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
-  .floating-card h3 {
-    font-size: 1rem;
-    color: #1e3a8a;
-  }
-}
+      .financial-hero-text p {
+        font-size: clamp(1rem, 3vw, 1.1rem);
+        line-height: 1.7;
+        color: #e2e8f0;
+        margin-bottom: 2.5rem;
+      }
 
-  /* ---------- Responsive for iPhone 15 / 15 Pro Max (Portrait) ---------- */
-@media only screen 
-  and (min-device-width: 1280px)
-  and (max-device-width: 1290px)
-  and (max-device-height: 2780px)
-  and (orientation: portrait) {
+      /* Buttons */
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
 
-  .financial-hero {
-    margin-top: 60px !important;
-    text-align: center;
-    padding: 40px 20px;
-  }
+      .btn-primary {
+        background: linear-gradient(135deg, #3b82f6, #2563eb);
+        color: white;
+        padding: 0.9rem 1.8rem;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+        -webkit-tap-highlight-color: transparent;
+      }
 
-  .financial-hero-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+      .btn-primary:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+      }
 
-  .financial-hero-text {
-    max-width: 90%;
-  }
+      .btn-outline {
+        border: 2px solid #93c5fd;
+        color: #93c5fd;
+        padding: 0.9rem 1.8rem;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: background 0.3s, color 0.3s, transform 0.3s;
+        -webkit-tap-highlight-color: transparent;
+      }
 
-  .financial-hero-text h1 {
-    font-size: 2.2rem;
-    line-height: 1.3;
-    margin-bottom: 15px;
-  }
+      .btn-outline:hover {
+        background: #93c5fd;
+        color: #1e3a8a;
+        transform: translateY(-3px);
+      }
 
-  .financial-hero-text p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin: 0 auto 25px;
-  }
+      /* Floating cards */
+      .financial-hero-visual {
+        flex: 1 1 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        animation: fadeUp 1.2s ease forwards;
+      }
 
-  .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-  }
+      .floating-card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        width: 170px;
+        animation: floatAnimation 3s ease-in-out infinite;
+        animation-delay: var(--delay);
+        transition: transform 0.4s, box-shadow 0.4s;
+        position: relative;
+        overflow: hidden;
+        flex: 0 1 auto;
+      }
 
-  .hero-buttons a {
-    display: block;
-    width: 80%;
-    padding: 14px 0;
-    font-size: 1rem;
-    text-align: center;
-  }
+      .floating-card::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
 
-  .financial-hero-visual {
-    margin-top: 35px !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
+      .floating-card:hover {
+        transform: translateY(-12px) scale(1.07);
+        box-shadow: 0 0 30px rgba(147, 197, 253, 0.3);
+      }
 
-  .floating-card {
-    width: 80%;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 16px;
-  }
+      .floating-card:hover::after {
+        opacity: 1;
+      }
 
-  .floating-card img {
-    width: 70px;
-    height: 70px;
-  }
+      .floating-card img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+        animation: pulseIcon 2.5s infinite ease-in-out;
+        object-fit: contain;
+      }
 
-  .floating-card h3 {
-    font-size: 1.1rem;
-    margin-top: 10px;
-  }
-}
-  /* Interactive Financial Strategies Hero */
-  .financial-hero {
-    position: relative;
-    background: radial-gradient(circle at top left, #0f172a, #1e3a8a 40%, #312e81);
-    color: #fff;
-    padding: 1rem 1rem;
-    overflow: hidden;
-  }
+      .floating-card h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #f8fafc;
+      }
 
-  .hero-bg-shapes::before,
-  .hero-bg-shapes::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.4;
-    z-index: 0;
-    animation: floatGlow 10s ease-in-out infinite alternate;
-  }
+      @keyframes pulseIcon {
 
-  .hero-bg-shapes::before {
-    top: 10%;
-    left: 5%;
-    width: 300px;
-    height: 300px;
-    background: #60a5fa;
-  }
+        0%,
+        100% {
+          transform: scale(1);
+        }
 
-  .hero-bg-shapes::after {
-    bottom: 10%;
-    right: 10%;
-    width: 400px;
-    height: 400px;
-    background: #a78bfa;
-    animation-delay: 3s;
-  }
+        50% {
+          transform: scale(1.1);
+        }
+      }
 
-  @keyframes floatGlow {
-    0% {
-      transform: translateY(0) scale(1);
-    }
-    100% {
-      transform: translateY(-30px) scale(1.1);
-    }
-  }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
 
-  .financial-hero-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* flex-wrap: wrap; */
-    gap: 3rem;
-    position: relative;
-    z-index: 2;
-  }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-  .financial-hero-text {
-    flex: 1 1 500px;
-    max-width: 600px;
-    animation: fadeUp 1s ease forwards;
-  }
+      @keyframes floatAnimation {
 
-  .financial-hero-text h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    background: linear-gradient(to right, #93c5fd, #60a5fa, #a78bfa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+        0%,
+        100% {
+          transform: translateY(0);
+        }
 
-  .financial-hero-text p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #e2e8f0;
-    margin-bottom: 2.5rem;
-  }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
 
-  .hero-buttons {
-    display: flex;
-    gap: 1rem;
-  }
+      /* Responsive */
+      @media (max-width: 900px) {
+        .financial-hero {
+          padding: 4rem 1rem;
+          min-height: auto;
+        }
 
-  .btn-primary {
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
-    color: white;
-    padding: 0.9rem 1.8rem;
-    border-radius: 12px;
-    font-weight: 600;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
-  }
+        .financial-hero-inner {
+          flex-direction: column;
+          text-align: center;
+          gap: 2rem;
+        }
 
-  .btn-primary:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
-  }
+        .hero-buttons {
+          justify-content: center;
+        }
 
-  .btn-outline {
-    border: 2px solid #93c5fd;
-    color: #93c5fd;
-    padding: 0.9rem 1.8rem;
-    border-radius: 12px;
-    font-weight: 600;
-    transition: background 0.3s, color 0.3s, transform 0.3s;
-  }
+        .financial-hero-visual {
+          width: 100%;
+          gap: 1rem;
+        }
 
-  .btn-outline:hover {
-    background: #93c5fd;
-    color: #1e3a8a;
-    transform: translateY(-3px);
-  }
+        .floating-card {
+          width: calc(50% - 1rem);
+          min-width: 150px;
+        }
+      }
 
-  /* Floating cards */
-  .financial-hero-visual {
-    flex: 1 1 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    /* flex-wrap: wrap; */
-    animation: fadeUp 1.2s ease forwards;
-  }
+      /* iOS Specific Fixes */
+      @supports (-webkit-touch-callout: none) {
+        .financial-hero {
+          padding-top: max(4rem, env(safe-area-inset-top));
+          padding-bottom: max(2rem, env(safe-area-inset-bottom));
+          min-height: -webkit-fill-available;
+        }
 
-  .floating-card {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 2rem;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    width: 170px;
-    animation: floatAnimation 3s ease-in-out infinite;
-    animation-delay: var(--delay);
-    transition: transform 0.4s, box-shadow 0.4s;
-    position: relative;
-    overflow: hidden;
-  }
+        .financial-hero-inner {
+          gap: 2rem;
+          padding: 0 max(20px, env(safe-area-inset-left));
+        }
 
-  .floating-card::after {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
+        .financial-hero-visual {
+          width: 100%;
+          padding: 0 10px;
+        }
 
-  .floating-card:hover {
-    transform: translateY(-12px) scale(1.07);
-    box-shadow: 0 0 30px rgba(147, 197, 253, 0.3);
-  }
+        .floating-card {
+          width: calc(50% - 1rem);
+          min-width: 140px;
+          margin: 0;
+          flex-shrink: 0;
+          backdrop-filter: none;
+          -webkit-backdrop-filter: blur(10px);
+        }
 
-  .floating-card:hover::after {
-    opacity: 1;
-  }
+        .hero-buttons {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1rem;
+          width: 100%;
+          padding: 0 10px;
+        }
 
-  .floating-card img {
-    width: 60px;
-    margin-bottom: 1rem;
-    animation: pulseIcon 2.5s infinite ease-in-out;
-  }
-
-  .floating-card h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #f8fafc;
-  }
-
-  @keyframes pulseIcon {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes floatAnimation {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  /* ✅ Responsive Design */
-  @media (max-width: 900px) {
-    .financial-hero-inner {
-      flex-direction: column;
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .financial-hero-visual {
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      gap: 1.5rem;
-    }
-
-    .floating-card {
-      width: 45%;
-      padding: 1.5rem;
-      margin: 0 auto;
-    }
-
-    .floating-card img {
-      width: 50px;
-      display: block;
-      margin: 0 auto 1rem auto;
-    }
-
-    .floating-card h3 {
-      font-size: 0.95rem;
-    }
-
-    .hero-buttons {
-      justify-content: center;
-    }
-  }
-
-  @media (max-width: 600px) {
-  .financial-hero-visual {
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .floating-card {
-    width: 95%;           /* ⬆️ Increased from 85% */
-    padding: 1.8rem;      /* ⬆️ Increased spacing */
-    margin: 0 auto;
-    transform: scale(1.05); /* Slight zoom for larger feel */
-  }
-
-  .floating-card img {
-    width: 65px;          /* ⬆️ Increased from 45px */
-    margin: 0 auto 1rem auto;
-  }
-
-  .floating-card h3 {
-    font-size: 1.1rem;    /* ⬆️ Increased text size */
-    text-align: center;
-  }
-  .financial-hero-inner{
-    margin-right: 50px;
-  }
-}
-
-</style>
-
-
+        .btn-primary,
+        .btn-outline {
+          width: 100%;
+          text-align: center;
+          padding: 1rem;
+          margin: 0;
+        }
+      }
+    </style>
 
     <!-- Services Section -->
     <section id="services" class="services">
@@ -677,7 +563,7 @@
             Empowering Financial Growth
             <span class="highlight"> Since 2016 </span>
           </h2>
-
+          <div class="title-underline"></div>
         </div>
 
         <div class="about-grid">
@@ -691,7 +577,7 @@
 
             <div class="mission-cards">
               <div class="mission-card">
-                <i class="fas fa-medal icon" style="text-align: center;"></i>
+                <i class="fas fa-medal icon"></i>
                 <div>
                   <h3>Our Mission</h3>
                   <p>
@@ -700,34 +586,7 @@
                   </p>
                 </div>
               </div>
-              <style>
-                .mission-card {
-                  display: flex;
-                  align-items: center;
-                  /* Vertically center icon and text */
-                  justify-content: center;
-                  /* Centers entire content horizontally if needed */
-                  gap: 15px;
-                  /* Space between icon and text */
-                  padding: 20px;
-                  background: #fff;
-                  border-radius: 12px;
-                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                }
 
-                /* Center and style the icon */
-                .mission-card .icon {
-                  font-size: 40px;
-                  color: #0066cc;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  width: 60px;
-                  height: 60px;
-                  background: #e6f0ff;
-                  border-radius: 50%;
-                }
-              </style>
               <div class="mission-card">
                 <i class="fas fa-lightbulb icon"></i>
                 <div>
@@ -746,42 +605,16 @@
               <li><i class="fas fa-check-circle"></i> 100% Data Confidentiality</li>
             </ul>
 
-            <a href="contact.html" class="btn-gradient">Schedule Free Consultation</a>
+            <a href="#contact" class="btn-gradient">Schedule Free Consultation</a>
           </div>
 
           <!-- 💫 Right Visual -->
           <div class="about-visual fade-in-right">
             <div class="about-image-box">
-              <div class="badge1">
+              <div class="badge">
                 <i class="fas fa-shield-alt"></i>
                 <span>SEBI Certified</span>
               </div>
-              
-              <style>
-                .badge1 {
-                  display: flex;
-                  align-items: center;
-                  /* vertical alignment */
-                  justify-content: center;
-                  /* horizontal alignment */
-                  gap: 8px;
-                  /* space between icon and text */
-                  text-align: center;
-                  font-weight: 600;
-                  color: #0066cc;
-                }
-              
-                .badge1 i {
-                  font-size: 20px;
-                  color: #0066cc;
-                }
-              
-                .badge1 span {
-                  display: inline-block;
-                  text-align: center;
-                }
-              </style>
-
 
 
               <div class="team-preview">
@@ -859,7 +692,7 @@
 
       .mission-card:hover {
         transform: translateY(-5px);
-        background: linear-gradient(135deg, #79a4ea 0%, #00c6ae 100%);
+        background: linear-gradient(135deg, #0061ff 0%, #00c6ae 100%);
         color: #fff;
       }
 
@@ -871,7 +704,7 @@
       }
 
       .mission-card:hover .icon {
-        color: #496de2;
+        color: #fff;
       }
 
       .features {
@@ -1080,7 +913,7 @@
         <div class="section-header centered">
           <span class="section-subtitle">Client Feedback</span>
           <h2>What Our <span class="client-txt"> Clients</span> Say</h2>
-
+          <div class="title-underline"></div>
           <p>Read about their experience with our financial services</p>
         </div>
 
@@ -1365,7 +1198,7 @@
                 <li><a href="leadership.html">Leadership</a></li>
                 <li><a href="advisor.html">Advisor</a></li>
                 <li>
-                  <a href="calculators.html">Financial Calculators</a>
+                  <a href="retirement-plans.html">Financial Calculators</a>
                 </li>
                 <li><a href="faqs.html">FAQs</a></li>
                 <li><a href="contact.html">contact</a></li>

@@ -104,296 +104,297 @@
 
   <main>
     <!-- Interactive Financial Strategies Hero Section -->
-    <section class="financial-hero" style="margin-top: 70px;">
-      <div class="hero-bg-shapes"></div>
-
-      <div class="container financial-hero-inner">
-        <div class="financial-hero-text">
-          <h1>Transform Your Wealth with Smart Financial Strategies</h1>
-          <p>We craft data-driven financial plans designed to grow, protect, and optimize your wealth — no guesswork,
-            just
-            strategy.</p>
+    <section class="wealth-hero" style="margin-top: 20px;">
+      <div class="wealth-container">
+    
+        <!-- LEFT SIDE -->
+        <div class="wealth-left">
+          <h1 class="animated-heading">
+            <span>Your Journey of Financial Clarity, Growth, and Freedom</span>
+          </h1>
+    
+          <p style="margin-top: 20px;" class="hero-subtext">
+            Smarter investing, secure planning, and future-proof wealth strategies —
+            crafted for long-term financial success.
+          </p>
+    
           <div class="hero-buttons">
-            <a href="careers.html" class="btn-primary" style="text-decoration: none;">Start Planning</a>
-            <a href="contact.html" class="btn-outline" style="text-decoration: none;">Book Consultation</a>
+            <a href="careers.html" class="btn-primary">Start Planning</a>
+            <a href="contact.html" class="btn-outline">Book Consultation</a>
           </div>
         </div>
+    
+        <!-- RIGHT SIDE: SINGLE SERVICE CARD -->
+        <div class="wealth-right" style="margin-top: 10px;">
+    
+          <div class="single-service-container">
+    
+            <!-- Left Arrow -->
+            <button class="arrow-btn left-arrow" onclick="serviceLeft()">&#10094;</button>
+    
+            <!-- Service Card -->
+            <div class="single-service-card" id="serviceCard">
+    
+              <img style="height: 220px;width: 320px;" id="serviceImg"
+                src="https://cdn.zeebiz.com/sites/default/files/2023/08/03/254616-investment-article.jpg" alt="">
+    
+              <h3 id="serviceTitle">Investment Plans</h3>
+    
+              <p id="serviceDesc">
+                Smart & diversified plans designed for stable long-term wealth.
+              </p>
+    
+              <a id="serviceLink" style="text-decoration: none;" class="modern-btn" href="investment-plans.html">
+                Explore →
+              </a>
+            </div>
 
-        <div class="financial-hero-visual">
-          <div class="floating-card" style="--delay: 0s;">
-            <img src="assets/investment.svg" alt="Investment Icon">
-            <h3>Investment Growth</h3>
-          </div>
-          <div class="floating-card" style="--delay: 0.3s;">
-            <img src="assets/retirement.svg" alt="Retirement Icon">
-            <h3>Retirement Planning</h3>
-          </div>
-          <div class="floating-card" style="--delay: 0.6s;">
-            <img src="assets/tax.svg" alt="Tax Icon">
-            <h3>Tax Planning</h3>
+            <style>
+              .modern-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #93c5fd;
+  transition: 0.3s ease;
+}
+
+.modern-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #c084fc);
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.modern-btn:hover::before {
+  left: 0;
+}
+
+.modern-btn:hover {
+  border-color: transparent;
+  transform: translateY(-3px);
+}
+
+            </style>
+            <!-- Right Arrow -->
+            <button class="arrow-btn right-arrow" onclick="serviceRight()">&#10095;</button>
+    
           </div>
         </div>
       </div>
     </section>
-
-
     <style>
-      /* Interactive Financial Strategies Hero */
-      .financial-hero {
-        position: relative;
+      /* ------------------ HERO SECTION ------------------ */
+      .wealth-hero {
+        padding: 60px 40px;
         background: radial-gradient(circle at top left, #0f172a, #1e3a8a 40%, #312e81);
         color: #fff;
-        padding: 2rem 1rem;
         overflow: hidden;
-        min-height: 100vh;
+      }
+    
+      .wealth-container {
         display: flex;
-        align-items: center;
-      }
-
-      /* Glowing animated background orbs */
-      .hero-bg-shapes::before,
-      .hero-bg-shapes::after {
-        content: "";
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(120px);
-        opacity: 0.4;
-        z-index: 0;
-        animation: floatGlow 10s ease-in-out infinite alternate;
-      }
-
-      .hero-bg-shapes::before {
-        top: 10%;
-        left: 5%;
-        width: 300px;
-        height: 300px;
-        background: #60a5fa;
-      }
-
-      .hero-bg-shapes::after {
-        bottom: 10%;
-        right: 10%;
-        width: 400px;
-        height: 400px;
-        background: #a78bfa;
-        animation-delay: 3s;
-      }
-
-      @keyframes floatGlow {
-        0% {
-          transform: translateY(0) scale(1);
-        }
-
-        100% {
-          transform: translateY(-30px) scale(1.1);
-        }
-      }
-
-      /* Hero content layout */
-      .financial-hero-inner {
-        display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
+        gap: 30px;
         flex-wrap: wrap;
-        gap: 3rem;
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
       }
-
-      .financial-hero-text {
+    
+      /* ------------------ LEFT SIDE ------------------ */
+      .wealth-left {
+    
         flex: 1 1 500px;
-        max-width: 600px;
-        animation: fadeUp 1s ease forwards;
+        max-width: 550px;
       }
-
-      .financial-hero-text h1 {
-        font-size: clamp(2rem, 5vw, 2.5rem);
-        line-height: 1.2;
-        margin-bottom: 1rem;
+    
+      .animated-heading {
+        font-size: 3rem;
         font-weight: 700;
+        line-height: 1.2;
         background: linear-gradient(to right, #93c5fd, #60a5fa, #a78bfa);
         -webkit-background-clip: text;
-        background-clip: text;
         -webkit-text-fill-color: transparent;
+        height: 180px;
       }
-
-      .financial-hero-text p {
-        font-size: clamp(1rem, 3vw, 1.1rem);
-        line-height: 1.7;
+    
+      .hero-subtext {
+        margin-top: 20px;
+        font-size: 1.2rem;
         color: #e2e8f0;
-        margin-bottom: 2.5rem;
       }
-
+    
       /* Buttons */
       .hero-buttons {
         display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 30px;
       }
-
+    
       .btn-primary {
         background: linear-gradient(135deg, #3b82f6, #2563eb);
-        color: white;
-        padding: 0.9rem 1.8rem;
+        padding: 12px 28px;
+        color: #fff;
         border-radius: 12px;
         font-weight: 600;
-        transition: transform 0.3s, box-shadow 0.3s;
-        box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
-        -webkit-tap-highlight-color: transparent;
+        transition: 0.3s;
       }
-
+    
       .btn-primary:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+        transform: translateY(-4px);
+        box-shadow: 0 0 18px rgba(59, 130, 246, 0.6);
       }
-
+    
       .btn-outline {
         border: 2px solid #93c5fd;
+        padding: 12px 28px;
         color: #93c5fd;
-        padding: 0.9rem 1.8rem;
         border-radius: 12px;
         font-weight: 600;
-        transition: background 0.3s, color 0.3s, transform 0.3s;
-        -webkit-tap-highlight-color: transparent;
+        transition: 0.3s;
       }
-
+    
       .btn-outline:hover {
         background: #93c5fd;
         color: #1e3a8a;
-        transform: translateY(-3px);
       }
-
-      /* Floating cards */
-      .financial-hero-visual {
-        flex: 1 1 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-        animation: fadeUp 1.2s ease forwards;
-      }
-
-      .floating-card {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 20px;
-        padding: 2rem;
-        text-align: center;
-        backdrop-filter: blur(10px);
-        width: 170px;
-        animation: floatAnimation 3s ease-in-out infinite;
-        animation-delay: var(--delay);
-        transition: transform 0.4s, box-shadow 0.4s;
+    
+      /* ----------- SINGLE SERVICE CARD IN HERO ----------- */
+    
+      .single-service-container {
         position: relative;
-        overflow: hidden;
-        flex: 0 1 auto;
+        width: 100%;
+        max-width: 420px;
+        padding: 20px;
       }
-
-      .floating-card::after {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
-        opacity: 0;
-        transition: opacity 0.3s;
+    
+      .single-service-card {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 18px;
+        padding: 25px;
+        backdrop-filter: blur(10px);
+        text-align: left;
+        transition: 0.4s ease;
+        min-height: 320px;
       }
-
-      .floating-card:hover {
-        transform: translateY(-12px) scale(1.07);
-        box-shadow: 0 0 30px rgba(147, 197, 253, 0.3);
-      }
-
-      .floating-card:hover::after {
-        opacity: 1;
-      }
-
-      .floating-card img {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 1rem;
-        animation: pulseIcon 2.5s infinite ease-in-out;
+    
+      .single-service-card img {
+        width: 70px;
+        height: 70px;
         object-fit: contain;
+        margin-bottom: 15px;
       }
-
-      .floating-card h3 {
+    
+      .single-service-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+        color: #fff;
+      }
+    
+      .single-service-card p {
+        color: #dbeafe;
+        margin-bottom: 12px;
+      }
+     
+      .single-service-card a {
+        color: #a5f3fc;
+        font-weight: bold;
         font-size: 1rem;
-        font-weight: 600;
-        color: #f8fafc;
+        text-decoration: none;
       }
-
-      @keyframes pulseIcon {
-
-        0%,
-        100% {
-          transform: scale(1);
-        }
-
-        50% {
-          transform: scale(1.1);
-        }
+    
+      .single-service-card a:hover {
+        text-decoration: underline;
       }
-
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+    
+      /* Arrows */
+      .arrow-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+        padding: 12px 14px;
+        border-radius: 50%;
+        cursor: pointer;
+        backdrop-filter: blur(5px);
+        font-size: 20px;
+        color: #fff;
       }
-
-      @keyframes floatAnimation {
-
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-
-        50% {
-          transform: translateY(-10px);
-        }
+    
+      .arrow-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
       }
-
+    
+      .left-arrow {
+        left: -10px;
+      }
+    
+      .right-arrow {
+        right: -10px;
+      }
+    
       /* Responsive */
+      @media (max-width: 900px) {
+        .wealth-container {
+          flex-direction: column;
+          text-align: center;
+        }
+    
+        .service-box {
+          text-align: center;
+        }
+    
+        .wealth-left {
+          margin-top: 30px;
+        }
+    
+        .hero-buttons {
+          display: flex;
+          flex-direction: column;
+        }
+        .animated-heading{
+          height: 250px;
+        }
+      }
+    
       @media (max-width: 900px) {
         .financial-hero {
           padding: 4rem 1rem;
           min-height: auto;
         }
-
+    
         .financial-hero-inner {
           flex-direction: column;
           text-align: center;
           gap: 2rem;
         }
-
-        .hero-buttons {
+    
+        .hero-buttons {     
           justify-content: center;
         }
-
+    
         .financial-hero-visual {
           width: 100%;
           gap: 1rem;
         }
-
+    
         .floating-card {
           width: calc(50% - 1rem);
           min-width: 150px;
-          
+    
         }
       }
-
+    
       /* iOS Specific Fixes */
       @supports (-webkit-touch-callout: none) {
         .financial-hero {
@@ -401,17 +402,17 @@
           padding-bottom: max(2rem, env(safe-area-inset-bottom));
           min-height: -webkit-fill-available;
         }
-
+    
         .financial-hero-inner {
           gap: 2rem;
           padding: 0 max(20px, env(safe-area-inset-left));
         }
-
+    
         .financial-hero-visual {
           width: 100%;
           padding: 0 10px;
         }
-
+    
         .floating-card {
           width: calc(50% - 1rem);
           min-width: 140px;
@@ -420,7 +421,7 @@
           backdrop-filter: none;
           -webkit-backdrop-filter: blur(10px);
         }
-
+    
         .hero-buttons {
           display: grid;
           grid-template-columns: 1fr;
@@ -428,7 +429,7 @@
           width: 100%;
           padding: 0 10px;
         }
-
+    
         .btn-primary,
         .btn-outline {
           width: 100%;
@@ -438,8 +439,83 @@
         }
       }
     </style>
+    
+    
+    <script>
+      const services = [
+        {
+          img: "https://cdn.zeebiz.com/sites/default/files/2023/08/03/254616-investment-article.jpg",
+          title: "Investment Plans",
+          desc: "Smart & diversified plans designed for stable long-term wealth.",
+          link: "investment-plans.html"
+        },
+        {
+          img: "https://www.axismaxlife.com/static-page/assets/homepage/Benefits_of_Retirement_Planning_1_78eff79dca.webp",
+          title: "Retirement Plans",
+          desc: "Build a financially free and stress-less retirement life.",
+          link: "retirement-plans.html"
+        },
+        {
+          img: "https://www.iciciprulife.com/content/dam/icicipru/articles/compare-term-plans/savings-plans-for-children.jpg",
+          title: "Child Future Plans",
+          desc: "Secure your child’s education and future with smart planning.",
+          link: "child-plans.html"
+        },
+        {
+          img: "https://www.avivaindia.com/sites/default/files/Renew-Your-term-Insurance.jpg",
+          title: "Term Insurance",
+          desc: "Affordable life protection tailored for your family’s security.",
+          link: "term-insurance.html"
+        },
+        {
+          img: "https://d3ce1o48hc5oli.cloudfront.net/s3fs-public/2024-02/Guide%20on%20How%20Mutual%20Funds%20Work_20200809-141343.jpg?VersionId=wMy.okPJG7ddpBvo.bO4Adej.Z6uFVhe",
+          title: "Mutual Funds",
+          desc: "Diversified mutual fund portfolios with expert guidance.",
+          link: "mutualfunds.html"
+        },
+        {
+          img: "https://www.tatamutualfund.com/system/files/2023-06/What%20is%20SIP.jpg",
+          title: "Systematic Planning",
+          desc: "Start systematic investment journeys with small monthly amounts.",
+          link: "sip.html"
+        },
+        {
+          img: "https://blog.ipleaders.in/wp-content/uploads/2020/07/636867919594300000.jpg",
+          title: "Equity",
+          desc: "Invest in high-growth stocks with risk-managed strategies.",
+          link: "equity.html"
+        },
+        {
+          img: "https://img.freepik.com/free-vector/man-with-calculator-pile-coins_24877-63693.jpg?semt=ais_incoming&w=740&q=80",
+          title: "Financial Calculators",
+          desc: "Plan accurately using advanced investment & wealth calculators.",
+          link: "calculators.html"
+        }
+      ];
 
+      let index = 0;
 
+      function updateCard() {
+        const s = services[index];
+        document.getElementById("serviceImg").src = s.img;
+        document.getElementById("serviceTitle").innerText = s.title;
+        document.getElementById("serviceDesc").innerText = s.desc;
+        document.getElementById("serviceLink").href = s.link;
+      }
+
+      function serviceRight() {
+        index = (index + 1) % services.length;
+        updateCard();
+      }
+
+      function serviceLeft() {
+        index = (index - 1 + services.length) % services.length;
+        updateCard();
+      }
+
+      // Auto-slide every 4 seconds
+      setInterval(serviceRight, 3000);
+    </script>
 
     <!-- Services Section -->
     <section id="services" class="services">
@@ -1235,7 +1311,7 @@
             <div class="footer-column">
               <h3>Resources</h3>
               <ul>
-                <li><a href="leadership.html">Leadership</a></li>
+                
                 <li><a href="advisor.html">Advisor</a></li>
                 <li>
                   <a href="calculators.html">Financial Calculators</a>

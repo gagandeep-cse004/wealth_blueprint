@@ -25,6 +25,7 @@
   <meta name="google-adsense-account" content="ca-pub-8504842908769623" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8504842908769623"
     crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
@@ -105,7 +106,7 @@
   <main>
     <!-- Interactive Financial Strategies Hero Section -->
     <section class="wealth-hero" style="margin-top: 20px;">
-      <div class="wealth-container">
+      <div class="wealth-container" style="width: 100%;">
     
         <!-- LEFT SIDE -->
         <div class="wealth-left">
@@ -203,7 +204,7 @@
     
       .wealth-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         gap: 30px;
         flex-wrap: wrap;
@@ -223,7 +224,7 @@
         background: linear-gradient(to right, #93c5fd, #60a5fa, #a78bfa);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        height: 180px;
+        
       }
     
       .hero-subtext {
@@ -355,7 +356,7 @@
         }
     
         .wealth-left {
-          margin-top: 30px;
+          margin-top: 60px;
         }
     
         .hero-buttons {
@@ -394,6 +395,59 @@
     
         }
       }
+      /* Hero Heading */
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;   /* Increase or adjust as needed */
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 32px;   /* For very small screens */
+  }
+}
+/* Base (Desktop / Large screens) */
+.animated-heading span {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.2;
+  display: block;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .animated-heading span {
+    font-size: 38px;
+    line-height: 1.25;
+  }
+}
+
+/* Mobile Large (430px–480px) */
+@media (max-width: 480px) {
+  .animated-heading span {
+    font-size: 38px;
+    line-height: 1.3;
+    padding: 0 10px;
+  }
+}
+
+/* Mobile Small (≤390px like iPhone 12/13 Mini) */
+@media (max-width: 390px) {
+  .animated-heading span {
+    font-size: 28px;
+    line-height: 1.35;
+  }
+}
+
     
       /* iOS Specific Fixes */
       @supports (-webkit-touch-callout: none) {
@@ -1317,7 +1371,7 @@
                   <a href="calculators.html">Financial Calculators</a>
                 </li>
                 <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="contact.html">contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -1332,7 +1386,7 @@
       </div>
     </footer>
     <script>
-      (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "Jr9m058aVR3xnS-OpBZ2C"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+      (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "vJxzLLJKR2X1s7lb45jOU"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
     </script>
 
     <script src="js/script.js"></script>
